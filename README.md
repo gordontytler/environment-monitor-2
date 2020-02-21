@@ -3,7 +3,7 @@ ssh based zero client server monitor with discovery visualisation and automation
 
 It does what a developer might do. It logs on to a server, checks the running processes and looks for errors in the log files. It has a rest web service and browser console and a Java swing graphical representation of the log files. You see error, warning and info as scrolling patterns of red orange and green. One monitor screen might show an environment, such as user acceptance test. The will be a normal pattern of scrolling graphics but when anything is wrong, the human will instantly see. A network error or database problem produce entirely different patterns.
 
-When it logs on, it will create a new account so as to not fill up command history history. Then it will either use the existing config (on a central server) or will discover applications e.g. a jboss or spring boot and start monitoring their log files. 
+When it logs on, if it doesn't have one, it will create a new account so as to not fill up command history. Then it will either use the existing config (on a central server) or will discover applications e.g. a jboss or spring boot and start monitoring their log files. 
 
 It is written in java and python. There is no client. The ssl is written in java for performance. It has a rest and soap web service with browser console that can run a commands on servers e.g. a healthcheck script. 
 
@@ -85,7 +85,7 @@ java -Dlog.dir=/var/log/bf-cas -classpath ./bin monitor.implementation.shell.Log
 
 To deploy on a server
 =====================
-on the remote server
+This is the monitor server that has all the config and scripts and provides the web service. It logs on to other servers to view their processes and log files.
 
 cd /var/app
 rm environment-monitor.zip
@@ -95,7 +95,7 @@ on the local PC, cd to the directory containing the top level environment-monito
 
 rm -r environment-monitor.zip
 zip -r environment-monitor.zip environment-monitor
-scp /home/tytlerg/environment-monitor.zip jboss@hamdev425.aws.dev.ham.uk.betfair:/var/app/environment-monitor.zip
+scp /home/gordon/environment-monitor.zip user@monitorserver:/var/app/environment-monitor.zip
 
 back on the remote
 
@@ -108,7 +108,7 @@ cd /var/app/environment-monitor/environment-monitor
 
 test with this 
 
-http://hamdev425.aws.dev.ham.uk.betfair:8084/MonitorScript/get?config.properties
+http://monitorserver:8084/MonitorScript/get?config.properties
 
 
 To fix permissions
