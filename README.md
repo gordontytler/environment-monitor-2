@@ -9,7 +9,7 @@ It is written in java and python. There is no client. The ssl is written in java
 
 
 Here is the config file 
-
+```
 #Created from defaults. To recreate delete this file and run monitor.model.ConfigurationTest
 #Sun Dec 09 12:34:20 GMT 2019
 ApplicationHeartbeatMillis=32000
@@ -43,11 +43,11 @@ user.gordon-netbook.password=iY7UkS05R8UHtwzbqxscBw\=\=
 user.tytlergubuntu01=tytlerg
 user.tytlergubuntu01-2=tytlerg
 user.tytlergubuntu01.password=6paptXZlNI8VQU6Dc3/wSA\=\=
-
+```
 
 Here is the readme.txt
 
-
+```
 To generate code for the SOAP service from annotations in MonitorServiceImpl
 ============================================================================
 
@@ -117,10 +117,11 @@ To fix permissions
 
 cd /var/app
 chmod -R g+rwx environment-monitor
-
+```
 
 Here is the Python to discover what application are running.
 
+```
 #! /usr/bin/env python
 
 import httplib, urllib, sys, monitorrestclient, application
@@ -244,3 +245,4 @@ if __name__ == '__main__':
         option = sys.argv[3]
     discover_apps_all_servers(sys.argv[1], sys.argv[2], option)
     exit()
+    ```
