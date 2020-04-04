@@ -1,0 +1,12 @@
+Section "Application"
+	applicationName = Environment monitor
+	SubSection "Discovery"
+		monitor.api.Main
+	EndSubSection
+EndSection
+
+Section "Outputs"
+	# Output name	script
+	# ===========	========
+	log,	tail -F /var/app/environment-monitor/environment-monitor/log/environment-monitor-0.log
+EndSection

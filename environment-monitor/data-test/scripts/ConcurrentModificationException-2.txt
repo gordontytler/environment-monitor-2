@@ -1,0 +1,8 @@
+15-Apr-2011 21:10:35 monitor.gui.EnvironmentScrollPane$RefreshEnvironmentViewWorker doInBackground
+SEVERE: Test environment histories will be wiped new highestChunk 0 sessionId RESET but old highestChunk 2 sessionId 146
+16-Apr-2011 06:11:45 monitor.soap.client.MonitorServiceProxy getEnvironmentView
+SEVERE: java.util.concurrent.ExecutionException: javax.xml.ws.soap.SOAPFaultException: java.util.ConcurrentModificationException
+
+don't know what was happening server side at this time
+
+there is no need to halt the application for this 

@@ -1,0 +1,85 @@
+03-Jan-2011 18:23:13 monitor.model.Configuration loadProperties
+INFO: loaded properties from /home/gordon/environment-monitor/environment-monitor/config.properties
+03-Jan-2011 18:23:13 monitor.api.Main main
+INFO: Starting SOAP endpoint with wsdl http://gordon-netbook:8084/Monitor/?wsdl
+03-Jan-2011 18:23:15 monitor.api.Main main
+INFO: Starting http endpoint for scripts at http://gordon-netbook:8084/MonitorScript
+03-Jan-2011 18:23:15 monitor.implementation.session.SessionReaper run
+INFO: Checking for unused sessions.
+03-Jan-2011 18:23:15 monitor.implementation.session.FinishedActionSessionCloser run
+INFO: Checking for unused finished action sessions.
+03-Jan-2011 18:23:19 monitor.implementation.session.AllSessionPools dumpAllSessionsOnAllServers
+INFO: dump of all sessions because requested via http://gordon-netbook:8084/MonitorScript/dumpAllSessionsOnAllServers
+
+03-Jan-2011 18:23:21 monitor.implementation.session.AllSessionPools dumpAllSessionsOnAllServers
+INFO: dump of all sessions because requested via http://gordon-netbook:8084/MonitorScript/dumpAllSessionsOnAllServers
+
+03-Jan-2011 18:23:22 monitor.implementation.session.AllSessionPools dumpAllSessionsOnAllServers
+INFO: dump of all sessions because requested via http://gordon-netbook:8084/MonitorScript/dumpAllSessionsOnAllServers
+
+03-Jan-2011 18:23:22 monitor.implementation.session.AllSessionPools dumpAllSessionsOnAllServers
+INFO: dump of all sessions because requested via http://gordon-netbook:8084/MonitorScript/dumpAllSessionsOnAllServers
+
+03-Jan-2011 18:23:23 monitor.implementation.session.AllSessionPools dumpAllSessionsOnAllServers
+INFO: dump of all sessions because requested via http://gordon-netbook:8084/MonitorScript/dumpAllSessionsOnAllServers
+
+03-Jan-2011 18:23:24 monitor.implementation.session.AllSessionPools dumpAllSessionsOnAllServers
+INFO: dump of all sessions because requested via http://gordon-netbook:8084/MonitorScript/dumpAllSessionsOnAllServers
+
+03-Jan-2011 18:23:24 monitor.implementation.session.AllSessionPools dumpAllSessionsOnAllServers
+INFO: dump of all sessions because requested via http://gordon-netbook:8084/MonitorScript/dumpAllSessionsOnAllServers
+
+03-Jan-2011 18:23:33 monitor.implementation.shell.InputFromBashReader run
+INFO: sessionToken:zed0[0] finished - 'echo $$'
+03-Jan-2011 18:23:34 monitor.implementation.shell.InputFromBashReader run
+INFO: sessionToken:zed0[1] finished - 'grep environmentName ./data/environments/* | awk -F'= ' '{print $2}''
+03-Jan-2011 18:23:38 monitor.implementation.environment.RunningApplicationChecker checkIfApplicationsAreRunning
+INFO: First run of RunningApplicationChecker for colour bar test. lastCheckTime is null. applicationHeartbeatMillis: 30000
+03-Jan-2011 18:23:47 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:5[0] finished - 'python /home/gordon/environmen...' -> got stopSignal
+03-Jan-2011 18:23:55 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:11[0] finished - 'python /home/gordon/environmen...' -> python: can't open file '/home/gordon/environment-monitor/environment-monitordata/scripts/appsHeartbeatOnAllServers001.p...
+03-Jan-2011 18:23:59 monitor.implementation.session.AllSessionPools dumpAllSessionsOnAllServers
+INFO: dump of all sessions because requested via http://gordon-netbook:8084/MonitorScript/dumpAllSessionsOnAllServers
+sessionId:1	on gordon-netbook	loggedOn: true	open: true	controlSession: false null ACTION null ActionExecuter for Apps Heartbeat on gordon-netbook
+sessionId:7	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/carrero-wax-service/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+sessionId:11	on gordon-netbook	loggedOn: true	open: false	controlSession: false FINISHED TERMINAL python /home/gordon/environment-monitor/environment-monitor\data/scripts/appsHeartbeatOnAllServers001.py gordon-netbook:8084 1,3 Local session on gordon-netbook to run scripts/appsHeartbeatOnAllServers001.py for colour bar test
+sessionId:8	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/decision/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+sessionId:6	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/carrero-scanner-service/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+sessionId:3	on gordon-netbook-2	loggedOn: true	open: true	controlSession: false null ACTION null ActionExecuter for Apps Heartbeat on gordon-netbook-2
+sessionId:10	on gordon-netbook-2	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/carrero-uxb/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook-2
+sessionId:4	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/carrero-predictor/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+sessionId:9	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/carrero-uxb/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+sessionId:12	on gordon-netbook-2	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/decision-maker/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook-2
+sessionId:2	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/decision-maker/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+
+03-Jan-2011 18:24:00 monitor.implementation.session.FinishedActionSessionCloser run
+INFO: Checking for unused finished action sessions.
+03-Jan-2011 18:24:09 monitor.implementation.session.AllSessionPools dumpAllSessionsOnAllServers
+INFO: dump of all sessions because requested via http://gordon-netbook:8084/MonitorScript/dumpAllSessionsOnAllServers
+sessionId:1	on gordon-netbook	loggedOn: true	open: true	controlSession: false null ACTION null ActionExecuter for Apps Heartbeat on gordon-netbook
+sessionId:7	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/carrero-wax-service/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+sessionId:11	on gordon-netbook	loggedOn: true	open: false	controlSession: false FINISHED TERMINAL python /home/gordon/environment-monitor/environment-monitor\data/scripts/appsHeartbeatOnAllServers001.py gordon-netbook:8084 1,3 Local session on gordon-netbook to run scripts/appsHeartbeatOnAllServers001.py for colour bar test
+sessionId:8	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/decision/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+sessionId:6	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/carrero-scanner-service/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+sessionId:3	on gordon-netbook-2	loggedOn: true	open: true	controlSession: false null ACTION null ActionExecuter for Apps Heartbeat on gordon-netbook-2
+sessionId:10	on gordon-netbook-2	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/carrero-uxb/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook-2
+sessionId:4	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/carrero-predictor/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+sessionId:9	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/carrero-uxb/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+sessionId:12	on gordon-netbook-2	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/decision-maker/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook-2
+sessionId:2	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/decision-maker/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+
+03-Jan-2011 18:24:10 monitor.implementation.session.AllSessionPools dumpAllSessionsOnAllServers
+INFO: dump of all sessions because requested via http://gordon-netbook:8084/MonitorScript/dumpAllSessionsOnAllServers
+sessionId:1	on gordon-netbook	loggedOn: true	open: true	controlSession: false null ACTION null ActionExecuter for Apps Heartbeat on gordon-netbook
+sessionId:7	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/carrero-wax-service/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+sessionId:11	on gordon-netbook	loggedOn: true	open: true	controlSession: false FINISHED ACTION python /home/gordon/environment-monitor/environment-monitor\data/scripts/appsHeartbeatOnAllServers001.py gordon-netbook:8084 1,3 Local session on gordon-netbook to run scripts/appsHeartbeatOnAllServers001.py for colour bar test
+sessionId:8	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/decision/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+sessionId:6	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/carrero-scanner-service/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+sessionId:3	on gordon-netbook-2	loggedOn: true	open: true	controlSession: false null ACTION null ActionExecuter for Apps Heartbeat on gordon-netbook-2
+sessionId:10	on gordon-netbook-2	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/carrero-uxb/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook-2
+sessionId:4	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/carrero-predictor/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+sessionId:9	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/carrero-uxb/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+sessionId:12	on gordon-netbook-2	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/decision-maker/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook-2
+sessionId:2	on gordon-netbook	loggedOn: true	open: true	controlSession: false RUNNING ACTION ls /var/log/decision-maker/*ser*.log* -ltr  | tail -1 | awk '{print $8}'  | xargs tail -F ActionExecuter for server.log on gordon-netbook
+

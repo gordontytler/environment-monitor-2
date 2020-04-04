@@ -1,0 +1,18 @@
+Section "Application"
+	applicationName = active-mq
+	SubSection "Discovery"
+		# text in the output from ps -ef | grep java, that must be present when application running
+		-Dactivemq.classpath=
+		# additional checks that must all return 1 if application is present
+        if [ -d /var/app/apache-activemq* ] ; then echo "1" ; else echo "0"; fi
+	EndSubSection
+EndSection
+
+Section "Outputs"
+
+# Output name	script
+# ===========	========
+activemq.log,	ls /var/app/apache-activemq*/data/*log -ltr | tail -1 | awk '{print $NF}' | xargs tail -F
+
+EndSection
+

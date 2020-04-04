@@ -1,0 +1,55 @@
+
+The previous output might be in ChunkedOutput or it might be arriving later.
+There is another bug here:  su: Authentication failure
+
+
+
+all servers in environment Test environment  Execute...uptime
+Execute...uptime on all servers in environment Test environment
+
+_______________________________________________________________________________________________________________________
+Getting sessions on: [gordon-netbook, some-other-machine, gordon-netbook-2, gordon-netbook-3, gordon-netbook-4, gordon-netbook-5, muffy-ubuntu.local]
+Got session. sessionId:132    auto  on gordon-netbook                      loggedOn: true  open: true  controlSession: false FINISHED TERMINAL ps -ef | grep j[a]va | grep -v grep ->AlreadyRunningChecker.newOutputStarted
+Won't attempt logon to some-other-machine for another 8 minutes. Previous failed logon was 2 minutes ago.
+    Previous failure: monitor.implementation.MonitorRuntimeException: java.io.IOException: There was a problem while connecting to some-other-machine:22
+    Caused by: java.net.UnknownHostException: some-other-machine
+Got session. sessionId:115    auto  on gordon-netbook-2                    loggedOn: true  open: true  controlSession: false FINISHED TERMINAL ps -ef | grep j[a]va | grep -v grep ->AlreadyRunningChecker.newOutputStarted
+Got session. sessionId:134    auto  on gordon-netbook-3                    loggedOn: true  open: true  controlSession: false FINISHED TERMINAL ps -ef | grep j[a]va | grep -v grep ->AlreadyRunningChecker.newOutputStarted
+Got session. sessionId:120    auto  on gordon-netbook-4                    loggedOn: true  open: true  controlSession: false FINISHED TERMINAL su -l -c "ls /var/log/carrero-scanner-service/*ser*.log* -ltr | grep -v x509 | tail -1 | awk '{print \$NF}'  | xargs tail -F" devops ->AlreadyRunningChecker.newOutputStarted
+Got session. sessionId:114    auto  on gordon-netbook-5                    loggedOn: true  open: true  controlSession: false FINISHED TERMINAL if [ -d /var/log/test-application ] ; then echo "1" ; else  echo "0"; fi ->AlreadyRunningChecker.newOutputStarted
+Won't attempt logon to muffy-ubuntu.local for another 8 minutes. Previous failed logon was 2 minutes ago.
+    Previous failure: monitor.implementation.MonitorRuntimeException: java.io.IOException: There was a problem while connecting to muffy-ubuntu.local:22
+    Caused by: java.net.UnknownHostException: muffy-ubuntu.local
+_______________________________________________________________________________________________________________________
+
+Running command> uptime
+
+gordon-netbook$ gordon    1570     1  8 08:25 ?        00:11:45 /home/gordon/eclipse/eclipse -vm /usr/share/java/jdk1.6.0_18/bin -clean
+gordon    1785     1  0 08:35 ?        00:00:00 /bin/sh /usr/lib/firefox-3.6.15/firefox http://java.sun.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantLock.html
+gordon    1791  1785  0 08:35 ?        00:00:00 /bin/sh /usr/lib/firefox-3.6.15/run-mozilla.sh /usr/lib/firefox-3.6.15/firefox-bin http://java.sun.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantLock.html
+gordon    1795  1791  5 08:35 ?        00:07:23 /usr/lib/firefox-3.6.15/firefox-bin http://java.sun.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantLock.html
+gordon    6565  5548  0 09:47 pts/0    00:00:08 java -Dlog.dir=/var/log/decision -classpath ./bin monitor.implementation.shell.LogFileWriterApplication
+gordon    9954  1570  8 10:45 ?        00:00:13 /usr/share/java/jdk1.6.0_18/bin/java -Dfile.encoding=UTF-8 -classpath /home/gordon/environment-monitor/environment-monitor/bin:/home/gordon/eclipse/plugins/org.junit4_4.5.0.v20090824/junit.jar:/home/gordon/eclipse/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar:/home/gordon/environment-monitor/environment-monitor/lib/ganymed-ssh2-build251beta1.jar monitor.api.Main
+gordon   10055  1570 17 10:46 ?        00:00:18 /usr/share/java/jdk1.6.0_18/bin/java -Dfile.encoding=UTF-8 -classpath /home/gordon/environment-monitor/environment-monitor-client/bin:/home/gordon/eclipse/plugins/org.junit4_4.5.0.v20090824/junit.jar:/home/gordon/eclipse/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar monitor.gui.MainFrame
+$ 10750
+gordon-netbook-2$ gordon    1570     1  8 08:25 ?        00:11:44 /home/gordon/eclipse/eclipse -vm /usr/share/java/jdk1.6.0_18/bin -clean
+gordon    1785     1  0 08:35 ?        00:00:00 /bin/sh /usr/lib/firefox-3.6.15/firefox http://java.sun.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantLock.html
+gordon    1791  1785  0 08:35 ?        00:00:00 /bin/sh /usr/lib/firefox-3.6.15/run-mozilla.sh /usr/lib/firefox-3.6.15/firefox-bin http://java.sun.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantLock.html
+gordon    1795  1791  5 08:35 ?        00:07:21 /usr/lib/firefox-3.6.15/firefox-bin http://java.sun.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantLock.html
+gordon    6565  5548  0 09:47 pts/0    00:00:08 java -Dlog.dir=/var/log/decision -classpath ./bin monitor.implementation.shell.LogFileWriterApplication
+gordon    9954  1570 10 10:45 ?        00:00:11 /usr/share/java/jdk1.6.0_18/bin/java -Dfile.encoding=UTF-8 -classpath /home/gordon/environment-monitor/environment-monitor/bin:/home/gordon/eclipse/plugins/org.junit4_4.5.0.v20090824/junit.jar:/home/gordon/eclipse/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar:/home/gordon/environment-monitor/environment-monitor/lib/ganymed-ssh2-build251beta1.jar monitor.api.Main
+gordon   10055  1570 15 10:46 ?        00:00:12 /usr/share/java/jdk1.6.0_18/bin/java -Dfile.encoding=UTF-8 -classpath /home/gordon/environment-monitor/environment-monitor-client/bin:/home/gordon/eclipse/plugins/org.junit4_4.5.0.v20090824/junit.jar:/home/gordon/eclipse/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar monitor.gui.MainFrame
+$ 11438
+gordon-netbook-3$ gordon    1570     1  8 08:25 ?        00:11:45 /home/gordon/eclipse/eclipse -vm /usr/share/java/jdk1.6.0_18/bin -clean
+gordon    1785     1  0 08:35 ?        00:00:00 /bin/sh /usr/lib/firefox-3.6.15/firefox http://java.sun.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantLock.html
+gordon    1791  1785  0 08:35 ?        00:00:00 /bin/sh /usr/lib/firefox-3.6.15/run-mozilla.sh /usr/lib/firefox-3.6.15/firefox-bin http://java.sun.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantLock.html
+gordon    1795  1791  5 08:35 ?        00:07:23 /usr/lib/firefox-3.6.15/firefox-bin http://java.sun.com/javase/6/docs/api/java/util/concurrent/locks/ReentrantLock.html
+gordon    6565  5548  0 09:47 pts/0    00:00:08 java -Dlog.dir=/var/log/decision -classpath ./bin monitor.implementation.shell.LogFileWriterApplication
+gordon    9954  1570  8 10:45 ?        00:00:13 /usr/share/java/jdk1.6.0_18/bin/java -Dfile.encoding=UTF-8 -classpath /home/gordon/environment-monitor/environment-monitor/bin:/home/gordon/eclipse/plugins/org.junit4_4.5.0.v20090824/junit.jar:/home/gordon/eclipse/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar:/home/gordon/environment-monitor/environment-monitor/lib/ganymed-ssh2-build251beta1.jar monitor.api.Main
+gordon   10055  1570 17 10:46 ?        00:00:18 /usr/share/java/jdk1.6.0_18/bin/java -Dfile.encoding=UTF-8 -classpath /home/gordon/environment-monitor/environment-monitor-client/bin:/home/gordon/eclipse/plugins/org.junit4_4.5.0.v20090824/junit.jar:/home/gordon/eclipse/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar monitor.gui.MainFrame
+$ 11470
+gordon-netbook-4$ su: Authentication failure
+$  10:49:16 up  2:25, 63 users,  load average: 0.87, 0.71, 0.56
+gordon-netbook-5$ 11851
+
+Finished.

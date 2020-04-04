@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Performance improvements</title>
+<style>body, td, th, p, ul, ol, div {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12pt;}</style></head>
+<body>
+<h2>Performance improvements using jconsole</h2>
+<h3>Before</h3>
+<p>
+Environment monitor server was initially using 185% of CPU just to tail 5 remote log files.
+<p>
+(on a 2009 Acer netbook with dual core Intel(R) Atom(TM) CPU N270   @ 1.60GHz - 1GB memory)
+<p>
+It was using ProcessBuilder to create a local process running ssh and reading the output stream from this.
+ProcessBuilder was also used to execute bash to run python scripts to check which applications are running.
+<p>
+jprofiler produced this picture: <a href="jprofiler-initial-Screenshot.png">jprofiler-initial-Screenshot.png</a>
+<p>
+The problem areas were:
+<ul>
+<li>71.6% InputFromShellReader.readInputFromShell -  this was mainly caused by FileInputStream.available and String.decode
+<li>24.6% UNIXProcess.waitForProcessExit - this is a bug in the process reaper thread which is fixed in the Open JDK but not in the Sun 1.6.0_18 version.
+</ul>
+<hr size="1"/><br />
+<h3>Changes made</h3>
+<p>
+The ssh client process was replaced with the pure Java implementation <a href="http://www.cleondris.ch/opensource/ssh2/">Ganymed SSH-2 for Java</a>.
+<p>
+This proved to be so fast it was also used to run local bash processes. Ganymed made it possible to use a pseudo-terminal.
+Looking for the terminal prompt speeded up the text processing needed to determine when a command has finished.
+Previously this was taking 21.1%.
+<p>
+<img height="91" width="641" border="0" hspace="0" vspace="0" src="removeEchoText.png">
+<p>
+These improvements either caused or made it possible to fix some previously undetected thread blocking problems:
+<p>
+<a href="Current_locking_graph.html">locked by ChunkedOutput after client request to killRunningCommand</a><br>
+<a href="Current_locking_graph_5.html">threads blocked by a lock owned by their own thread in java.util.logging.ConsoleHandler</a>
+<hr size="1"/><br />
+<h3>After</h3>
+<p>
+Environment monitor server was using just 4% of CPU to tail (and analyse) 5 remote log files.
+<p>
+<a href="Call_Tree.html">jprofiler call tree</a>
+<p>
+<ul>
+<li>40.7% - 19,406 ms sun.net.httpserver.ServerImpl$Exchange.run -  web server
+<li>17.1% - 8,164 ms javax.xml.ws.Endpoint.publish -  web server
+<li>13.4% - 6,392 ms monitor.implementation.shell.InputFromSSHReader.filter
+</ul>
+57% of cpu is now being used to publish the web view. Most of the 13.4% for InputFromSSHReader caused by FINE logging,
+<p>
+11.4% - 5,429 ms java.util.logging.Logger.info
+<p>
+which can be turned off.
+
+ 
+</body>
+</html>

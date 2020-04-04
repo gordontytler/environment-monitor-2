@@ -1,0 +1,25 @@
+
+environmentName = env002 DEV
+discover-apps = scripts/discoverApps001.py
+apps-heartbeat = scripts/appsHeartbeatOnAllServers001.py
+discover-apps-all = scripts/discoverAppsOnAllServers001.py
+
+# serverName	applicationName	applicationFileName	outputName
+# ==========	===============	===================	==========
+node574.test.carrero.es,	,	,
+node517.test.carrero.es,	,	,
+node666.test.carrero.es,	,	,
+node563.test.carrero.es,	,	,
+node557.test.carrero.es,	,	,
+node554.test.carrero.es,	,	,
+node578.test.carrero.es,	,	,
+node704.test.carrero.es,	,	,
+node577.test.carrero.es,	,	,
+node640.test.carrero.es,	,	,
+node715.test.carrero.es,	,	,
+node745.test.carrero.es,	,	,
+node747.test.carrero.es,	,	,
+node756.test.carrero.es,	,	,
+node568.test.carrero.es,	,	,
+node567.test.carrero.es,	,	,
+

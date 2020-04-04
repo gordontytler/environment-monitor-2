@@ -1,0 +1,43 @@
+
+environmentName = env003 Italy
+java-version-all = scripts/commandOnAllServers001.py "sudo ls /usr/java"
+umask-all = scripts/commandOnAllServers001.py "ls /var/app/*rule* -al"
+discover-apps = scripts/discoverApps001.py
+apps-heartbeat = scripts/appsHeartbeatOnAllServers001.py
+discover-apps-all = scripts/discoverAppsOnAllServers001.py
+
+# serverName	applicationName	applicationFileName	outputName
+# ==========	===============	===================	==========
+node549.test.carrero.es,	karma,	applications/generic-application-001.txt,	server.log
+node748.test.carrero.es,	decision-maker,	applications/generic-application-001.txt,	server.log
+node760.test.carrero.es,	ex-back-office AUS,	applications/ex-back-office-001.txt,	server.log
+node761.test.carrero.es,	,	,
+node757.test.carrero.es,	exchange web,	applications/exchange-web-001.txt,	server.log
+node668.test.carrero.es,	global-ex-back-office,	applications/african-portal-back-office-001.txt,	server.log
+node651.test.carrero.es,	attribution-service,	applications/attribution-service-001.txt,	server.log
+node649.test.carrero.es,	,	,
+node650.test.carrero.es,	,	,
+node550.test.carrero.es,	,	,
+node648.test.carrero.es,	test-denaro-service,	applications/test-denaro-service-001.txt,	denaro-service.log
+node648.test.carrero.es,	carrero-translation-service,	applications/carrero-translation-service-001.txt,	denaro-service.log
+node648.test.carrero.es,	carrero-denaro-service,	applications/carrero-denaro-service-001.txt,	denaro-service.log
+node546.test.carrero.es,	carrero-task-router,	applications/generic-application-001.txt,	server.log
+node546.test.carrero.es,	carrero-responsibility-service,	applications/generic-application-001.txt,	server.log
+node546.test.carrero.es,	carrero-rules-service,	applications/x010-generic-bst-var-log-001.txt,	server.log
+node548.test.carrero.es,	lus,	applications/generic-application-001.txt,	server.log
+node548.test.carrero.es,	carrero-fuse-active-mq,	applications/carrero-fuse-activemq-001.txt,	activemq.log
+node548.test.carrero.es,	decision,	applications/x010-generic-cougar-001.txt,	server.log
+node548.test.carrero.es,	decision,	applications/x010-generic-cougar-001.txt,	access.log
+node544.test.carrero.es,	japi AUS,	applications/japi-aus-002.txt,	server.log
+node544.test.carrero.es,	japi AUS,	applications/japi-aus-002.txt,	system.log
+node544.test.carrero.es,	japi AUS,	applications/japi-aus-002.txt,	access.log
+node544.test.carrero.es,	japi AUS,	applications/japi-aus-002.txt,	webapi/system.log
+node544.test.carrero.es,	japi AUS,	applications/japi-aus-002.txt,	input.log
+node544.test.carrero.es,	japi AUS,	applications/japi-aus-002.txt,	payments.log
+node545.test.carrero.es,	japi,	applications/japi-002.txt,	server.log
+node545.test.carrero.es,	japi,	applications/japi-002.txt,	system.log
+node545.test.carrero.es,	japi,	applications/japi-002.txt,	access.log
+node545.test.carrero.es,	japi,	applications/japi-002.txt,	webapi/system.log
+node545.test.carrero.es,	japi,	applications/japi-002.txt,	input.log
+node545.test.carrero.es,	japi,	applications/japi-002.txt,	payments.log
+
