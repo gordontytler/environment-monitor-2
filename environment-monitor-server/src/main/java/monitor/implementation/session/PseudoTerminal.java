@@ -39,7 +39,6 @@ public class PseudoTerminal implements SessionIdMaker {
 	}
 	
 	/** To prevent the old client from using the session when it has been reallocated. */
-	@Override
 	public String makeNewSessionId() {
 		sshConnection.removePseudoTerminalButKeepConnectionOpen(this);
 		sessionId = nextSessionId.makeNewSessionId();

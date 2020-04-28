@@ -1,11 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="42888511-bec5-456a-90e8-58d2f67ecf03" name="Default Changelist" comment="" />
+    <list default="true" id="42888511-bec5-456a-90e8-58d2f67ecf03" name="Default Changelist" comment="remove target from VCS">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_ethz_ganymed_ganymed_ssh2_262.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environment-monitor-client/environment-monitor-client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/environment-monitor-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/environment-monitor-master.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allFiles.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client.zip" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/src/monitor/gui/ServerNameParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/src/monitor/gui/ServerNameParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/test/monitor/gui/ServerNameParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/test/monitor/gui/ServerNameParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/environment-monitor-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/environment-monitor-server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/PseudoTerminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/PseudoTerminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/BashExecuter.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/BashExecuter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/resources/scripts/weird-errors.txt" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/resources/scripts/weird-errors.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -16,12 +65,49 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/environment-monitor-client" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.21358268" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RunManager" selected="JUnit.All in environment-monitor-client">
+    <configuration name="All in environment-monitor-client" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="environment-monitor-client" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="monitor in environment-monitor-server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="environment-monitor-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="monitor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="monitor" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in environment-monitor-client" />
+        <item itemvalue="JUnit.monitor in environment-monitor-server" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -34,16 +120,105 @@
       <option name="presentableId" value="Default" />
       <updated>1588061799402</updated>
     </task>
+    <task id="LOCAL-00001" summary="remove target from VCS">
+      <created>1588067135599</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588067135599</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="remove target from VCS" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove target from VCS" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="443" y="116" width="1397" height="845" key="#Project_Structure" timestamp="1588069716612">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="443" y="116" width="1397" height="845" key="#Project_Structure/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588069716612" />
+    <state x="874" y="296" width="524" height="484" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1588069713282">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="874" y="296" width="524" height="484" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588069713282" />
+    <state x="450" y="107" width="1009" height="864" key="CommitChangelistDialog2" timestamp="1588070526335">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="450" y="107" width="1009" height="864" key="CommitChangelistDialog2/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588070526335" />
+    <state x="733" y="296" width="936" height="484" key="FileChooserDialogImpl" timestamp="1588069486695">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="733" y="296" width="936" height="484" key="FileChooserDialogImpl/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588069486695" />
+    <state width="1874" height="290" key="GridCell.Tab.0.bottom" timestamp="1588070360109">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="290" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588070360109" />
+    <state width="1874" height="290" key="GridCell.Tab.0.center" timestamp="1588070360108">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="290" key="GridCell.Tab.0.center/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588070360108" />
+    <state width="1874" height="290" key="GridCell.Tab.0.left" timestamp="1588070360108">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="290" key="GridCell.Tab.0.left/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588070360108" />
+    <state width="1874" height="290" key="GridCell.Tab.0.right" timestamp="1588070360109">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="290" key="GridCell.Tab.0.right/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588070360109" />
+    <state x="727" y="285" width="986" height="507" key="NewModule_or_Project.wizard" timestamp="1588069533091">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="727" y="285" width="986" height="507" key="NewModule_or_Project.wizard/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588069533091" />
+    <state x="492" y="222" width="925" height="633" key="RollbackChangesDialog" timestamp="1588067868783">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="492" y="222" width="925" height="633" key="RollbackChangesDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588067868783" />
     <state x="449" y="174" key="SettingsEditor" timestamp="1588062724248">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="449" y="174" key="SettingsEditor/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588062724248" />
+    <state x="555" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1588067182732">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="555" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588067182732" />
+    <state x="627" y="432" width="646" height="213" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1588067843689">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="627" y="432" width="646" height="213" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588067843689" />
+    <state x="650" y="280" width="1033" height="518" key="find.popup" timestamp="1588070353735">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="650" y="280" width="1033" height="518" key="find.popup/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588070353735" />
+    <state x="264" y="242" width="1372" height="592" key="new project wizard" timestamp="1588067655933">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="264" y="242" width="1372" height="592" key="new project wizard/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588067655933" />
   </component>
 </project>

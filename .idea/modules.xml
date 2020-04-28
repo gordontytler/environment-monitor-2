@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/environment-monitor-master.iml" filepath="$PROJECT_DIR$/.idea/environment-monitor-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/environment-monitor-client/environment-monitor-client.iml" filepath="$PROJECT_DIR$/environment-monitor-client/environment-monitor-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/environment-monitor-server/environment-monitor-server.iml" filepath="$PROJECT_DIR$/environment-monitor-server/environment-monitor-server.iml" />
     </modules>
   </component>
 </project>

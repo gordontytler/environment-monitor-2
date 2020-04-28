@@ -22,7 +22,7 @@ import monitor.model.Server;
 /**
  * I execute commands. I throw exceptions if anything goes wrong. 
  * I am not thread safe. If a command does not complete a new thread is started.
- * @deprecated with 1.6_20 waitForProcessExit in lava.lang.UNIXProcess uses too much cpu.
+ * @deprecated with Java 1.6_20 waitForProcessExit in lava.lang.UNIXProcess uses too much cpu.
  * Use SSHExecuter instead.
  */
 public class BashExecuter implements CommandExecuter {
@@ -109,7 +109,7 @@ public class BashExecuter implements CommandExecuter {
 		}
 	}
 
-	@Override
+	
 	public void testTerminal() throws Exception {
 		String loggedOnMessage = executeTestCommand(showSSHcopyIdHintInException, Configuration.getInstance().getSessionLoginTimeoutSeconds() * 1000);
 		if (logFine) logger.log(Level.INFO, loggedOnMessage);
@@ -148,7 +148,7 @@ public class BashExecuter implements CommandExecuter {
 		return String.format("logged on to %s PID %d sessionId %s\n", server.getHost(), getBashProcessId(), getSessionId());
 	}
 	
-	@Override
+	
 	public void createAndStartInputFromShellReader(InputStream inputFromShell) {
 		inputFromShellReader = new InputFromBashReader(inputFromShell, this, getSessionId());
 		inputFromShellReaderThread = new Thread(inputFromShellReader, server.getHost() + "-PID:?");
@@ -158,7 +158,7 @@ public class BashExecuter implements CommandExecuter {
 	/* (non-Javadoc)
 	 * @see monitor.implementation.shell.CommandExecuter#killProcess()
 	 */
-	@Override
+	
 	public void killProcess() {
 		if (alreadyKilled)
 			return;
@@ -183,7 +183,7 @@ public class BashExecuter implements CommandExecuter {
 		}
 	}
 	
-	@Override
+	
 	public void stopReaderThread() throws InterruptedException {
 		CountDownLatch stoppedSignal = new CountDownLatch(1);
 		inputFromShellReader.stopRunning(stoppedSignal);
@@ -200,7 +200,7 @@ public class BashExecuter implements CommandExecuter {
 	/* (non-Javadoc)
 	 * @see monitor.implementation.shell.CommandExecuter#resetChunkedOutput()
 	 */
-	@Override
+	
 	public synchronized void resetChunkedOutput(String newSessionId, int millisBeforeInterupting) throws Exception {
 		this.sessionId = newSessionId;
 		inputFromShellReader.changeSessionId(newSessionId);
@@ -220,7 +220,7 @@ public class BashExecuter implements CommandExecuter {
 	/* (non-Javadoc)
 	 * @see monitor.implementation.shell.CommandExecuter#flushInputFromShell()
 	 */
-	@Override	
+		
 	public void flushInputFromShell() {
 		InputStream inputFromShell = shell.getInputStream();
 		int available;
@@ -238,18 +238,18 @@ public class BashExecuter implements CommandExecuter {
 	}
 	
 
-	@Override	
+		
 	public void stopReadingInput() {
 		inputFromShellReader.stopFinishedChecking(new CountDownLatch(1));
 	}
 	
-	@Override
+	
 	public synchronized void clearChunkedOutput() {
 		inputFromShellReader.clearChunkedOutput();
 		lastChunkRead = -1;
 	}
 
-	@Override
+	
 	public void writeToShell(String text) {
 		try {
 			outputToShell.write(text.getBytes());
@@ -263,7 +263,7 @@ public class BashExecuter implements CommandExecuter {
 	/* (non-Javadoc)
 	 * @see monitor.implementation.shell.CommandExecuter#executeCommand(monitor.model.Command)
 	 */
-	@Override	
+		
 	public CommandResult executeCommand(Command command) {
 		logger.fine(command.getRequest());
 		String cmd = command.getRequest().concat("\n");
@@ -326,7 +326,7 @@ public class BashExecuter implements CommandExecuter {
 	/* (non-Javadoc)
 	 * @see monitor.implementation.shell.CommandExecuter#getLastCommandStatus()
 	 */
-	@Override	
+		
 	public CommandStatus getLastCommandStatus() {
 		return lastCommandStatus;
 	}
@@ -334,7 +334,7 @@ public class BashExecuter implements CommandExecuter {
 	/* (non-Javadoc)
 	 * @see monitor.implementation.shell.CommandExecuter#getChunkedOutput()
 	 */
-	@Override	
+		
 	public ChunkedOutput getChunkedOutput() {
 		return inputFromShellReader.getChunkedOutput();
 	}
@@ -342,7 +342,7 @@ public class BashExecuter implements CommandExecuter {
 	/* (non-Javadoc)
 	 * @see monitor.implementation.shell.CommandExecuter#appendToChunkedOutput(java.lang.String)
 	 */
-	@Override	
+		
 	public synchronized void appendToChunkedOutput(String chunk) {
 		if (getChunkedOutput().getHighestChunkNumber() > lastChunkRead ) {
 			// can't stop the chunk from being included after some command output that has not been processed yet
@@ -356,7 +356,7 @@ public class BashExecuter implements CommandExecuter {
 	/* (non-Javadoc)
 	 * @see monitor.implementation.shell.CommandExecuter#getSessionId()
 	 */
-	@Override	
+		
 	public String getSessionId() {
 		return sessionId;
 	}
@@ -364,7 +364,7 @@ public class BashExecuter implements CommandExecuter {
 	/* (non-Javadoc)
 	 * @see monitor.implementation.shell.CommandExecuter#saveInputFromShellReaderException(java.lang.Exception)
 	 */
-	@Override	
+		
 	public void saveInputFromShellReaderException(Exception e) {
 		inputFromShellReaderException = e;
 	}
@@ -372,7 +372,7 @@ public class BashExecuter implements CommandExecuter {
 	/* (non-Javadoc)
 	 * @see monitor.implementation.shell.CommandExecuter#setLastCommandStatus(monitor.model.CommandStatus)
 	 */
-	@Override	
+		
 	public void setLastCommandStatus(CommandStatus status) {
 		lastCommandStatus = status;
 	}
@@ -380,7 +380,7 @@ public class BashExecuter implements CommandExecuter {
 	/* (non-Javadoc)
 	 * @see monitor.implementation.shell.CommandExecuter#getRunningCommand()
 	 */
-	@Override	
+		
 	public String getRunningCommand() {
 		return inputFromShellReader.getRunningCommand();
 	}
@@ -388,7 +388,7 @@ public class BashExecuter implements CommandExecuter {
 	/* (non-Javadoc)
 	 * @see monitor.implementation.shell.CommandExecuter#isInteruptable()
 	 */
-	@Override	
+		
 	public boolean isInteruptable() {
 		return wantToBeInterupted;
 	}
@@ -396,7 +396,7 @@ public class BashExecuter implements CommandExecuter {
 	/* (non-Javadoc)
 	 * @see monitor.implementation.shell.CommandExecuter#sendOutputTo(monitor.implementation.shell.ChunkedOutput)
 	 */
-	@Override	
+		
 	public void copyOutputTo(ChunkedOutput chunkedOutput) {
 		inputFromShellReader.sendOutputTo(chunkedOutput);
 	}
@@ -404,7 +404,7 @@ public class BashExecuter implements CommandExecuter {
 	/* (non-Javadoc)
 	 * @see monitor.implementation.shell.CommandExecuter#getBashProcessId()
 	 */
-	@Override	
+		
 	public int getBashProcessId() {
 		return bashProcessId;
 	}
@@ -412,25 +412,25 @@ public class BashExecuter implements CommandExecuter {
 	/* (non-Javadoc)
 	 * @see monitor.implementation.shell.CommandExecuter#setBashProcessId(int)
 	 */
-	@Override	
+		
 	public void setBashProcessId(int bashProcessId) {
 		this.bashProcessId = bashProcessId;
 		inputFromShellReaderThread.setName(server.getHost() + "-PID:" + bashProcessId);
 	}
 
-	@Override
+	
 	public String getLoggedOnUserName() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public String getLoggedOnUserPassword() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public String getHostName() {
 		return server.getHost();
 	}

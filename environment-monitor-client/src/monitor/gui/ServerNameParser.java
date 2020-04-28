@@ -22,7 +22,7 @@ public class ServerNameParser {
 	}
 
 	/** return true for valid hostname RFC1034 if the string contains a "." and the other chars are not all numbers
-	 * so soa-multi-app and 10.160.116.165 are not server names but hamdev321.aws.dev.ham.uk.betfair is. */
+	 * so application-name and 10.160.116.165 are not server names but dev123.carrero.es is. */
 	private boolean isServerName(String part) {
 		if (part.length() == 0) {
 			return false;
