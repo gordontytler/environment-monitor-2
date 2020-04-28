@@ -1,0 +1,12 @@
+
+environmentName = tytlergubuntu01 environment
+discover-apps = scripts/discoverApps001.py
+apps-heartbeat = scripts/appsHeartbeatOnAllServers001.py
+discover-apps-all = scripts/discoverAppsOnAllServers001.py
+
+# serverName	applicationName	applicationFileName	outputName
+# ==========	===============	===================	==========
+tytlergubuntu01,	,	,	
+tytlergubuntu01,	unknown,	,	
+tytlergubuntu01,	Test Application with long name,	applications/test-application-with-long-name-001.txt,	Test Action
+

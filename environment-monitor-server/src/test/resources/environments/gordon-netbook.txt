@@ -1,0 +1,10 @@
+
+environmentName = gordon-netbook
+discover-apps = scripts/discoverApps001.py
+apps-heartbeat = scripts/appsHeartbeatOnAllServers001.py
+discover-apps-all = scripts/discoverAppsOnAllServers001.py
+
+# serverName	applicationName	applicationFileName	outputName
+# ==========	===============	===================	==========
+gordon-netbook,	,	,	
+

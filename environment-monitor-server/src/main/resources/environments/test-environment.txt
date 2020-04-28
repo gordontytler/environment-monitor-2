@@ -1,0 +1,51 @@
+
+environmentName = Test environment
+java-version-all = sudo ls /usr/java
+umask-all = umask
+discover-apps = scripts/discoverApps001.py
+apps-heartbeat = scripts/appsHeartbeatOnAllServers001.py
+discover-apps-all = scripts/discoverAppsOnAllServers001.py
+
+# serverName	applicationName	applicationFileName	outputName
+# ==========	===============	===================	==========
+gordon-netbook,	Environment monitor,	applications/environment-monitor-001.txt,	log
+gordon-netbook,	Test Application with long name,	applications/test-application-with-long-name-001.txt,	Direct Action
+gordon-netbook,	Test Application with long name,	applications/test-application-with-long-name-001.txt,	Python Action
+gordon-netbook,	Test Application with long name,	applications/test-application-with-long-name-001.txt,	Direct tail
+gordon-netbook,	Test Application with long name,	applications/test-application-with-long-name-001.txt,	log
+gordon-netbook,	Test Application with long name,	applications/app-file-does-not-exist-000.txt,	test error 1
+gordon-netbook,	Test Application with long name,	applications/test-application-with-long-name-001.txt,	test error 2
+gordon-netbook,	decision,	applications/generic-application-001.txt,	server.log
+gordon-netbook,	test-application,	applications/generic-application-001.txt,	server.log
+gordon-netbook,	Test Application,	applications/test-application-with-long-name-001.txt,	Python Action
+gordon-netbook,	Test Application,	applications/test-application-with-long-name-001.txt,	Direct Action
+gordon-netbook,	carrero-munger-service,	applications/generic-application-001.txt,	server.log
+gordon-netbook,	decision-maker/,	applications/generic-application-001.txt,	server.log
+gordon-netbook,	carrero-munger-service/,	applications/generic-application-001.txt,	server.log
+some-other-machine,	,	,	
+gordon-netbook-2,	Test Application,	applications/test-application-with-long-name-001.txt,	Direct Action
+gordon-netbook-2,	Test Application,	applications/test-application-with-long-name-001.txt,	Python Action
+gordon-netbook-2,	Environment monitor,	applications/environment-monitor-001.txt,	log
+gordon-netbook-2,	decision,	applications/generic-application-001.txt,	server.log
+gordon-netbook-2,	decision-maker/,	applications/generic-application-001.txt,	server.log
+gordon-netbook-2,	carrero-munger-service/,	applications/generic-application-001.txt,	server.log
+gordon-netbook-2,	carrero-munger-service,	applications/generic-application-001.txt,	server.log
+gordon-netbook-3,	Test Application,	applications/test-application-with-long-name-001.txt,	Direct Action
+gordon-netbook-3,	Test Application,	applications/test-application-with-long-name-001.txt,	Python Action
+gordon-netbook-3,	Environment monitor,	applications/environment-monitor-001.txt,	log
+gordon-netbook-3,	decision,	applications/generic-application-001.txt,	server.log
+gordon-netbook-3,	carrero-munger-service,	applications/generic-application-001.txt,	server.log
+gordon-netbook-4,	Test Application,	applications/test-application-with-long-name-001.txt,	Direct Action
+gordon-netbook-4,	Test Application,	applications/test-application-with-long-name-001.txt,	Python Action
+gordon-netbook-4,	Test Application,	applications/test-application-with-long-name-001.txt,	log
+gordon-netbook-4,	Environment monitor,	applications/environment-monitor-001.txt,	log
+gordon-netbook-4,	decision,	applications/generic-application-001.txt,	server.log
+gordon-netbook-4,	carrero-munger-service,	applications/generic-application-001.txt,	server.log
+gordon-netbook-5,	Test Application,	applications/test-application-with-long-name-001.txt,	Direct Action
+gordon-netbook-5,	Test Application,	applications/test-application-with-long-name-001.txt,	Python Action
+gordon-netbook-5,	Test Application,	applications/test-application-with-long-name-001.txt,	log
+gordon-netbook-5,	Environment monitor,	applications/environment-monitor-001.txt,	log
+gordon-netbook-5,	decision,	applications/generic-application-001.txt,	server.log
+gordon-netbook-5,	carrero-munger-service,	applications/generic-application-001.txt,	server.log
+muffy-ubuntu.local,	,	,	
+

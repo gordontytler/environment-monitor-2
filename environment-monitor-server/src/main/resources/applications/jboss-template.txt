@@ -1,0 +1,24 @@
+Section "Application"
+	applicationName = devops-template
+	SubSection "Discovery"
+		# text in the output from ps -ef | grep java, that must be present when application running
+		org.devops.Main
+		# additional checks that must all return 1 if application is present
+		ls directory-that-should-not-be-empty* | wc -w
+        if [ -d deployment-directory ] ; then echo "1" ; else  echo "0"; fi
+	EndSubSection
+EndSection
+
+Section "Outputs"
+    # Output name	script
+    # ===========	========
+    server.log,	ls path-to-log-files/*server.log* -ltr  | tail -1 | awk '{print $NF}' | xargs tail -F
+    system.log,	ls path-to-log-files//*system.log* -ltr  | tail -1 | awk '{print $NF}' | xargs tail -F
+    start,  su -l -c "sh /path-to-commands/start.sh" auto
+    stop,   echo 'n' | sh /path-to-commands/karma-stop.sh
+EndSection
+
+Section "Menu"
+    selected = server.log, system.log
+    commands = start, stop
+EndSection

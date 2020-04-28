@@ -1,0 +1,30 @@
+# Any change to this must be considered in MockApplicationDAO.java and ApplicationViewBuilderTest.java
+
+Section "Application"
+	applicationName = Test Application
+	SubSection "Discovery"
+		# text in the output from ps -ef | grep java, that must be present when application running
+		test-application
+		# additional checks that must all return '1' if application is present
+		if [ -d /var/log/test-application ] ; then echo "1" ; else  echo "0"; fi
+		echo 1
+	EndSubSection
+EndSection
+
+Section "Outputs"
+	# Output name	script
+	# ===========	========
+	test error 2,	scripts/this-file-does-not-exist.py
+	request.log,	scripts/request-log.py
+	Direct Action,	sh logger.sh
+	Python Action,	scripts/test-application-with-long-name-test-action.py
+	Direct tail,	ls /var/log/*uth* -ltr  | tail -1 | awk '{print $NF}'  | xargs tail -F
+	log,	ls /var/log/test-application/*server.log* -ltr  | tail -1 | awk '{print $NF}'  | xargs tail -F
+    start,  cd /home/gordon/environment-monitor/environment-monitor; java -Dlog.dir=/var/log/test-application -classpath ./bin monitor.implementation.shell.LogFileWriterApplication &
+EndSection
+
+Section "Menu"
+    selected = Direct Action, Python Action
+    commands = start, stop
+EndSection
+

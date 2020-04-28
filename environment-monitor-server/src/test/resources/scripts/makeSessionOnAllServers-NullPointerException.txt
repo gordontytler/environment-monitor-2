@@ -1,0 +1,33 @@
+Some severe errors
+
+[devops@node425 log-copy]$ find -name '*log' | xargs grep SEVERE
+./environment-monitor-2.log:SEVERE: node38.test.carrero.es
+./environment-monitor-3.log:SEVERE: node38.test.carrero.es
+./environment-monitor-7.log:SEVERE: node38.test.carrero.es
+./environment-monitor-9.log:SEVERE: node38.test.carrero.es
+./environment-monitor-5.log:SEVERE: node38.test.carrero.es
+
+
+
+Feb 16, 2011 4:14:44 PM monitor.implementation.session.FinishedActionSessionCloser run
+INFO: Checking for unused finished action sessions.
+Feb 16, 2011 4:14:44 PM monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:4171[30] finished - 'python -u /var/app/environment...' ->  got stopFinishedCheckingSignal 
+Feb 16, 2011 4:14:51 PM monitor.implementation.action.ActionExecuter makeSessionsOnAllServers
+SEVERE: node38.test.carrero.es
+java.lang.NullPointerException
+        at monitor.implementation.action.ActionExecuter.makeSessionsOnAllServers(ActionExecuter.java:133)
+        at monitor.implementation.action.ActionExecuter.executeAction(ActionExecuter.java:66)
+        at monitor.implementation.action.ActionRunnable.run(ActionRunnable.java:33)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+        at java.lang.Thread.run(Thread.java:662)
+Feb 16, 2011 4:14:51 PM monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:4138[224] finished - 'ps -ef | grep j[a]va | grep -v...' -> devops    31436     1  0  2010 ?        01:09:53 /usr/java/latest/bin/java -server
+ -Dsun.net.client.defaultConnectTimeout...
+Feb 16, 2011 4:14:52 PM monitor.api.MonitorHttpProvider finishedHeartbeat
+INFO: No change to DOWN appliations  - on 'decision test' server 'node727.test.carrero.es'.
+
+
+
+

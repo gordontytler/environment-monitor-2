@@ -1,0 +1,1128 @@
+Environment monitor - dump of all sessions
+sessionId 	User 	Server 	logged on, open, control 	Last command 	Called by
+504 	auto 	gordon-netbook-3 	true false false FINISHED TERMINAL 	ps --ppid 22521 -o pid | grep -v PID 	SessionReaper logout->Session.Close->ProcessKiller.killSubProcesses
+498 	auto 	gordon-netbook-4 	true false false FINISHED TERMINAL 	ps --ppid 22427 -o pid | grep -v PID 	SessionReaper logout->Session.Close->ProcessKiller.killSubProcesses
+501 	auto 	gordon-netbook-5 	true false false FINISHED TERMINAL 	ps --ppid 22511 -o pid | grep -v PID 	SessionReaper logout->Session.Close->ProcessKiller.killSubProcesses
+
+
+
+
+SEVERE: Run 1161 of thread ClosedSessionTester was 1153 millis ago. Will be considered stuck after 305000
+26-Apr-2011 22:24:33 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 13 closed sessions.
+26-Apr-2011 22:27:06 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 13 closed sessions.
+26-Apr-2011 22:29:40 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 13 closed sessions.
+26-Apr-2011 22:32:14 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 13 closed sessions.
+26-Apr-2011 22:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 807 of thread SessionReaper was 252357 millis ago. Will be considered stuck after 490000
+26-Apr-2011 22:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 8198 of thread FinishedActionSessionCloser was 18045 millis ago. Will be considered stuck after 200000
+26-Apr-2011 22:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1206 of thread ClosedSessionTester was 2034 millis ago. Will be considered stuck after 305000
+26-Apr-2011 22:34:47 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 13 closed sessions.
+26-Apr-2011 22:37:21 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 13 closed sessions.
+26-Apr-2011 22:39:55 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 13 closed sessions.
+26-Apr-2011 22:42:28 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 13 closed sessions.
+26-Apr-2011 22:44:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 833 of thread SessionReaper was 232367 millis ago. Will be considered stuck after 490000
+26-Apr-2011 22:44:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 8562 of thread FinishedActionSessionCloser was 3509 millis ago. Will be considered stuck after 200000
+26-Apr-2011 22:44:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1253 of thread ClosedSessionTester was 123513 millis ago. Will be considered stuck after 305000
+26-Apr-2011 22:45:02 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 13 closed sessions.
+26-Apr-2011 22:45:49 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:412 PID 14366 on gordon-netbook-4
+26-Apr-2011 22:45:49 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 14366 on gordon-netbook-4. Called by SessionReaper logout->Session.Close
+26-Apr-2011 22:45:49 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 412 on gordon-netbook-4 with PID 14366. Response:  
+26-Apr-2011 22:45:50 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:430[12] finished - 'ps --ppid 14366 -o pid | grep ...' -> 
+26-Apr-2011 22:45:50 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:451[12] finished - 'ps --ppid 14366 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+26-Apr-2011 22:45:55 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:450 PID 14366 on gordon-netbook-4 Previous sessionId:412
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-4-PID:14366 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+26-Apr-2011 22:45:55 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:450 on gordon-netbook-4 with PID 14366.
+26-Apr-2011 22:47:31 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 11 closed sessions.
+26-Apr-2011 22:50:03 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 12 closed sessions.
+26-Apr-2011 22:50:59 monitor.implementation.session.SessionReaper run
+INFO: Checking for unused sessions.
+26-Apr-2011 22:50:59 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:428 PID 12273 on gordon-netbook-2
+26-Apr-2011 22:50:59 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 12273 on gordon-netbook-2. Called by SessionReaper logout->Session.Close
+26-Apr-2011 22:50:59 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 428 on gordon-netbook-2 with PID 12273. Response:  
+26-Apr-2011 22:50:59 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:415 PID 12863 on gordon-netbook-5
+26-Apr-2011 22:50:59 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 12863 on gordon-netbook-5. Called by SessionReaper logout->Session.Close
+26-Apr-2011 22:51:00 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:432[8] finished - 'ps --ppid 12273 -o pid | grep ...' -> 
+26-Apr-2011 22:51:00 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:453[8] finished - 'ps --ppid 12273 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+26-Apr-2011 22:51:00 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:415[6] finished - 'ps --ppid 12863 -o pid | grep ...' ->  got stopFinishedCheckingSignal got stopSignal
+26-Apr-2011 22:51:00 monitor.implementation.session.ProcessKiller killSubProcesses
+SEVERE: Problem killing subprocesses of PID 12863 on gordon-netbook-5.
+java.lang.NumberFormatException: For input string: "$ -sh: logout: not found"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)
+	at java.lang.Integer.parseInt(Integer.java:449)
+	at java.lang.Integer.parseInt(Integer.java:499)
+	at monitor.implementation.session.ChildProcessFinder.processOutputToList(ChildProcessFinder.java:26)
+	at monitor.implementation.session.ChildProcessFinder.getChildren(ChildProcessFinder.java:18)
+	at monitor.implementation.session.ProcessKiller.getChildrenTopDownOrder(ProcessKiller.java:67)
+	at monitor.implementation.session.ProcessKiller.getChildren(ProcessKiller.java:62)
+	at monitor.implementation.session.ProcessKiller.killSubProcesses(ProcessKiller.java:31)
+	at monitor.implementation.session.ProcessKiller.killSubProcesses(ProcessKiller.java:53)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:57)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+26-Apr-2011 22:51:00 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 454 on gordon-netbook-5 with PID 12863. Response: 22309
+22310
+$ -sh: logout: not found
+ 
+26-Apr-2011 22:51:00 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:420 PID 12816 on gordon-netbook-5
+26-Apr-2011 22:51:00 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 12816 on gordon-netbook-5. Called by SessionReaper logout->Session.Close
+26-Apr-2011 22:51:00 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 420 on gordon-netbook-5 with PID 12816. Response:  
+26-Apr-2011 22:51:00 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:434[14] finished - 'ps --ppid 12816 -o pid | grep ...' -> 
+26-Apr-2011 22:51:00 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:456[14] finished - 'ps --ppid 12816 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+26-Apr-2011 22:51:05 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:452 PID 12273 on gordon-netbook-2 Previous sessionId:428
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-2-PID:12273 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+26-Apr-2011 22:51:05 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:452 on gordon-netbook-2 with PID 12273.
+26-Apr-2011 22:51:05 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:454 PID 12863 on gordon-netbook-5 Previous sessionId:415
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-5-PID:12863 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+26-Apr-2011 22:51:05 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:454 on gordon-netbook-5 with PID 12863.
+26-Apr-2011 22:51:05 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:455 PID 12816 on gordon-netbook-5 Previous sessionId:420
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-5-PID:12816 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+26-Apr-2011 22:51:05 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:455 on gordon-netbook-5 with PID 12816.
+26-Apr-2011 22:52:23 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 7 closed sessions.
+26-Apr-2011 22:54:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 858 of thread SessionReaper was 212292 millis ago. Will be considered stuck after 490000
+26-Apr-2011 22:54:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 8868 of thread FinishedActionSessionCloser was 8801 millis ago. Will be considered stuck after 200000
+26-Apr-2011 22:54:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1300 of thread ClosedSessionTester was 1600 millis ago. Will be considered stuck after 305000
+26-Apr-2011 22:54:48 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 9 closed sessions.
+26-Apr-2011 22:56:10 monitor.implementation.session.SessionReaper run
+INFO: Checking for unused sessions.
+26-Apr-2011 22:56:10 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:447 PID 11854 on gordon-netbook-2
+26-Apr-2011 22:56:10 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 11854 on gordon-netbook-2. Called by SessionReaper logout->Session.Close
+26-Apr-2011 22:56:10 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 447 on gordon-netbook-2 with PID 11854. Response:  
+26-Apr-2011 22:56:10 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:449 PID 12563 on gordon-netbook-3
+26-Apr-2011 22:56:10 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 12563 on gordon-netbook-3. Called by SessionReaper logout->Session.Close
+26-Apr-2011 22:56:10 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 449 on gordon-netbook-3 with PID 12563. Response:  
+26-Apr-2011 22:56:10 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:442 PID 11140 on gordon-netbook
+26-Apr-2011 22:56:10 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 11140 on gordon-netbook. Called by SessionReaper logout->Session.Close
+26-Apr-2011 22:56:10 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 442 on gordon-netbook with PID 11140. Response:  
+26-Apr-2011 22:56:10 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:444 PID 12716 on gordon-netbook-4
+26-Apr-2011 22:56:10 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 12716 on gordon-netbook-4. Called by SessionReaper logout->Session.Close
+26-Apr-2011 22:56:10 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:453[10] finished - 'ps --ppid 11854 -o pid | grep ...' -> 
+26-Apr-2011 22:56:10 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:458[10] finished - 'ps --ppid 11854 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+26-Apr-2011 22:56:10 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:437[16] finished - 'ps --ppid 11140 -o pid | grep ...' -> 
+26-Apr-2011 22:56:10 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:460[16] finished - 'ps --ppid 11140 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+26-Apr-2011 22:56:10 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:440[12] finished - 'ps --ppid 12563 -o pid | grep ...' -> 
+26-Apr-2011 22:56:10 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:444[22] finished - 'ps --ppid 12716 -o pid | grep ...' ->  got stopFinishedCheckingSignal got stopSignal
+26-Apr-2011 22:56:10 monitor.implementation.session.ProcessKiller killSubProcesses
+SEVERE: Problem killing subprocesses of PID 12716 on gordon-netbook-4.
+java.lang.NumberFormatException: For input string: "$ -sh: logout: not found"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)
+	at java.lang.Integer.parseInt(Integer.java:449)
+	at java.lang.Integer.parseInt(Integer.java:499)
+	at monitor.implementation.session.ChildProcessFinder.processOutputToList(ChildProcessFinder.java:26)
+	at monitor.implementation.session.ChildProcessFinder.getChildren(ChildProcessFinder.java:18)
+	at monitor.implementation.session.ProcessKiller.getChildrenTopDownOrder(ProcessKiller.java:67)
+	at monitor.implementation.session.ProcessKiller.getChildren(ProcessKiller.java:62)
+	at monitor.implementation.session.ProcessKiller.killSubProcesses(ProcessKiller.java:31)
+	at monitor.implementation.session.ProcessKiller.killSubProcesses(ProcessKiller.java:53)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:57)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+26-Apr-2011 22:56:10 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:462[12] finished - 'ps --ppid 12563 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+26-Apr-2011 22:56:10 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 444 on gordon-netbook-4 with PID 12716. Response: 22321
+22322
+$ -sh: logout: not found
+ 
+26-Apr-2011 22:56:15 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:457 PID 11854 on gordon-netbook-2 Previous sessionId:447
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-2-PID:11854 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+26-Apr-2011 22:56:15 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:457 on gordon-netbook-2 with PID 11854.
+26-Apr-2011 22:56:15 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:459 PID 11140 on gordon-netbook Previous sessionId:442
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-PID:11140 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+26-Apr-2011 22:56:15 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:459 on gordon-netbook with PID 11140.
+26-Apr-2011 22:56:15 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:461 PID 12563 on gordon-netbook-3 Previous sessionId:449
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-3-PID:12563 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+26-Apr-2011 22:56:15 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:463 PID 12716 on gordon-netbook-4 Previous sessionId:444
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-4-PID:12716 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+26-Apr-2011 22:56:15 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:461 on gordon-netbook-3 with PID 12563.
+26-Apr-2011 22:56:15 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:463 on gordon-netbook-4 with PID 12716.
+26-Apr-2011 22:56:57 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+26-Apr-2011 22:59:13 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:01:20 monitor.implementation.session.SessionReaper run
+INFO: Checking for unused sessions.
+26-Apr-2011 23:01:29 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:03:45 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:04:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 872 of thread SessionReaper was 182550 millis ago. Will be considered stuck after 490000
+26-Apr-2011 23:04:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 9033 of thread FinishedActionSessionCloser was 18561 millis ago. Will be considered stuck after 200000
+26-Apr-2011 23:04:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1328 of thread ClosedSessionTester was 46538 millis ago. Will be considered stuck after 305000
+26-Apr-2011 23:06:01 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:08:17 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:10:33 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:12:49 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:14:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 882 of thread SessionReaper was 162559 millis ago. Will be considered stuck after 490000
+26-Apr-2011 23:14:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 9183 of thread FinishedActionSessionCloser was 2485 millis ago. Will be considered stuck after 200000
+26-Apr-2011 23:14:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1348 of thread ClosedSessionTester was 102488 millis ago. Will be considered stuck after 305000
+26-Apr-2011 23:15:05 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:17:21 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:19:37 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:21:53 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:24:09 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:24:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 892 of thread SessionReaper was 142569 millis ago. Will be considered stuck after 490000
+26-Apr-2011 23:24:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 9328 of thread FinishedActionSessionCloser was 14447 millis ago. Will be considered stuck after 200000
+26-Apr-2011 23:24:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1373 of thread ClosedSessionTester was 22421 millis ago. Will be considered stuck after 305000
+26-Apr-2011 23:26:25 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:28:39 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+26-Apr-2011 23:30:55 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:33:11 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 902 of thread SessionReaper was 122578 millis ago. Will be considered stuck after 490000
+26-Apr-2011 23:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 9473 of thread FinishedActionSessionCloser was 16586 millis ago. Will be considered stuck after 200000
+26-Apr-2011 23:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1393 of thread ClosedSessionTester was 80576 millis ago. Will be considered stuck after 305000
+26-Apr-2011 23:35:27 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:37:41 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+26-Apr-2011 23:39:57 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:42:13 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:44:29 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:44:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 912 of thread SessionReaper was 100758 millis ago. Will be considered stuck after 490000
+26-Apr-2011 23:44:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 9623 of thread FinishedActionSessionCloser was 2712 millis ago. Will be considered stuck after 200000
+26-Apr-2011 23:44:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1418 of thread ClosedSessionTester was 2714 millis ago. Will be considered stuck after 305000
+26-Apr-2011 23:46:45 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:48:01 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:451 PID 11619 on gordon-netbook-4
+26-Apr-2011 23:48:01 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 451 on gordon-netbook-4 with PID 11619. Response:  
+26-Apr-2011 23:48:01 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 11619 on gordon-netbook-4. Called by SessionReaper logout->Session.Close
+26-Apr-2011 23:48:02 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:464[0] finished - 'ps --ppid 11619 -o pid | grep ...' -> 
+26-Apr-2011 23:48:02 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:466[0] finished - 'ps --ppid 11619 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+26-Apr-2011 23:48:07 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:465 PID 11619 on gordon-netbook-4 Previous sessionId:451
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-4-PID:11619 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+26-Apr-2011 23:48:07 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:465 on gordon-netbook-4 with PID 11619.
+26-Apr-2011 23:48:59 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+26-Apr-2011 23:51:15 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:53:11 monitor.implementation.session.SessionReaper run
+INFO: Checking for unused sessions.
+26-Apr-2011 23:53:11 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:456 PID 14182 on gordon-netbook-5
+26-Apr-2011 23:53:11 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 14182 on gordon-netbook-5. Called by SessionReaper logout->Session.Close
+26-Apr-2011 23:53:11 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 456 on gordon-netbook-5 with PID 14182. Response:  
+26-Apr-2011 23:53:12 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:467[0] finished - 'ps --ppid 14182 -o pid | grep ...' -> 
+26-Apr-2011 23:53:12 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:469[0] finished - 'ps --ppid 14182 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+26-Apr-2011 23:53:17 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:468 PID 14182 on gordon-netbook-5 Previous sessionId:456
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-5-PID:14182 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+26-Apr-2011 23:53:17 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:468 on gordon-netbook-5 with PID 14182.
+26-Apr-2011 23:53:29 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+26-Apr-2011 23:54:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 922 of thread SessionReaper was 80756 millis ago. Will be considered stuck after 490000
+26-Apr-2011 23:54:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 9768 of thread FinishedActionSessionCloser was 16878 millis ago. Will be considered stuck after 200000
+26-Apr-2011 23:54:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1438 of thread ClosedSessionTester was 63068 millis ago. Will be considered stuck after 305000
+26-Apr-2011 23:55:43 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+26-Apr-2011 23:57:59 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 5 closed sessions.
+26-Apr-2011 23:58:21 monitor.implementation.session.SessionReaper run
+INFO: Checking for unused sessions.
+26-Apr-2011 23:58:21 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:462 PID 13538 on gordon-netbook-3
+26-Apr-2011 23:58:21 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 13538 on gordon-netbook-3. Called by SessionReaper logout->Session.Close
+26-Apr-2011 23:58:21 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 462 on gordon-netbook-3 with PID 13538. Response:  
+26-Apr-2011 23:58:21 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:458 PID 11979 on gordon-netbook-2
+26-Apr-2011 23:58:21 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 11979 on gordon-netbook-2. Called by SessionReaper logout->Session.Close
+26-Apr-2011 23:58:21 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:458[12] finished - 'ps --ppid 11979 -o pid | grep ...' ->  got stopFinishedCheckingSignal got stopSignal
+26-Apr-2011 23:58:21 monitor.implementation.session.ProcessKiller killSubProcesses
+SEVERE: Problem killing subprocesses of PID 11979 on gordon-netbook-2.
+java.lang.NumberFormatException: For input string: "$ -sh: logout: not found"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)
+	at java.lang.Integer.parseInt(Integer.java:449)
+	at java.lang.Integer.parseInt(Integer.java:499)
+	at monitor.implementation.session.ChildProcessFinder.processOutputToList(ChildProcessFinder.java:26)
+	at monitor.implementation.session.ChildProcessFinder.getChildren(ChildProcessFinder.java:18)
+	at monitor.implementation.session.ProcessKiller.getChildrenTopDownOrder(ProcessKiller.java:67)
+	at monitor.implementation.session.ProcessKiller.getChildren(ProcessKiller.java:62)
+	at monitor.implementation.session.ProcessKiller.killSubProcesses(ProcessKiller.java:31)
+	at monitor.implementation.session.ProcessKiller.killSubProcesses(ProcessKiller.java:53)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:57)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+26-Apr-2011 23:58:21 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 471 on gordon-netbook-2 with PID 11979. Response: 22354
+22355
+$ -sh: logout: not found
+ 
+26-Apr-2011 23:58:21 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:460 PID 11863 on gordon-netbook
+26-Apr-2011 23:58:21 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 11863 on gordon-netbook. Called by SessionReaper logout->Session.Close
+26-Apr-2011 23:58:21 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 460 on gordon-netbook with PID 11863. Response:  
+26-Apr-2011 23:58:22 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:470[0] finished - 'ps --ppid 13538 -o pid | grep ...' -> 
+26-Apr-2011 23:58:22 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:474[0] finished - 'ps --ppid 13538 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+26-Apr-2011 23:58:22 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:472[0] finished - 'ps --ppid 11863 -o pid | grep ...' -> 
+26-Apr-2011 23:58:22 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:476[0] finished - 'ps --ppid 11863 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+26-Apr-2011 23:58:26 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:471 PID 11979 on gordon-netbook-2 Previous sessionId:458
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-2-PID:11979 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+26-Apr-2011 23:58:26 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:471 on gordon-netbook-2 with PID 11979.
+26-Apr-2011 23:58:27 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:473 PID 13538 on gordon-netbook-3 Previous sessionId:462
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-3-PID:13538 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+26-Apr-2011 23:58:27 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:473 on gordon-netbook-3 with PID 13538.
+26-Apr-2011 23:58:27 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:475 PID 11863 on gordon-netbook Previous sessionId:460
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-PID:11863 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+26-Apr-2011 23:58:27 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:475 on gordon-netbook with PID 11863.
+27-Apr-2011 00:00:08 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 00:02:22 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:03:31 monitor.implementation.session.SessionReaper run
+INFO: Checking for unused sessions.
+27-Apr-2011 00:04:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 931 of thread SessionReaper was 60693 millis ago. Will be considered stuck after 490000
+27-Apr-2011 00:04:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 9899 of thread FinishedActionSessionCloser was 9259 millis ago. Will be considered stuck after 200000
+27-Apr-2011 00:04:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1458 of thread ClosedSessionTester was 627 millis ago. Will be considered stuck after 305000
+27-Apr-2011 00:04:36 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:06:49 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:09:03 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:11:17 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:13:31 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:14:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 939 of thread SessionReaper was 40702 millis ago. Will be considered stuck after 490000
+27-Apr-2011 00:14:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 10015 of thread FinishedActionSessionCloser was 14792 millis ago. Will be considered stuck after 200000
+27-Apr-2011 00:14:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1476 of thread ClosedSessionTester was 60982 millis ago. Will be considered stuck after 305000
+27-Apr-2011 00:15:45 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:17:59 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:20:12 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:22:26 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:24:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 947 of thread SessionReaper was 20712 millis ago. Will be considered stuck after 490000
+27-Apr-2011 00:24:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 10131 of thread FinishedActionSessionCloser was 19552 millis ago. Will be considered stuck after 200000
+27-Apr-2011 00:24:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1492 of thread ClosedSessionTester was 125745 millis ago. Will be considered stuck after 305000
+27-Apr-2011 00:24:40 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:26:54 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:29:08 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:31:21 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:33:35 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 955 of thread SessionReaper was 722 millis ago. Will be considered stuck after 490000
+27-Apr-2011 00:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 10247 of thread FinishedActionSessionCloser was 16696 millis ago. Will be considered stuck after 200000
+27-Apr-2011 00:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1512 of thread ClosedSessionTester was 56698 millis ago. Will be considered stuck after 305000
+27-Apr-2011 00:35:49 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:38:03 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:40:17 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:42:30 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:44:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 959 of thread SessionReaper was 290732 millis ago. Will be considered stuck after 490000
+27-Apr-2011 00:44:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 10367 of thread FinishedActionSessionCloser was 1458 millis ago. Will be considered stuck after 200000
+27-Apr-2011 00:44:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1528 of thread ClosedSessionTester was 121461 millis ago. Will be considered stuck after 305000
+27-Apr-2011 00:44:44 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:46:58 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:49:12 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:50:01 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:466 PID 22330 on gordon-netbook-4
+27-Apr-2011 00:50:01 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 22330 on gordon-netbook-4. Called by SessionReaper logout->Session.Close
+27-Apr-2011 00:50:01 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 466 on gordon-netbook-4 with PID 22330. Response:  
+27-Apr-2011 00:50:02 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:477[0] finished - 'ps --ppid 22330 -o pid | grep ...' -> 
+27-Apr-2011 00:50:02 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:479[0] finished - 'ps --ppid 22330 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+27-Apr-2011 00:50:07 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:478 PID 22330 on gordon-netbook-4 Previous sessionId:466
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-4-PID:22330 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+27-Apr-2011 00:50:07 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:478 on gordon-netbook-4 with PID 22330.
+27-Apr-2011 00:51:21 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 00:53:35 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 00:54:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 967 of thread SessionReaper was 270735 millis ago. Will be considered stuck after 490000
+27-Apr-2011 00:54:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 10483 of thread FinishedActionSessionCloser was 10625 millis ago. Will be considered stuck after 200000
+27-Apr-2011 00:54:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1548 of thread ClosedSessionTester was 56818 millis ago. Will be considered stuck after 305000
+27-Apr-2011 00:55:11 monitor.implementation.session.SessionReaper run
+INFO: Checking for unused sessions.
+27-Apr-2011 00:55:11 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:469 PID 22340 on gordon-netbook-5
+27-Apr-2011 00:55:11 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 22340 on gordon-netbook-5. Called by SessionReaper logout->Session.Close
+27-Apr-2011 00:55:11 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 469 on gordon-netbook-5 with PID 22340. Response:  
+27-Apr-2011 00:55:12 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:480[0] finished - 'ps --ppid 22340 -o pid | grep ...' -> 
+27-Apr-2011 00:55:12 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:482[0] finished - 'ps --ppid 22340 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+27-Apr-2011 00:55:17 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:481 PID 22340 on gordon-netbook-5 Previous sessionId:469
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-5-PID:22340 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+27-Apr-2011 00:55:17 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:481 on gordon-netbook-5 with PID 22340.
+27-Apr-2011 00:55:47 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 00:58:01 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 01:00:14 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 4 closed sessions.
+27-Apr-2011 01:00:21 monitor.implementation.session.SessionReaper run
+INFO: Checking for unused sessions.
+27-Apr-2011 01:00:21 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:474 PID 22351 on gordon-netbook-3
+27-Apr-2011 01:00:21 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 22351 on gordon-netbook-3. Called by SessionReaper logout->Session.Close
+27-Apr-2011 01:00:21 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 474 on gordon-netbook-3 with PID 22351. Response:  
+27-Apr-2011 01:00:21 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:476 PID 22359 on gordon-netbook
+27-Apr-2011 01:00:21 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 22359 on gordon-netbook. Called by SessionReaper logout->Session.Close
+27-Apr-2011 01:00:21 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:476[2] finished - 'ps --ppid 22359 -o pid | grep ...' ->  got stopFinishedCheckingSignal got stopSignal
+27-Apr-2011 01:00:21 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 476 on gordon-netbook with PID 22359. Response:  
+27-Apr-2011 01:00:21 monitor.implementation.session.ProcessKiller killSubProcesses
+SEVERE: Problem killing subprocesses of PID 22359 on gordon-netbook.
+java.lang.NumberFormatException: For input string: "$ -sh: logout: not found"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)
+	at java.lang.Integer.parseInt(Integer.java:449)
+	at java.lang.Integer.parseInt(Integer.java:499)
+	at monitor.implementation.session.ChildProcessFinder.processOutputToList(ChildProcessFinder.java:26)
+	at monitor.implementation.session.ChildProcessFinder.getChildren(ChildProcessFinder.java:18)
+	at monitor.implementation.session.ProcessKiller.getChildrenTopDownOrder(ProcessKiller.java:67)
+	at monitor.implementation.session.ProcessKiller.getChildren(ProcessKiller.java:62)
+	at monitor.implementation.session.ProcessKiller.killSubProcesses(ProcessKiller.java:31)
+	at monitor.implementation.session.ProcessKiller.killSubProcesses(ProcessKiller.java:53)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:57)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+27-Apr-2011 01:00:22 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:483[0] finished - 'ps --ppid 22351 -o pid | grep ...' -> 
+27-Apr-2011 01:00:22 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:486[0] finished - 'ps --ppid 22351 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+27-Apr-2011 01:00:26 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:484 PID 22359 on gordon-netbook Previous sessionId:476
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-PID:22359 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+27-Apr-2011 01:00:26 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:484 on gordon-netbook with PID 22359.
+27-Apr-2011 01:00:27 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:485 PID 22351 on gordon-netbook-3 Previous sessionId:474
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-3-PID:22351 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+27-Apr-2011 01:00:27 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:485 on gordon-netbook-3 with PID 22351.
+27-Apr-2011 01:02:24 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 01:04:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 975 of thread SessionReaper was 250664 millis ago. Will be considered stuck after 490000
+27-Apr-2011 01:04:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 10587 of thread FinishedActionSessionCloser was 17590 millis ago. Will be considered stuck after 200000
+27-Apr-2011 01:04:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1564 of thread ClosedSessionTester was 985 millis ago. Will be considered stuck after 305000
+27-Apr-2011 01:04:33 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 01:05:31 monitor.implementation.session.SessionReaper run
+INFO: Checking for unused sessions.
+27-Apr-2011 01:06:45 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:08:56 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:11:08 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:13:17 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 01:14:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 981 of thread SessionReaper was 230671 millis ago. Will be considered stuck after 490000
+27-Apr-2011 01:14:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 10677 of thread FinishedActionSessionCloser was 14558 millis ago. Will be considered stuck after 200000
+27-Apr-2011 01:14:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1578 of thread ClosedSessionTester was 74559 millis ago. Will be considered stuck after 305000
+27-Apr-2011 01:15:29 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:17:38 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 01:19:50 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:22:02 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:24:13 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:24:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 987 of thread SessionReaper was 210680 millis ago. Will be considered stuck after 490000
+27-Apr-2011 01:24:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 10767 of thread FinishedActionSessionCloser was 10332 millis ago. Will be considered stuck after 200000
+27-Apr-2011 01:24:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1593 of thread ClosedSessionTester was 18727 millis ago. Will be considered stuck after 305000
+27-Apr-2011 01:26:25 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:28:36 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:30:48 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:33:00 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 993 of thread SessionReaper was 190689 millis ago. Will be considered stuck after 490000
+27-Apr-2011 01:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 10857 of thread FinishedActionSessionCloser was 3903 millis ago. Will be considered stuck after 200000
+27-Apr-2011 01:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1605 of thread ClosedSessionTester was 92299 millis ago. Will be considered stuck after 305000
+27-Apr-2011 01:35:11 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:37:23 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:39:32 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 01:41:44 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:43:56 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:44:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 999 of thread SessionReaper was 168070 millis ago. Will be considered stuck after 490000
+27-Apr-2011 01:44:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 10944 of thread FinishedActionSessionCloser was 16461 millis ago. Will be considered stuck after 200000
+27-Apr-2011 01:44:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1620 of thread ClosedSessionTester was 36461 millis ago. Will be considered stuck after 305000
+27-Apr-2011 01:46:07 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:48:17 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 01:50:28 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 01:52:04 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:479 PID 22382 on gordon-netbook-4
+27-Apr-2011 01:52:04 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 22382 on gordon-netbook-4. Called by SessionReaper logout->Session.Close
+27-Apr-2011 01:52:04 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 479 on gordon-netbook-4 with PID 22382. Response:  
+27-Apr-2011 01:52:05 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:487[0] finished - 'ps --ppid 22382 -o pid | grep ...' -> 
+27-Apr-2011 01:52:05 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:489[0] finished - 'ps --ppid 22382 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+27-Apr-2011 01:52:10 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:488 PID 22382 on gordon-netbook-4 Previous sessionId:479
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-4-PID:22382 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+27-Apr-2011 01:52:10 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:488 on gordon-netbook-4 with PID 22382.
+27-Apr-2011 01:52:38 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 01:54:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1005 of thread SessionReaper was 148073 millis ago. Will be considered stuck after 490000
+27-Apr-2011 01:54:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 11034 of thread FinishedActionSessionCloser was 14440 millis ago. Will be considered stuck after 200000
+27-Apr-2011 01:54:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1632 of thread ClosedSessionTester was 114441 millis ago. Will be considered stuck after 305000
+27-Apr-2011 01:54:47 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 01:56:56 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 01:57:14 monitor.implementation.session.SessionReaper run
+INFO: Checking for unused sessions.
+27-Apr-2011 01:57:14 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:482 PID 22392 on gordon-netbook-5
+27-Apr-2011 01:57:14 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 22392 on gordon-netbook-5. Called by SessionReaper logout->Session.Close
+27-Apr-2011 01:57:14 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 482 on gordon-netbook-5 with PID 22392. Response:  
+27-Apr-2011 01:57:14 monitor.implementation.session.SSHConnection tryToLogonWithPassword
+INFO: logged on to server gordon-netbook-5 as user auto using password authentication.
+27-Apr-2011 01:57:16 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:490[0] finished - 'ps --ppid 22392 -o pid | grep ...' -> 
+27-Apr-2011 01:57:16 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:492[0] finished - 'ps --ppid 22392 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+27-Apr-2011 01:57:21 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:491 PID 22392 on gordon-netbook-5 Previous sessionId:482
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-5-PID:22392 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+27-Apr-2011 01:57:21 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:491 on gordon-netbook-5 with PID 22392.
+27-Apr-2011 01:59:06 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 02:01:15 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 02:02:24 monitor.implementation.session.SessionReaper run
+INFO: Checking for unused sessions.
+27-Apr-2011 02:02:24 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:486 PID 22408 on gordon-netbook-3
+27-Apr-2011 02:02:24 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 22408 on gordon-netbook-3. Called by SessionReaper logout->Session.Close
+27-Apr-2011 02:02:24 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 486 on gordon-netbook-3 with PID 22408. Response:  
+27-Apr-2011 02:02:25 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:493[0] finished - 'ps --ppid 22408 -o pid | grep ...' -> 
+27-Apr-2011 02:02:25 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:495[0] finished - 'ps --ppid 22408 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+27-Apr-2011 02:02:30 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:494 PID 22408 on gordon-netbook-3 Previous sessionId:486
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-3-PID:22408 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+27-Apr-2011 02:02:30 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:494 on gordon-netbook-3 with PID 22408.
+27-Apr-2011 02:03:25 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 02:04:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1011 of thread SessionReaper was 128065 millis ago. Will be considered stuck after 490000
+27-Apr-2011 02:04:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 11124 of thread FinishedActionSessionCloser was 14441 millis ago. Will be considered stuck after 200000
+27-Apr-2011 02:04:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1647 of thread ClosedSessionTester was 67422 millis ago. Will be considered stuck after 305000
+27-Apr-2011 02:05:34 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 02:07:34 monitor.implementation.session.SessionReaper run
+INFO: Checking for unused sessions.
+27-Apr-2011 02:07:46 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:09:57 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:12:09 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:14:20 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:14:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1017 of thread SessionReaper was 108072 millis ago. Will be considered stuck after 490000
+27-Apr-2011 02:14:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 11214 of thread FinishedActionSessionCloser was 11588 millis ago. Will be considered stuck after 200000
+27-Apr-2011 02:14:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1662 of thread ClosedSessionTester was 11589 millis ago. Will be considered stuck after 305000
+27-Apr-2011 02:16:30 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 02:18:41 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:20:53 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:23:05 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:24:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1023 of thread SessionReaper was 87361 millis ago. Will be considered stuck after 490000
+27-Apr-2011 02:24:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 11304 of thread FinishedActionSessionCloser was 7361 millis ago. Will be considered stuck after 200000
+27-Apr-2011 02:24:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1674 of thread ClosedSessionTester was 87363 millis ago. Will be considered stuck after 305000
+27-Apr-2011 02:25:16 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:27:28 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:29:40 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:31:51 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:34:03 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1029 of thread SessionReaper was 67370 millis ago. Will be considered stuck after 490000
+27-Apr-2011 02:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 11394 of thread FinishedActionSessionCloser was 933 millis ago. Will be considered stuck after 200000
+27-Apr-2011 02:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1689 of thread ClosedSessionTester was 29327 millis ago. Will be considered stuck after 305000
+27-Apr-2011 02:36:14 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:38:24 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 02:40:35 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:42:47 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:44:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1035 of thread SessionReaper was 47379 millis ago. Will be considered stuck after 490000
+27-Apr-2011 02:44:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 11481 of thread FinishedActionSessionCloser was 16709 millis ago. Will be considered stuck after 200000
+27-Apr-2011 02:44:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1701 of thread ClosedSessionTester was 105103 millis ago. Will be considered stuck after 305000
+27-Apr-2011 02:44:59 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:47:10 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:49:20 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 02:51:31 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:53:41 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 02:54:05 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:489 PID 22427 on gordon-netbook-4
+27-Apr-2011 02:54:05 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 22427 on gordon-netbook-4. Called by SessionReaper logout->Session.Close
+27-Apr-2011 02:54:05 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 489 on gordon-netbook-4 with PID 22427. Response:  
+27-Apr-2011 02:54:06 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:496[0] finished - 'ps --ppid 22427 -o pid | grep ...' -> 
+27-Apr-2011 02:54:06 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:498[0] finished - 'ps --ppid 22427 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+27-Apr-2011 02:54:11 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:497 PID 22427 on gordon-netbook-4 Previous sessionId:489
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-4-PID:22427 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+27-Apr-2011 02:54:11 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:497 on gordon-netbook-4 with PID 22427.
+27-Apr-2011 02:54:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1041 of thread SessionReaper was 27383 millis ago. Will be considered stuck after 490000
+27-Apr-2011 02:54:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 11571 of thread FinishedActionSessionCloser was 11468 millis ago. Will be considered stuck after 200000
+27-Apr-2011 02:54:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1716 of thread ClosedSessionTester was 51470 millis ago. Will be considered stuck after 305000
+27-Apr-2011 02:55:50 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 02:58:02 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 02:59:15 monitor.implementation.session.SessionReaper run
+INFO: Checking for unused sessions.
+27-Apr-2011 02:59:15 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:492 PID 22511 on gordon-netbook-5
+27-Apr-2011 02:59:15 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 22511 on gordon-netbook-5. Called by SessionReaper logout->Session.Close
+27-Apr-2011 02:59:15 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 492 on gordon-netbook-5 with PID 22511. Response:  
+27-Apr-2011 02:59:16 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:499[0] finished - 'ps --ppid 22511 -o pid | grep ...' -> 
+27-Apr-2011 02:59:16 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:501[0] finished - 'ps --ppid 22511 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+27-Apr-2011 02:59:21 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:500 PID 22511 on gordon-netbook-5 Previous sessionId:492
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-5-PID:22511 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+27-Apr-2011 02:59:21 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:500 on gordon-netbook-5 with PID 22511.
+27-Apr-2011 03:00:11 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 03:02:23 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 03:04:25 monitor.implementation.session.SessionReaper run
+INFO: Checking for unused sessions.
+27-Apr-2011 03:04:25 monitor.implementation.session.SessionReaper run
+INFO: 
+
+Logout sessionId:495 PID 22521 on gordon-netbook-3
+27-Apr-2011 03:04:25 monitor.implementation.session.ProcessKiller killSubProcesses
+INFO: Starting control session to kill subprocesses of PID 22521 on gordon-netbook-3. Called by SessionReaper logout->Session.Close
+27-Apr-2011 03:04:25 monitor.implementation.session.Session logout
+INFO: logout ssh sessionId 495 on gordon-netbook-3 with PID 22521. Response:  
+27-Apr-2011 03:04:26 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:502[0] finished - 'ps --ppid 22521 -o pid | grep ...' -> 
+27-Apr-2011 03:04:26 monitor.implementation.shell.InputFromSSHReader run
+INFO: sessionId:504[0] finished - 'ps --ppid 22521 -o pid | grep ...' ->  got stopFinishedCheckingSignal 
+27-Apr-2011 03:04:31 monitor.implementation.session.SessionClosingRunnable close
+SEVERE: sessionId:503 PID 22521 on gordon-netbook-3 Previous sessionId:495
+monitor.implementation.MonitorRuntimeException: Thread gordon-netbook-3-PID:22521 did not stop reading input when asked.
+	at monitor.implementation.shell.SSHExecuter.resetChunkedOutput(SSHExecuter.java:213)
+	at monitor.implementation.session.SessionClosingRunnable.prepareSessionForReuse(SessionClosingRunnable.java:74)
+	at monitor.implementation.session.SessionClosingRunnable.close(SessionClosingRunnable.java:60)
+	at monitor.implementation.session.SessionClosingRunnable.run(SessionClosingRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+27-Apr-2011 03:04:31 monitor.implementation.session.Session logout
+INFO: java.io.IOException: SSH channel is closed. (Closed due to user request). Occured when logging out sessionId:503 on gordon-netbook-3 with PID 22521.
+27-Apr-2011 03:04:32 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 03:04:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1047 of thread SessionReaper was 7364 millis ago. Will be considered stuck after 490000
+27-Apr-2011 03:04:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 11661 of thread FinishedActionSessionCloser was 9446 millis ago. Will be considered stuck after 200000
+27-Apr-2011 03:04:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1731 of thread ClosedSessionTester was 41 millis ago. Will be considered stuck after 305000
+27-Apr-2011 03:06:44 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 03:08:55 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 03:09:35 monitor.implementation.session.SessionReaper run
+INFO: Checking for unused sessions.
+27-Apr-2011 03:11:05 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 03:13:16 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 03:14:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1050 of thread SessionReaper was 297373 millis ago. Will be considered stuck after 490000
+27-Apr-2011 03:14:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 11751 of thread FinishedActionSessionCloser was 7422 millis ago. Will be considered stuck after 200000
+27-Apr-2011 03:14:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1743 of thread ClosedSessionTester was 75816 millis ago. Will be considered stuck after 305000
+27-Apr-2011 03:15:28 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 03:17:39 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 03:19:51 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 03:22:03 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 03:24:14 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 03:24:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1056 of thread SessionReaper was 277383 millis ago. Will be considered stuck after 490000
+27-Apr-2011 03:24:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 11838 of thread FinishedActionSessionCloser was 17780 millis ago. Will be considered stuck after 200000
+27-Apr-2011 03:24:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1758 of thread ClosedSessionTester was 17781 millis ago. Will be considered stuck after 305000
+27-Apr-2011 03:26:26 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 03:28:38 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 03:30:47 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 2 closed sessions.
+27-Apr-2011 03:32:59 monitor.implementation.session.ClosedSessionTester run
+INFO: Tested 3 closed sessions.
+27-Apr-2011 03:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1062 of thread SessionReaper was 257392 millis ago. Will be considered stuck after 490000
+27-Apr-2011 03:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 11928 of thread FinishedActionSessionCloser was 13555 millis ago. Will be considered stuck after 200000
+27-Apr-2011 03:34:32 monitor.implementation.session.SessionManager logAllThreadsInfo
+SEVERE: Run 1770 of thread ClosedSessionTester was 93558 millis ago. Will be considered stuck after 305000
+
