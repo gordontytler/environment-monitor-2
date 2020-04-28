@@ -1,5 +1,0 @@
-# default properties for a new environment
-
-discover-apps = scripts/discoverApps001.py
-discover-apps-all = scripts/discoverAppsOnAllServers001.py
-apps-heartbeat = scripts/appsHeartbeatOnAllServers001.py

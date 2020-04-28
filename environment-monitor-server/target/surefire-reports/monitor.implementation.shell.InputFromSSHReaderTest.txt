@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: monitor.implementation.shell.InputFromSSHReaderTest
--------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.573 sec
