@@ -27,8 +27,7 @@ public class MockEnvironmentViewDAO extends EnvironmentViewDAO {
 		Application thisApplication = new Application("Environment monitor", "applications/environment-monitor-001.txt");
 
 		EnvironmentView view = new EnvironmentView(environmentName);
-		DataDirectory.setTest(true);
-		view.setFileName(new EnvironmentViewDAO().getDir() + FileDAOHelper.toFileName(environmentName) + ".txt");
+		view.setFileName(EnvironmentViewDAO.ENVIRONMENTS + FileDAOHelper.toFileName(environmentName) + ".txt");
 		HashMap<String, String> properties = new HashMap<String, String>();
 		properties.put("discover-apps", TEST_DISCOVER_APPS_SCRIPT);
 		view.setProperties(properties);

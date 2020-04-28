@@ -26,7 +26,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42888511-bec5-456a-90e8-58d2f67ecf03" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/environment-monitor-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/environment-monitor-server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/ApplicationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/ApplicationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/ApplicationFileNamesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/ApplicationFileNamesDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/DataDirectory.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/DataDirectory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/EnvironmentNamesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/EnvironmentNamesDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/EnvironmentViewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/EnvironmentViewDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/action/ActionOutputRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/action/ActionOutputRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/InputFromSSHReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/InputFromSSHReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/model/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/model/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/dao/ActionDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/dao/ActionDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/dao/ApplicationDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/dao/ApplicationDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/dao/EnvironmentViewDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/dao/EnvironmentViewDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/dao/MockEnvironmentViewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/dao/MockEnvironmentViewDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/application/ApplicationViewBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/application/ApplicationViewBuilderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/shell/LogFileReplayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/shell/LogFileReplayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/shell/LogFileWriterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/shell/LogFileWriterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/shell/SSH2test.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/shell/SSH2test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/model/ConfigurationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/model/ConfigurationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,17 +78,68 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/environment-monitor-client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/environment-monitor-server/src/test/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.21358268" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
-  <component name="RunManager" selected="JUnit.All in environment-monitor-client">
-    <configuration name="All in environment-monitor-client" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="environment-monitor-client" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/environment-monitor-server/src/test/resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.All in environment-monitor-server">
+    <configuration name="All in environment-monitor-server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="environment-monitor-server" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigurationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="environment-monitor-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="monitor.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="monitor.model" />
+      <option name="MAIN_CLASS_NAME" value="monitor.model.ConfigurationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigurationTest.testGetInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="environment-monitor-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="monitor.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="monitor.model" />
+      <option name="MAIN_CLASS_NAME" value="monitor.model.ConfigurationTest" />
+      <option name="METHOD_NAME" value="testGetInstance" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerSessionPoolTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="environment-monitor-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="monitor.implementation.session.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="monitor.implementation.session" />
+      <option name="MAIN_CLASS_NAME" value="monitor.implementation.session.ServerSessionPoolTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -86,8 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in environment-monitor-client" />
+        <item itemvalue="JUnit.All in environment-monitor-server" />
+        <item itemvalue="JUnit.ServerSessionPoolTest" />
+        <item itemvalue="JUnit.ConfigurationTest" />
         <item itemvalue="JUnit.monitor in environment-monitor-server" />
+        <item itemvalue="JUnit.ConfigurationTest.testGetInstance" />
       </list>
     </recent_temporary>
   </component>
@@ -141,6 +218,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -166,22 +244,22 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="733" y="296" width="936" height="484" key="FileChooserDialogImpl/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588069486695" />
-    <state width="1874" height="290" key="GridCell.Tab.0.bottom" timestamp="1588070360109">
+    <state width="1874" height="531" key="GridCell.Tab.0.bottom" timestamp="1588096588036">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="290" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588070360109" />
-    <state width="1874" height="290" key="GridCell.Tab.0.center" timestamp="1588070360108">
+    <state width="1874" height="531" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588096588036" />
+    <state width="1874" height="531" key="GridCell.Tab.0.center" timestamp="1588096588036">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="290" key="GridCell.Tab.0.center/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588070360108" />
-    <state width="1874" height="290" key="GridCell.Tab.0.left" timestamp="1588070360108">
+    <state width="1874" height="531" key="GridCell.Tab.0.center/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588096588036" />
+    <state width="1874" height="531" key="GridCell.Tab.0.left" timestamp="1588096588035">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="290" key="GridCell.Tab.0.left/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588070360108" />
-    <state width="1874" height="290" key="GridCell.Tab.0.right" timestamp="1588070360109">
+    <state width="1874" height="531" key="GridCell.Tab.0.left/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588096588035" />
+    <state width="1874" height="531" key="GridCell.Tab.0.right" timestamp="1588096588036">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="290" key="GridCell.Tab.0.right/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588070360109" />
+    <state width="1874" height="531" key="GridCell.Tab.0.right/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588096588036" />
     <state x="727" y="285" width="986" height="507" key="NewModule_or_Project.wizard" timestamp="1588069533091">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -202,13 +280,21 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="627" y="432" width="646" height="213" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588067843689" />
-    <state x="650" y="280" width="1033" height="518" key="find.popup" timestamp="1588070882953">
+    <state x="574" y="210" width="762" height="658" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1588073260673">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="650" y="280" width="1033" height="518" key="find.popup/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588070882953" />
+    <state x="574" y="210" width="762" height="658" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588073260673" />
+    <state x="650" y="120" width="1033" height="924" key="find.popup" timestamp="1588073280242">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="650" y="120" width="1033" height="924" key="find.popup/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588073280242" />
     <state x="264" y="242" width="1372" height="592" key="new project wizard" timestamp="1588067655933">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="264" y="242" width="1372" height="592" key="new project wizard/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588067655933" />
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1588093736912">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588093736912" />
   </component>
 </project>

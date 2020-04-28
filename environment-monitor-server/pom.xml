@@ -16,8 +16,19 @@
 		 <configuration>
         <runOrder>alphabetical</runOrder>
       </configuration>
-    </plugin>    
-   </plugins>
+    </plugin>
+        <!--
+           This was incorrectly added by Idea as the "fix" for Properties.java having @since 1.6 annotation.
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>6</source>
+                <target>6</target>
+            </configuration>
+        </plugin>
+        -->
+    </plugins>
   </build>  
    
 

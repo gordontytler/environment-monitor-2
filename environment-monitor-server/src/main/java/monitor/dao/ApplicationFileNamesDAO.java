@@ -12,8 +12,7 @@ import monitor.model.Configuration;
 public class ApplicationFileNamesDAO {
 
 	private static ApplicationFileNamesDAO theInstance = new ApplicationFileNamesDAO();
-	private final String fullPathToInstallDirectory = Configuration.getInstance().getFullPathToInstallDirectory();	
-	private AllSessionPools allSessionPools = AllSessionPools.getInstance();	
+	private AllSessionPools allSessionPools = AllSessionPools.getInstance();
 
 	ArrayList<String> names = new ArrayList<String>();
 	
@@ -27,7 +26,7 @@ public class ApplicationFileNamesDAO {
 	public synchronized List<String> getApplicationFileNames() {
 		if (names.size() == 0) {
 			Session session = allSessionPools.getLocalSession("->ApplicationFileNamesDAO.getApplicationFileNames");
-			Command command = new Command("ls -1 " + fullPathToInstallDirectory + "/" + DataDirectory.getDataDirectory() + "/applications/");
+			Command command = new Command("ls -1 " + Configuration.getInstance().getDataDirectory() + "applications/");
 			CommandResult commandResult = session.executeCommand(command);
 			session.close("getApplicationFileNames");
 			String[] lines = commandResult.getOutput().split("\n");

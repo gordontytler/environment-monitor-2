@@ -1,5 +1,10 @@
 package monitor.dao;
 
+import monitor.implementation.MonitorRuntimeException;
+import monitor.model.Action;
+import monitor.model.Application;
+import monitor.model.Configuration;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,10 +12,6 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
-
-import monitor.implementation.MonitorRuntimeException;
-import monitor.model.Action;
-import monitor.model.Application;
 
 /*
  * Loads an existing application using the file name name stored with the EnvironmentView. 
@@ -26,7 +27,8 @@ public class ApplicationDAO {
 		Application application = null;
 		List<Action> actions = new ArrayList<Action>();		
 
-		File file = new File(DataDirectory.getDataDirectory() + File.separatorChar + fileName);
+		File file = new File(Configuration.getInstance().getDataDirectory() + fileName);
+
 		BufferedReader reader = null;
 		try {
 			reader = new BufferedReader(new FileReader(file));
