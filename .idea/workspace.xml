@@ -25,26 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42888511-bec5-456a-90e8-58d2f67ecf03" name="Default Changelist" comment="remove target from VCS">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_ethz_ganymed_ganymed_ssh2_262.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environment-monitor-client/environment-monitor-client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/environment-monitor-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/environment-monitor-master.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="42888511-bec5-456a-90e8-58d2f67ecf03" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allFiles.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-client.zip" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-client/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-client/src/monitor/gui/ServerNameParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/src/monitor/gui/ServerNameParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-client/test/monitor/gui/ServerNameParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/test/monitor/gui/ServerNameParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/environment-monitor-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/environment-monitor-server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/PseudoTerminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/PseudoTerminal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/BashExecuter.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/BashExecuter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/resources/scripts/weird-errors.txt" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/resources/scripts/weird-errors.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588067135599</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix Idea config">
+      <created>1588070975515</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588070975515</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,7 +146,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="remove target from VCS" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove target from VCS" />
+    <MESSAGE value="fix Idea config" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix Idea config" />
   </component>
   <component name="WindowStateProjectService">
     <state x="443" y="116" width="1397" height="845" key="#Project_Structure" timestamp="1588069716612">
@@ -168,10 +158,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="874" y="296" width="524" height="484" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588069713282" />
-    <state x="450" y="107" width="1009" height="864" key="CommitChangelistDialog2" timestamp="1588070526335">
+    <state x="450" y="107" width="1009" height="864" key="CommitChangelistDialog2" timestamp="1588070975189">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="450" y="107" width="1009" height="864" key="CommitChangelistDialog2/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588070526335" />
+    <state x="450" y="107" width="1009" height="864" key="CommitChangelistDialog2/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588070975189" />
     <state x="733" y="296" width="936" height="484" key="FileChooserDialogImpl" timestamp="1588069486695">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -204,18 +194,18 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="449" y="174" key="SettingsEditor/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588062724248" />
-    <state x="555" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1588067182732">
+    <state x="555" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1588071016217">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="555" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588067182732" />
+    <state x="555" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588071016217" />
     <state x="627" y="432" width="646" height="213" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1588067843689">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="627" y="432" width="646" height="213" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588067843689" />
-    <state x="650" y="280" width="1033" height="518" key="find.popup" timestamp="1588070353735">
+    <state x="650" y="280" width="1033" height="518" key="find.popup" timestamp="1588070882953">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="650" y="280" width="1033" height="518" key="find.popup/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588070353735" />
+    <state x="650" y="280" width="1033" height="518" key="find.popup/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588070882953" />
     <state x="264" y="242" width="1372" height="592" key="new project wizard" timestamp="1588067655933">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
