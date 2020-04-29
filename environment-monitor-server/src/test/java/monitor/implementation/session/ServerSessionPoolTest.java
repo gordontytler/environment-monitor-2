@@ -35,6 +35,8 @@ public class ServerSessionPoolTest {
 
 	@Test
 	public void testGetSession() throws Exception {
+		System.out.println("\n\n----------------------------------------------------------");
+		System.out.println("Start of ServerSessionPoolTest.testGetSession");
 		allSessionPools.logoutAllSessionsOnAllServers("testGetSession");
 		
 		ServerSessionPool ssp = allSessionPools.getServerSessionPool(server);
@@ -62,6 +64,8 @@ public class ServerSessionPoolTest {
 		allSessionPools.dumpAllSessionsOnAllServers("after closing one");
 		assertTrue("session was not closed after " + timeOut + "ms.", wasClosed);
 		ssp.getSession("testGetSession");
+		System.out.println("End of ServerSessionPoolTest.testGetSession");
+		System.out.println("--------------------------------------------------------\n\n");
 	}
 
 	

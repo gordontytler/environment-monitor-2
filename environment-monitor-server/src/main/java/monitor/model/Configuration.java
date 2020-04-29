@@ -30,7 +30,6 @@ public class Configuration {
     public static final String DATA_DIRECTORY = "DataDirectory";
     private static final Configuration theInstance = new Configuration();
     private static final Encrypter encrypter = new Encrypter();
-    private static String CONFIG_PROPERTIES_FILE;
     private static SortedProperties properties;
     private String localHostName;
 
@@ -48,8 +47,7 @@ public class Configuration {
         String dataDirectorySystemProperty = System.getProperty(DATA_DIRECTORY);
         try {
             if (dataDirectorySystemProperty != null) {
-                CONFIG_PROPERTIES_FILE = dataDirectorySystemProperty + "config.properties";
-                File file = new File(CONFIG_PROPERTIES_FILE);
+                File file = new File(dataDirectorySystemProperty + "config.properties");
                 FileReader reader = new FileReader(file);
                 properties.load(reader);
                 logger.log(Level.INFO, "loaded properties from " + file.getAbsolutePath());
@@ -147,6 +145,9 @@ public class Configuration {
     /**
      * Normally called with a real host name and you get back the default user if there is no specific user for the host.
      * Can also be called with the special values "default" or "auto".
+     *
+     * @return the User specified for the host in the user.host     e.g.  user.devserver666 = oldnick
+     * if no user is specified for the host returns user.default
      */
     public User getUser(String host) {
         String password = null;

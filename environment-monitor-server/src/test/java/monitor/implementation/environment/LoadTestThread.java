@@ -17,7 +17,7 @@ public class LoadTestThread implements Runnable {
 	private EnvironmentViewBuilder environmentViewBuilder = EnvironmentViewBuilder.getInstance("colour bar test");	
 	
 	public void run() {
-		logger.info("Running environmentViewBuilder load simulator. Uncomment in Main.java if you dont want this.");
+		logger.info("Running environmentViewBuilder load simulator. Uncomment in Main.java if you don't want this.");
 		// @see Env  AdaptiveSleeper sleeper = new AdaptiveSleeper(10000, 500, 200);
 		// AdaptiveSleeper sleeper = new AdaptiveSleeper(10000, 500, 200);*/
 		long outputHistoryTimeStamp = 0l;

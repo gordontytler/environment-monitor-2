@@ -59,7 +59,7 @@ public class Main {
 			Endpoint.publish(scriptAddress, new MonitorHttpProvider(monitorServiceImpl));
 
 			Runtime.getRuntime().addShutdownHook(new Thread("ShutdownHook") {
-			    public void run() { AllSessionPools.getInstance().logoutAllSessionsOnAllServers("new Thread(\"ShutdownHook\")"); }
+			    public void run() { AllSessionPools.getInstance().messyLogoutAllSessionsOnAllServers("new Thread(\"ShutdownHook\")"); }
 			});
 			EnvironmentNamesDAO.getInstance().getEnvironmentNames();
 			

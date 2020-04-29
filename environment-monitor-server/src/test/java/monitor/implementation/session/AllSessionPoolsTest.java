@@ -21,6 +21,7 @@ public class AllSessionPoolsTest {
 	/**
 	 * Check that logout works when the command is still running.
 	 */
+
 	public void testLogoutAllSessionsOnAllServers() {
 		Session session = allSessionPools.getServerSessionPool(server).getSession("SessionTest");
 		Command command = new Command("sleep 20");
@@ -28,7 +29,11 @@ public class AllSessionPoolsTest {
 		CommandResult commandResult = session.executeCommand(command);
 		assertEquals(CommandStatus.RUNNING, commandResult.getCommandStatus());
 		assertEquals(CommandStatus.RUNNING, session.getLastCommandStatus());
-		allSessionPools.logoutAllSessionsOnAllServers("logoutAllSessionsOnAllServers");
+		allSessionPools.logoutAllSessionsOnAllServers("testLogoutAllSessionsOnAllServers");
+		if (allSessionPools.getAllSessions().size() > 0) {
+			allSessionPools.dumpAllSessionsOnAllServers("to show which ones remain after logoutAllSessionsOnAllServers");
+			assertEquals("expected no sessions after logoutAllSessionsOnAllServers", 0, allSessionPools.getAllSessions().size());
+		}
 	}
 		
 	

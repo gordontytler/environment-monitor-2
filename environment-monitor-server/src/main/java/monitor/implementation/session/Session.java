@@ -160,6 +160,7 @@ public class Session {
 	  * If anything goes wrong we free up resources and don't re-add the session to the pool.
 	  * 
 	  * This is done in a separate thread so as to not block the caller.
+	  * @return CountDownLatch for the caller to await if it wants to
 	  */
 	public CountDownLatch close(String calledBy) {
 		sessionHistory.append(new SessionEvent(System.currentTimeMillis(), "close", sessionId, loggedOn, open, controlSession, sessionType, "starting thread to close session. Called by: " + calledBy, lastUsed));

@@ -66,10 +66,17 @@ public class AllSessionPools {
 	public boolean isShutdownThreadIsRunning() {
 		return shutdownThreadIsRunning;
 	}
-	
+
+	/** The shutdown hook uses this to quickly kill remote processes, log out and end connections.
+	 * It leaves the connection pool in a mess and will result in errors if the JVM dooes not shut down and stuff continues to use it.
+	 * @param calledBy monitor.api.Main#main
+	 */
+	public void messyLogoutAllSessionsOnAllServers(String calledBy) {
+		shutdownThreadIsRunning = true;
+		logoutAllSessionsOnAllServers(calledBy);
+	}
 
 	public void logoutAllSessionsOnAllServers(String calledBy) {
-		shutdownThreadIsRunning = true;
 		logger.info(String.format("ShutdownHook: %s logging out %d remote ssh sessions.", Thread.currentThread().getName(), allSessions.size()));
 		dumpAllSessionsOnAllServers(" because shutting down.");
 		// First close all sessions where the last command has finished. This frees them up to be used as control sessions to kill processes.
@@ -83,6 +90,9 @@ public class AllSessionPools {
 				session.logout("logoutAllSessionsOnAllServers called by: " + calledBy);
 			}
 		}
+		if (allSessions.entrySet().size() > 0) {
+			dumpAllSessionsOnAllServers("did not expect any sessions after logoutAllSessionsOnAllServers");
+		}
 		for (Map.Entry<String, ServerSessionPool> entry : allServerSessionPools.entrySet()) {
 			ServerSessionPool serverSessionPool = entry.getValue();
 			serverSessionPool.destroySSHConnections();
@@ -92,7 +102,6 @@ public class AllSessionPools {
 			Thread.sleep(500);  // allow time for the last log entry to be written.
 		} catch (InterruptedException e) {
 		}
-		shutdownThreadIsRunning = false; // for tests
 	}
 	
 	public void closeAllFinishedSessionsOnAllServers() {

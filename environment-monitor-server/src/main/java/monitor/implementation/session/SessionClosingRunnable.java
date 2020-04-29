@@ -73,8 +73,9 @@ public class SessionClosingRunnable implements Runnable {
 			prepareSessionForReuse(millisBeforeInterupting);
 		} catch (Exception e) {
 			message = e.getMessage();
-			logger.log(Level.SEVERE, session.toString() + " Previous sessionId:" + previousSessionId, e);
+			logger.log(Level.SEVERE, "Failed to close session for reuse. It will be removed from the pool. " + session.toString() + " Previous sessionId:" + previousSessionId, e);
 			session.logout(message + " called by: " + calledBy);
+			allSessionPools.dumpAllSessionsOnAllServers("to see if session.logout() due to previous exception removed " + session.toString());
 		}
 		SessionEvent sessionEvent = new SessionEvent(System.currentTimeMillis(), "finished close", session.getSessionId(), session.isLoggedOn(), session.isOpen(), session.isControlSession(), session.getSessionType(), message, session.getLastUsed());
 		session.appendToSessionHistory(sessionEvent);

@@ -51,16 +51,17 @@ public class ProcessKillerTest {
 	/** In this test the parent process has three children. */
 	@Test
 	public void getChildrenOneLevel() {
-		Command command = new Command("echo blah1 | sleep 20 | cat | cat &");
+		String request = "echo blah1 | sleep 20 | cat | cat &";
+		Command command = new Command(request);
 		CommandResult commandResult = session.executeCommand(command);
 		assertEquals(CommandStatus.FINISHED, commandResult.getCommandStatus());
 		ProcessKiller processKiller = new ProcessKiller();
 		ArrayList<Integer> childProcesses = processKiller.getChildren(session.getBashProcessId(), controlSession);
-		System.out.println(childProcesses);
+		System.out.println("\n\nThe child processes of command \"" + request + "\" are " + childProcesses + "\n\n");
 		command = new Command("ps -f");
 		System.out.println(controlSession.executeCommand(command).getOutput());
 		int remainingProcesses = childProcesses.size();
-		assertTrue("Expected 3 or 4 processes but get ", remainingProcesses > 2 &&  remainingProcesses < 5);
+		assertTrue("Expected 3 or 4 processes but got ", remainingProcesses > 2 &&  remainingProcesses < 5);
 	}
 
 	/** 
@@ -81,7 +82,7 @@ public class ProcessKillerTest {
 	 */
 	@Test
 	public void getChildOfChildAndKillThem() {
-		System.out.println("getChildOfChildAndKillThem()");
+		System.out.println("\n\nstart getChildOfChildAndKillThem()\n\n");
 		Command command = new Command("sudo ls /var/log/*syslog* -ltr  | tail -1 | awk '{print $NF}'  | xargs tail -F");
 		CommandResult commandResult = session.executeCommand(command);
 		System.out.println("output from tail: " + commandResult.getOutput());
@@ -97,7 +98,8 @@ public class ProcessKillerTest {
 		// now kill them
 		processKiller.killSubProcesses(server, session.getBashProcessId(), "ProcessKillerTest");
 		childProcesses = processKiller.getChildren(session.getBashProcessId(), controlSession);
-		assertEquals(0, childProcesses.size());		
+		assertEquals(0, childProcesses.size());
+		System.out.println("\n\nend getChildOfChildAndKillThem()\n\n");
 	}
 
 	@Test

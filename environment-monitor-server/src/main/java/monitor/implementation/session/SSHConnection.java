@@ -83,8 +83,17 @@ public class SSHConnection {
 					conn.close();
 					conn = new Connection(server.getHost());
 					conn.connect();
-					// TODO - this may be the wrong username
-					isAuthenticated = conn.authenticateWithPublicKey(username, keyfile, keyfilePass);
+					// TODO - Get the correct public key from the user's home directory.
+					//
+					// Won't this be the wrong username unless connection is to localhost? Perhaps.
+					// The public keys are in the home directories of the users of monitor server.
+					// Need to confirm this but basically a remote server just checks that the public key you are
+					// sending it is the same as the the one it already has? If so, we don't need to create these users
+					// on monitor server. We just need the public keys?
+					//
+					// What's wrong with user.getName ?
+					// isAuthenticated = conn.authenticateWithPublicKey(username, keyfile, keyfilePass);
+					isAuthenticated = conn.authenticateWithPublicKey(user.getName(), keyfile, keyfilePass);
 					if (isAuthenticated) {
 						loggedOnUserName = user.getName();
 						logger.info(String.format("logged on to server %s as user %s using public key authentication.", server.getHost(), username));

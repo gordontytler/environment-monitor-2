@@ -50,7 +50,7 @@ public class SessionManagerTest {
 		sessionManager.getSessionManagementLock().lock();
 		System.out.println("         got sessionManagementLock at " + System.currentTimeMillis());		
 		
-		// wait until all threads have run less than times than before so must have been restarted 
+		// wait until all threads have run less times than before so must have been restarted
 		waitFor("less than", 5, 3000);
 		System.out.println("End of SessionManagerTest\n\n");		
 	}
