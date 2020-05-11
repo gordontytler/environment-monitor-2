@@ -30,6 +30,7 @@ public class ProcessKillerTest {
 
 	@Before
 	public void setUp() {
+		allSessionPools.getServerSessionPool(server).destroySSHConnections();
 		session = allSessionPools.getServerSessionPool(server).getSession(this.getClass().getSimpleName());
 		controlSession = allSessionPools.getServerSessionPool(server).getSession(this.getClass().getSimpleName());
 		SSHExecuter sshExecuter = (SSHExecuter) session.getCommandExecuter();
@@ -41,7 +42,9 @@ public class ProcessKillerTest {
 	@After
 	public void tearDown() throws Exception {
 		System.out.println("tearDown()");
-		new ProcessKiller().killSubProcesses(server, session.getBashProcessId(), "ProcessKillerTest.tearDown");
+		if (session != null) {
+			new ProcessKiller().killSubProcesses(server, session.getBashProcessId(), "ProcessKillerTest.tearDown");
+		}
 		allSessionPools.closeAllFinishedSessionsOnAllServers();
 		SSHExecuter sshExecuter = (SSHExecuter) session.getCommandExecuter();
 		sshExecuter.getInputFromSSHReader().setLogFine(true);

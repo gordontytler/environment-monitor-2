@@ -32,6 +32,7 @@ public class SSHConnection {
 	private boolean wantToCreateAutoUser = false;
 
 	private ServerSessionPool serverSessionPool;
+	private boolean connectionIsDestroyed = false;
 
 
 	/**
@@ -136,6 +137,7 @@ public class SSHConnection {
 	}
 
 	public void destroy() {
+		connectionIsDestroyed = true;
 		conn.close();
 	}
 	
@@ -144,7 +146,14 @@ public class SSHConnection {
 		if (terminals.isEmpty()) {
 			if (serverSessionPool != null) {
 				// todo bug java.lang.IndexOutOfBoundsException: Index: 1, Size: 1  in  ServerSessionPoolTest.testGetSession
-				serverSessionPool.removeSSHConnection(indexInServerSessionPool);
+				//   need a big refactor - checking if destroy already called fixes IndexOutOfBoundsException
+				//   but still have did not expect any sessions after logoutAllSessionsOnAllServers
+				// Session.logout will call
+				//    commandExecuter.killProcess();  which calls this method SSHConnection.removePseudoTerminal
+				//    allSessionPools.removeSession(getSessionId());
+				if (!connectionIsDestroyed) {
+					serverSessionPool.removeSSHConnection(indexInServerSessionPool);
+				}
 			}
 			destroy();
 		}

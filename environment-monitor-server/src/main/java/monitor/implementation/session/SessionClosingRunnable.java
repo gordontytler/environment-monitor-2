@@ -4,6 +4,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import ch.ethz.ssh2.channel.ChannelClosedException;
 import monitor.implementation.shell.CommandExecuter;
 import monitor.model.CommandStatus;
 import monitor.model.Server;
@@ -39,8 +40,6 @@ public class SessionClosingRunnable implements Runnable {
 		this.latch = latch;
 	}
 
-
-	@Override
 	public void run() {
 		close(calledBy);
 		if (latch != null) {
@@ -70,31 +69,21 @@ public class SessionClosingRunnable implements Runnable {
 					millisBeforeInterupting = LONG_DELAY_BEFORE_INTERUPTING; // give it time for tail to stop to avoid SSHExecuter complaining did not stop reading input when asked
 				}
 			}
-			prepareSessionForReuse(millisBeforeInterupting);
+			session.prepareSessionForReuse(millisBeforeInterupting);
 		} catch (Exception e) {
 			message = e.getMessage();
-			logger.log(Level.SEVERE, "Failed to close session for reuse. It will be removed from the pool. " + session.toString() + " Previous sessionId:" + previousSessionId, e);
-			session.logout(message + " called by: " + calledBy);
-			allSessionPools.dumpAllSessionsOnAllServers("to see if session.logout() due to previous exception removed " + session.toString());
+			if (e instanceof ChannelClosedException) {
+				logger.log(Level.WARNING, "ChannelClosedException when closing session for reuse. It will be removed from the pool. " + session.toString() + " Previous sessionId:" + previousSessionId);
+				session.remove(message + " called by: " + calledBy);
+			} else {
+				logger.log(Level.SEVERE, "Failed to close session for reuse. It will be removed from the pool. " +
+						session.toString() + " Previous sessionId:" + previousSessionId + " caused by: " + message);
+				session.logout(message + " called by: " + calledBy);
+				allSessionPools.dumpAllSessionsOnAllServers("to see if session.logout() due to previous exception removed " + session.toString());
+			}
 		}
 		SessionEvent sessionEvent = new SessionEvent(System.currentTimeMillis(), "finished close", session.getSessionId(), session.isLoggedOn(), session.isOpen(), session.isControlSession(), session.getSessionType(), message, session.getLastUsed());
 		session.appendToSessionHistory(sessionEvent);
 	}
 
-
-	void prepareSessionForReuse(int millisBeforeInterupting) throws Exception {
-		if (!allSessionPools.isShutdownThreadIsRunning()) {
-			allSessionPools.removeSession(session.getSessionId());
-			previousSessionId = session.getSessionId();
-			String sessionId = sessionIdMaker.makeNewSessionId();
-			session.setSessionId(sessionId);
-			allSessionPools.putSession(sessionId, session);
-			allSessionPools.saveOldSessionId(previousSessionId, sessionId);
-			commandExecuter.resetChunkedOutput(sessionId, millisBeforeInterupting);
-			commandExecuter.testTerminal();
-			session.updateLastTested();
-			session.resetAfterClosing();
-		}
-	}	
-	
 }

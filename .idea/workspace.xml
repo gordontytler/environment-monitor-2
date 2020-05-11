@@ -26,30 +26,137 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42888511-bec5-456a-90e8-58d2f67ecf03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/resources/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environment-monitor-server/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environment-monitor-server/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environment-monitor-server/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environment-monitor-server/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/session package.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/session package.ucls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/environment-monitor-server/environment-monitor-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/environment-monitor-server.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/environment-monitor-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/ApplicationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/ApplicationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/ApplicationFileNamesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/ApplicationFileNamesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/DataDirectory.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/DataDirectory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/EnvironmentNamesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/EnvironmentNamesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/EnvironmentViewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/EnvironmentViewDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/action/ActionOutputRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/action/ActionOutputRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/action/ActionRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/action/ActionRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/AllSessionPools.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/AllSessionPools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/ClosedSessionTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/ClosedSessionTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/FinishedActionSessionCloser.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/FinishedActionSessionCloser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/NextSessionId.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/NextSessionId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/SSHConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/SSHConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/ServerSessionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/ServerSessionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/SessionClosingRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/SessionClosingRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/SessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/SessionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/SessionReaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/SessionReaper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/InputFromBashReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/InputFromBashReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/InputFromSSHReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/InputFromSSHReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/model/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/model/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/SSHExecuter.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/SSHExecuter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/dao/ActionDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/dao/ActionDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/dao/ApplicationDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/dao/ApplicationDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/dao/EnvironmentViewDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/dao/EnvironmentViewDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/dao/MockEnvironmentViewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/dao/MockEnvironmentViewDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/application/ApplicationViewBuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/application/ApplicationViewBuilderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/shell/LogFileReplayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/shell/LogFileReplayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/shell/LogFileWriterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/shell/LogFileWriterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/shell/SSH2test.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/shell/SSH2test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/model/ConfigurationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/model/ConfigurationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/session/AllSessionPoolsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/session/AllSessionPoolsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/session/ProcessKillerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/session/ProcessKillerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/session/ServerSessionPoolTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/session/ServerSessionPoolTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/model/EncrypterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/model/EncrypterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/resources/config.properties" afterDir="false" />
+    </list>
+    <list id="b1259bc0-9b08-4bb8-90f1-cfca68ba8d85" name="do not commit" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environment-monitor-client/bin/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/WebServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/WebServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/ClientConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/ClientConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/CloseableTabbedPane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/CloseableTabbedPane$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/CloseableTabbedPane$CloseTabIcon.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/CloseableTabbedPane$CloseTabIcon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/CloseableTabbedPane$CloseableMetalTabbedPaneUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/CloseableTabbedPane$CloseableMetalTabbedPaneUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/CloseableTabbedPane$CloseableTabbedPaneUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/CloseableTabbedPane$CloseableTabbedPaneUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/CloseableTabbedPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/CloseableTabbedPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/CloseableTabbedPaneListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/CloseableTabbedPaneListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentMouseAdapter$MenuItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentMouseAdapter$MenuItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentMouseAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentMouseAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentMouseListener$RestartOutputsWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentMouseListener$RestartOutputsWorker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentMouseListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentMouseListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentScrollPane$EnvironmentTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentScrollPane$EnvironmentTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentScrollPane$EnvironmentTableModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentScrollPane$EnvironmentTableModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentScrollPane$RefreshEnvironmentViewWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentScrollPane$RefreshEnvironmentViewWorker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentScrollPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentScrollPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentSelector.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/EnvironmentSelector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/HttpQueryStringParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/HttpQueryStringParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/ListOfOutputHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/ListOfOutputHistory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/MainFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/MainFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/MainFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/MainFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/MainFrame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/MainFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/MainFrame$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel$ExecuteActionPropertyChangeListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel$ExecuteActionPropertyChangeListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel$ExecuteActionWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel$ExecuteActionWorker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel$LogonPropertyChangeListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel$LogonPropertyChangeListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel$LogonWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel$LogonWorker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel$OutputChunkWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel$OutputChunkWorker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/OutputStreamPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/PictureIcon$Severity.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/PictureIcon$Severity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/PictureIcon.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/PictureIcon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/PictureIconKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/PictureIconKey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/PictureRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/PictureRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/ServerNameParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/ServerNameParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/ServerNameParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/ServerNameParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/soap/client/AdaptiveSleeper.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/soap/client/AdaptiveSleeper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/soap/client/MonitorServiceProxy$GetEnvironmentViewCallable.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/soap/client/MonitorServiceProxy$GetEnvironmentViewCallable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/soap/client/MonitorServiceProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/soap/client/MonitorServiceProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/AddApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/AddApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/AddApplicationResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/AddApplicationResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/AddServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/AddServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/AddServerResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/AddServerResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/Close.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/Close.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/CloseResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/CloseResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/CommandResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/CommandResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/CommandStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/CommandStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/DeleteEnvironment.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/DeleteEnvironment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/DeleteEnvironmentResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/DeleteEnvironmentResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/DeleteRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/DeleteRow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/DeleteRowResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/DeleteRowResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/EnvironmentView$Properties$Entry.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/EnvironmentView$Properties$Entry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/EnvironmentView$Properties.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/EnvironmentView$Properties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/EnvironmentView.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/EnvironmentView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/EnvironmentViewRow.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/EnvironmentViewRow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/ExecuteAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/ExecuteAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/ExecuteActionResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/ExecuteActionResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/ExecuteCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/ExecuteCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/ExecuteCommandResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/ExecuteCommandResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/GetEnvironmentNames.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/GetEnvironmentNames.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/GetEnvironmentNamesResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/GetEnvironmentNamesResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/GetEnvironmentView.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/GetEnvironmentView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/GetEnvironmentViewResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/GetEnvironmentViewResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/GetOutputChunk.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/GetOutputChunk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/GetOutputChunkResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/GetOutputChunkResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/KillRunningCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/KillRunningCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/KillRunningCommandResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/KillRunningCommandResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/LoadApplicationByFileName.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/LoadApplicationByFileName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/LoadApplicationByFileNameResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/LoadApplicationByFileNameResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/Logon.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/Logon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/LogonResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/LogonResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/LogonResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/LogonResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/MonitorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/MonitorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/MonitorService_Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/MonitorService_Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/ObjectFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/ObjectFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/OutputChunkResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/OutputChunkResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/OutputHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/OutputHistory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/OutputInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/OutputInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/RenameEnvironment.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/RenameEnvironment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/RenameEnvironmentResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/RenameEnvironmentResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/RestartOutputs.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/RestartOutputs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/RestartOutputsResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/RestartOutputsResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/SaveEnvironment.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/SaveEnvironment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/SaveEnvironmentResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/SaveEnvironmentResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/UpDownState.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/UpDownState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/package-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitorservice/package-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +168,13 @@
       <option value="directory" />
     </option>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -70,6 +184,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -79,17 +194,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/environment-monitor-server/src/test/resources" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.21358268" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/environment-monitor-server/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in environment-monitor-server">
+  <component name="RunManager" selected="JUnit.ConfigurationTest">
     <configuration name="All in environment-monitor-server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="environment-monitor-server" />
       <option name="PACKAGE_NAME" value="" />
@@ -113,7 +228,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConfigurationTest.testGetInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ConfigurationTest.testUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="environment-monitor-server" />
       <extension name="coverage">
         <pattern>
@@ -123,22 +238,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="monitor.model" />
       <option name="MAIN_CLASS_NAME" value="monitor.model.ConfigurationTest" />
-      <option name="METHOD_NAME" value="testGetInstance" />
+      <option name="METHOD_NAME" value="testUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerSessionPoolTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EncrypterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="environment-monitor-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="monitor.implementation.session.*" />
+          <option name="PATTERN" value="monitor.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="monitor.implementation.session" />
-      <option name="MAIN_CLASS_NAME" value="monitor.implementation.session.ServerSessionPoolTest" />
+      <option name="PACKAGE_NAME" value="monitor.model" />
+      <option name="MAIN_CLASS_NAME" value="monitor.model.EncrypterTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,11 +275,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in environment-monitor-server" />
-        <item itemvalue="JUnit.ServerSessionPoolTest" />
         <item itemvalue="JUnit.ConfigurationTest" />
+        <item itemvalue="JUnit.EncrypterTest" />
+        <item itemvalue="JUnit.ConfigurationTest.testUser" />
+        <item itemvalue="JUnit.All in environment-monitor-server" />
         <item itemvalue="JUnit.monitor in environment-monitor-server" />
-        <item itemvalue="JUnit.ConfigurationTest.testGetInstance" />
       </list>
     </recent_temporary>
   </component>
@@ -174,6 +289,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="42888511-bec5-456a-90e8-58d2f67ecf03" name="Default Changelist" comment="" />
+      <changelist id="b1259bc0-9b08-4bb8-90f1-cfca68ba8d85" name="do not commit" comment="" />
       <created>1588061799402</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -193,7 +309,21 @@
       <option name="project" value="LOCAL" />
       <updated>1588070975515</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Improve the loading of configuration data. &#10;&#10;Look for config.properties in the location specified by the DataDirectory system property. If this fails, look in the classpath for config.properties.">
+      <created>1588097323932</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588097323932</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fix session management tests by removing stale data in the session pool after closing all sessions. This is only needed for tests. It isn't necessary when shutting down.">
+      <created>1588169882780</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588169882780</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,57 +355,93 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="remove target from VCS" />
     <MESSAGE value="fix Idea config" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix Idea config" />
+    <MESSAGE value="Improve the loading of configuration data. &#10;&#10;Look for config.properties in the location specified by the DataDirectory system property. If this fails, look in the classpath for config.properties." />
+    <MESSAGE value="Fix session management tests by removing stale data in the session pool after closing all sessions. This is only needed for tests. It isn't necessary when shutting down." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix session management tests by removing stale data in the session pool after closing all sessions. This is only needed for tests. It isn't necessary when shutting down." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="443" y="116" width="1397" height="845" key="#Project_Structure" timestamp="1588069716612">
+    <state x="443" y="116" width="1397" height="845" key="#Project_Structure" timestamp="1588100649386">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="443" y="116" width="1397" height="845" key="#Project_Structure/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588069716612" />
+    <state x="443" y="116" width="1397" height="845" key="#Project_Structure/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588100649386" />
+    <state x="2087" y="125" width="1099" height="543" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1589199069226">
+      <screen x="1920" y="0" width="1366" height="768" />
+    </state>
+    <state x="2087" y="125" width="1099" height="543" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589199069226" />
+    <state x="2594" y="27" width="692" height="502" key="#com.intellij.unscramble.UnscrambleDialog" timestamp="1589224301504">
+      <screen x="1920" y="0" width="1366" height="768" />
+    </state>
+    <state x="2285" y="53" width="692" height="687" key="#com.intellij.unscramble.UnscrambleDialog/0.27.3286.1053@0.27.3286.1053" timestamp="1588519662959" />
+    <state x="2594" y="27" width="692" height="502" key="#com.intellij.unscramble.UnscrambleDialog/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589224301504" />
     <state x="874" y="296" width="524" height="484" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1588069713282">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="874" y="296" width="524" height="484" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588069713282" />
-    <state x="450" y="107" width="1009" height="864" key="CommitChangelistDialog2" timestamp="1588070975189">
+    <state x="390" y="236" width="643" height="320" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1588492728305">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="390" y="236" width="643" height="320" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.27.1299.741@67.27.1299.741" timestamp="1588492728305" />
+    <state x="450" y="107" width="1009" height="864" key="CommitChangelistDialog2" timestamp="1588169882084">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="450" y="107" width="1009" height="864" key="CommitChangelistDialog2/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588070975189" />
+    <state x="450" y="107" width="1009" height="864" key="CommitChangelistDialog2/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588169882084" />
+    <state width="870" height="482" key="Diff.GoToChangePopup" timestamp="1588233841200">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="870" height="482" key="Diff.GoToChangePopup/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588233841200" />
+    <state x="100" y="98" width="1720" height="882" key="DiffContextDialog" timestamp="1588234818108">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="100" y="98" width="1720" height="882" key="DiffContextDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588234818108" />
     <state x="733" y="296" width="936" height="484" key="FileChooserDialogImpl" timestamp="1588069486695">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="733" y="296" width="936" height="484" key="FileChooserDialogImpl/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588069486695" />
-    <state width="1874" height="531" key="GridCell.Tab.0.bottom" timestamp="1588096588036">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1253" height="372" key="GridCell.Tab.0.bottom" timestamp="1589233382556">
+      <screen x="1920" y="0" width="1366" height="768" />
     </state>
-    <state width="1874" height="531" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588096588036" />
-    <state width="1874" height="531" key="GridCell.Tab.0.center" timestamp="1588096588036">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1253" height="303" key="GridCell.Tab.0.bottom/0.27.3286.1053@0.27.3286.1053" timestamp="1588521379095" />
+    <state width="1874" height="491" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588418754404" />
+    <state width="1253" height="372" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589233382556" />
+    <state width="1253" height="372" key="GridCell.Tab.0.center" timestamp="1589233382556">
+      <screen x="1920" y="0" width="1366" height="768" />
     </state>
-    <state width="1874" height="531" key="GridCell.Tab.0.center/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588096588036" />
-    <state width="1874" height="531" key="GridCell.Tab.0.left" timestamp="1588096588035">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1253" height="303" key="GridCell.Tab.0.center/0.27.3286.1053@0.27.3286.1053" timestamp="1588521379094" />
+    <state width="1874" height="491" key="GridCell.Tab.0.center/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588418754403" />
+    <state width="1253" height="372" key="GridCell.Tab.0.center/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589233382556" />
+    <state width="1253" height="372" key="GridCell.Tab.0.left" timestamp="1589233382555">
+      <screen x="1920" y="0" width="1366" height="768" />
     </state>
-    <state width="1874" height="531" key="GridCell.Tab.0.left/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588096588035" />
-    <state width="1874" height="531" key="GridCell.Tab.0.right" timestamp="1588096588036">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1253" height="303" key="GridCell.Tab.0.left/0.27.3286.1053@0.27.3286.1053" timestamp="1588521379094" />
+    <state width="1874" height="491" key="GridCell.Tab.0.left/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588418754403" />
+    <state width="1253" height="372" key="GridCell.Tab.0.left/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589233382555" />
+    <state width="1253" height="372" key="GridCell.Tab.0.right" timestamp="1589233382556">
+      <screen x="1920" y="0" width="1366" height="768" />
     </state>
-    <state width="1874" height="531" key="GridCell.Tab.0.right/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588096588036" />
+    <state width="1253" height="303" key="GridCell.Tab.0.right/0.27.3286.1053@0.27.3286.1053" timestamp="1588521379095" />
+    <state width="1874" height="491" key="GridCell.Tab.0.right/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588418754403" />
+    <state width="1253" height="372" key="GridCell.Tab.0.right/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589233382556" />
     <state x="727" y="285" width="986" height="507" key="NewModule_or_Project.wizard" timestamp="1588069533091">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="727" y="285" width="986" height="507" key="NewModule_or_Project.wizard/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588069533091" />
-    <state x="492" y="222" width="925" height="633" key="RollbackChangesDialog" timestamp="1588067868783">
+    <state x="492" y="222" width="925" height="633" key="RollbackChangesDialog" timestamp="1588234816894">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="492" y="222" width="925" height="633" key="RollbackChangesDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588067868783" />
-    <state x="449" y="174" key="SettingsEditor" timestamp="1588062724248">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="492" y="222" width="925" height="633" key="RollbackChangesDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588234816894" />
+    <state x="167" y="27" width="1189" height="741" key="SettingsEditor" timestamp="1588494821607">
+      <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="449" y="174" key="SettingsEditor/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588062724248" />
-    <state x="555" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1588071016217">
+    <state x="167" y="27" width="1189" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1588494821607" />
+    <state x="793" y="410" width="324" height="257" key="VCS.EditChangelistDialog" timestamp="1588167764634">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="555" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588071016217" />
+    <state x="793" y="410" width="324" height="257" key="VCS.EditChangelistDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588167764634" />
+    <state x="555" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1588169944995">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="555" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588169944995" />
     <state x="627" y="432" width="646" height="213" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1588067843689">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -284,17 +450,26 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="574" y="210" width="762" height="658" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588073260673" />
-    <state x="650" y="120" width="1033" height="924" key="find.popup" timestamp="1588073280242">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="2382" y="68" width="803" height="674" key="find.popup" timestamp="1589192349567">
+      <screen x="1920" y="0" width="1366" height="768" />
     </state>
-    <state x="650" y="120" width="1033" height="924" key="find.popup/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588073280242" />
+    <state x="2272" y="138" width="773" height="559" key="find.popup/0.27.3286.1053@0.27.3286.1053" timestamp="1588521100356" />
+    <state x="650" y="120" width="1033" height="924" key="find.popup/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588166235659" />
+    <state x="2382" y="68" width="803" height="674" key="find.popup/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589192349567" />
+    <state x="507" y="92" width="716" height="651" key="find.popup/67.27.1299.741@67.27.1299.741" timestamp="1588495331925" />
     <state x="264" y="242" width="1372" height="592" key="new project wizard" timestamp="1588067655933">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="264" y="242" width="1372" height="592" key="new project wizard/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588067655933" />
-    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1588093736912">
+    <state x="624" y="246" key="run.anything.popup" timestamp="1588098078270">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588093736912" />
+    <state x="624" y="246" key="run.anything.popup/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588098078270" />
+    <state x="2363" y="153" width="672" height="495" key="search.everywhere.popup" timestamp="1589215993751">
+      <screen x="1920" y="0" width="1366" height="768" />
+    </state>
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588166152130" />
+    <state x="2363" y="153" width="672" height="495" key="search.everywhere.popup/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589215993751" />
+    <state x="488" y="175" width="672" height="478" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1588504302407" />
   </component>
 </project>

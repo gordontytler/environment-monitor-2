@@ -57,7 +57,7 @@ public class SessionManager implements Runnable {
 		}
 	}	
 	
-	@Override
+
 	public void run() {
 		logger.info("SessionManager is running.");
 		startThreads();
@@ -77,7 +77,7 @@ public class SessionManager implements Runnable {
 						break;
 					}
 				}
-				if (logFine || ++loopCount % 30 == 0) logAllThreadsInfo(-1);
+				if (logFine && ++loopCount % 3000 == 0) logAllThreadsInfo(-1);
 				sleepBetweenRuns();				
 				
 			} catch (Exception e) {
@@ -89,7 +89,7 @@ public class SessionManager implements Runnable {
 	
 	private void sleepBetweenRuns() {
 		try {
-			if (logFine) logger.info("\n\nSessionManager is sleeping for " + delayBetweenRuns);
+			if (logFine) logger.fine("\n\nSessionManager is sleeping for " + delayBetweenRuns);
 			Thread.sleep(delayBetweenRuns);
 		} catch (InterruptedException e) {
 			logger.log(Level.SEVERE, e.getMessage(), e);
@@ -99,7 +99,7 @@ public class SessionManager implements Runnable {
 	private void logAllThreadsInfo(int indexToIgnore) {
 		for (int j=0; j < threads.length; j++) {
 			if (j != indexToIgnore) {
-				logger.info(String.format("Run %d of thread %s was %d millis ago. Will be considered stuck after %d", runnables[j].runCount, threads[j].getName(),
+				logger.fine(String.format("Run %d of thread %s was %d millis ago. Will be considered stuck after %d", runnables[j].runCount, threads[j].getName(),
 						System.currentTimeMillis() - runnables[j].getTimeLastRan(), runnables[j].getMaxExpectedDelayBetweenRuns()));
 			}
 		}

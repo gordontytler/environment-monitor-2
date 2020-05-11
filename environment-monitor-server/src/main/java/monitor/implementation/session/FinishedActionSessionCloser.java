@@ -35,7 +35,6 @@ public class FinishedActionSessionCloser extends SessionManagementRunnable imple
 		this.delayBeforeRunning = delayBeforeRunning;		
 	}
 
-	@Override
 	public void run() {
 		boolean interrupted = false;
 		super.setLastActivityTime(System.currentTimeMillis() + delayBeforeRunning);

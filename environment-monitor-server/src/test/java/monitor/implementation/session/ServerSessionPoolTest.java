@@ -43,8 +43,11 @@ public class ServerSessionPoolTest {
 		Session session = ssp.getSession("testGetSession");
 		session.logout("testGetSession");
 		List<Session> sessions = ssp.getSessions();
- 
-		assertEquals(0, sessions.size());
+
+		if (sessions.size() != 0) {
+			allSessionPools.dumpAllSessionsOnAllServers("to see what went wrong in ServerSessionPoolTest.testGetSession");
+			assertEquals(0, sessions.size());
+		}
 		
 		int maxSessions = 2;
 		ssp.setMaxSessions(maxSessions);

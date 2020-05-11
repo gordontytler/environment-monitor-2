@@ -22,6 +22,7 @@ import monitor.model.SessionType;
 import monitor.model.StringUtil;
 import monitor.model.User;
 import ch.ethz.ssh2.Connection;
+import ch.ethz.ssh2.channel.ChannelClosedException;
 
 /**
  * A session represents the execution of a remote bash shell and manages its state so that it can
@@ -65,7 +66,8 @@ public class Session {
 	}
 
 	/** Use the pure Java ssh implementation from http://www.cleondris.ch/opensource/ssh2/<br> 
-	 * The protocol architecture implemented by the library is documented in RFC 4251.*/
+	 * The protocol architecture implemented by the library is documented in RFC 4251.
+	 * This is a friend of ServerSessionPool and should not talk to anyone else.*/
 	public Session(Server server, PseudoTerminal terminal, String calledBy, int testCommandTimeoutMillis) {
 		initialiseSSHExecuter(server, terminal, calledBy, testCommandTimeoutMillis);
 		sessionHistory.append(new SessionEvent(System.currentTimeMillis(), "create", sessionId, loggedOn, open, controlSession, sessionType, calledBy, lastUsed));
@@ -97,7 +99,7 @@ public class Session {
 	 *  <li>only runs on Linux
 	 *  <li>processes can be left running on the local and remove machine 
 	 * <ul>
-	 *  @deprecated use {@link Session#SSHSession(Server, Connection, String)} instead
+	 *  @deprecated use this instead {@link Session#(Server, PseudoTerminal, String , int }
 	 **/	
 	public Session(Server server, NextSessionId nextSessionId, String calledBy) {
 		initialiseBashExecuter(server, nextSessionId, calledBy);
@@ -123,6 +125,9 @@ public class Session {
 	}
 
 	public void tidyUpAfterException(String calledBy) {
+		if (commandExecuter == null ) {
+			return; // todo MockSession used by EnvironmentViewBuilderTest needs some work to prevent null pointer exceptions
+		}
 		sessionHistory.append(new SessionEvent(System.currentTimeMillis(), "testTerminal", sessionId, loggedOn, open, controlSession, sessionType, "tidyUpAfterException called by: " + calledBy, lastUsed));
 		if (killSubprocesesWhenFinished) {
 			try {
@@ -154,6 +159,14 @@ public class Session {
 		allSessionPools.removeSession(getSessionId());		
 	}
 
+	/** Just remove the session when you know that the connection is broken and that attempting to logout woulf only cause more errors. */
+	public void remove(String reason) {
+		sessionHistory.append(new SessionEvent(System.currentTimeMillis(), "logout", sessionId, loggedOn, open, controlSession, sessionType, reason, lastUsed));
+		allSessionPools.removeSession(getSessionId());		
+	}
+
+	
+	
 	 /** 
 	  * Allows another task to use this logged in session to save the cost of creating a new ssh session.
 	  * Closing the session kills child processes, changes the sessionId and clears its output. 
@@ -217,7 +230,7 @@ public class Session {
 	}	
 	
 	public CommandResult killRunningCommand(String calledBy) throws Exception {
-		sessionHistory.append(new SessionEvent(System.currentTimeMillis(), "killRunningCommand", sessionId, loggedOn, open, controlSession, sessionType, "Called by: " + calledBy, lastUsed));		
+		sessionHistory.append(new SessionEvent(System.currentTimeMillis(), "killRunningCommand", sessionId, loggedOn, open, controlSession, sessionType, "Called by: " + calledBy, lastUsed));
 		int chunkBefore = commandExecuter.getChunkedOutput().getHighestChunkNumber();
 		commandExecuter.stopReadingInput();
 		processKiller.killSubProcesses(server, commandExecuter.getBashProcessId(), calledBy + "->Session.killRunningCommand");
@@ -225,13 +238,33 @@ public class Session {
 		commandResult.setSessionId(getSessionId());
 		commandResult.setCommandStatus(CommandStatus.FINISHED);
 		commandResult.setOutput(commandExecuter.getChunkedOutput().getChunk(chunkBefore + 1));
-		if (SessionType.ACTION == sessionType) {
-			new SessionClosingRunnable(this, "Session.closeIfLastCommandFinished", null).prepareSessionForReuse(LONG_DELAY_BEFORE_INTERUPTING);
-			commandResult.setSessionId(null);
+		//  if (SessionType.ACTION == sessionType) {
+		try {
+			prepareSessionForReuse(LONG_DELAY_BEFORE_INTERUPTING);
+		} catch (ChannelClosedException e) {
+			String message = "killRunningCommand got ChannelClosedException when closing session for reuse. It will be removed from the pool. "
+					+ this.toString() + " Previous sessionId:" + previousSessionId;
+			logger.log(Level.WARNING, message);
+			remove(message + " called by: " + calledBy);
 		}
 		return commandResult;
 	}
-	
+
+	void prepareSessionForReuse(int millisBeforeInterupting) throws Exception {
+		if (!allSessionPools.isShutdownThreadIsRunning()) {
+			allSessionPools.removeSession(getSessionId());
+			previousSessionId = getSessionId();
+			String sessionId = sessionIdMaker.makeNewSessionId();
+			setSessionId(sessionId);
+			allSessionPools.putSession(sessionId, this);
+			allSessionPools.saveOldSessionId(previousSessionId, sessionId);
+			commandExecuter.resetChunkedOutput(sessionId, millisBeforeInterupting);
+			commandExecuter.testTerminal();
+			updateLastTested();
+			resetAfterClosing();
+		}
+	}
+
 	public CommandResult executeCommand(Command command) {
 		if (!controlSession) {
 			lastUsed = System.currentTimeMillis();
@@ -311,7 +344,7 @@ public class Session {
 	}
 
 	public int getBashProcessId() {
-		return commandExecuter.getBashProcessId();
+		return commandExecuter == null ? 0 : commandExecuter.getBashProcessId();
 	}
 	
 	public void setProcessKiller(ProcessKiller processKiller) {

@@ -29,7 +29,7 @@ public class ClosedSessionTester  extends SessionManagementRunnable implements R
 		this.delayBeforeRunning = delayBeforeRunning;
 	}
 
-	@Override
+
 	public void run() {
 		boolean interrupted = false;
 		super.setLastActivityTime(System.currentTimeMillis() + delayBeforeRunning);

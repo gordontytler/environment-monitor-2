@@ -94,8 +94,6 @@ public class InputFromBashReader implements Runnable {
 	
 	
 	
-	
-	@Override
 	public void run() {
 		try {
 			foundEchoText = false;

@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import ch.ethz.ssh2.channel.ChannelClosedException;
 import monitor.api.StackTraceFormatter;
 import monitor.implementation.MonitorRuntimeException;
 import monitor.implementation.session.PseudoTerminal;
@@ -93,7 +94,7 @@ public class SSHExecuter implements CommandExecuter {
 			lastNewline = firstOutput.lastIndexOf('\n');
 		}
 		if (lastNewline == -1) {
-			throw new MonitorRuntimeException(String.format("Expected a newline in reply from %s. Test command 'echo $$' returned: %s", server.getHost(), firstOutput));
+			throw new MonitorRuntimeException(String.format("Expected a newline in reply from %s. Test command 'echo $$' returned: '%s'", server.getHost(), firstOutput));
 		}
 		String extractorMessage = extractor.extractPromptAndProcessId(firstOutput, lastNewline); 
 		if (!"OK".equals(extractorMessage)) {
@@ -128,10 +129,12 @@ public class SSHExecuter implements CommandExecuter {
 		int len = 0;
 		if (in.available() > 0) {  // <---  we don't want to block here because ServerSessionPool.getSession is synchronized 
 			len = in.read(buff);
-			return new String(buff, 0, len);
-		} else {
-			return "";
+			if (len > 0) {
+				return new String(buff, 0, len);
+			// todo  is end of the stream an error, can more data be read later ?  e.g. if (len == -1) {
+			}
 		}
+		return "";
 	}
 
 	public void createAndStartInputFromShellReader(InputStream inputFromShell) {
@@ -162,7 +165,7 @@ public class SSHExecuter implements CommandExecuter {
 		if (exceptions.size() > 0) {
 			StringBuilder message = new StringBuilder();
 			for (Exception e : exceptions) {
-				logger.log(Level.SEVERE, "Problem when ending SSHExecuter process.", e);
+				logger.log(Level.SEVERE, "Problem when ending SSHExecuter process:"  + e.getMessage());
 				message.append(e.getMessage());
 				if (exceptions.size() > 1) {
 					message.append('\n');
@@ -194,6 +197,7 @@ public class SSHExecuter implements CommandExecuter {
 	}
 	
 	/**
+	 * TODO remove this method
 	 * This is the original method called when closing the session. We have to throw an exception when we have failed to 
 	 * make the inputFromSSHReader stop reading. This makes session do a logout which prevents a
 	 * deadlock from occuring when testTerminal is called. We don't start a new reader thread
@@ -233,17 +237,19 @@ public class SSHExecuter implements CommandExecuter {
 	
 	public void flushInputFromShell() throws Exception {
 		int available;
-		try {
-			out.write("echo $$\n".getBytes());
-			out.flush();
-			Thread.sleep(testCommandTimeoutMillis);
-			available = in.available(); // checking first avoids blocking on the read
-			while (available > 0) {
-				in.read(new byte[available]);
-				available = in.available();
-			}
-		} catch (IOException e) {
-			throw new MonitorRuntimeException(e);
+		out.write("echo $$\n".getBytes());
+		out.flush();
+		// TODO - better to block on the read and interupt to avoid waisting our sleep time and also
+		// also, we need the output to avoid the process id popping up later in some other commands output
+		Thread.sleep(testCommandTimeoutMillis);
+		available = in.available(); // checking first avoids blocking on the read
+		if (available == 0) {
+			throw new MonitorRuntimeException(String.format("No response from 'echo $$' for sessionId: %s on server: %s after %d milliseconds", sessionId,  server, testCommandTimeoutMillis));
+		}
+		while (available > 0) {
+			// TODO - this is a good place to save the process id
+			in.read(new byte[available]);
+			available = in.available();
 		}
 	}	
 	
@@ -291,14 +297,21 @@ public class SSHExecuter implements CommandExecuter {
 				} catch (InterruptedException ie) {
 					// good, we were interrupted by InputFromShellReader thread which found output before we gave up waiting
 					if (logFine) logger.info("Interupted after " + (System.currentTimeMillis() - startTime) + "ms while waiting because got output from command: " + cmd);
+					lastCommandStatus = CommandStatus.FINISHED;
+				} finally {
+					// but - InputFromShellReader now has our thread and could interrupt anytime so wantsToBeInterupted = false
+					// but furthermore, it might interrupt later when we want to be but for a subsequent command
+					wantToBeInterupted = false;
 				}
-				// but - InputFromShellReader now has our thread and could interrupt anytime so wantsToBeInterupted = false
-				wantToBeInterupted = false;
 			}			
 			int chunkAfter = getChunkedOutput().getHighestChunkNumber();
 			response = getChunkedOutput().getChunks(lastChunkRead + 1, chunkAfter);
 			lastChunkRead = chunkAfter;
 			
+		} catch (ChannelClosedException e) {
+			String message = String.format("ChannelClosedException executing command: '%s' on %s", command.getRequest(), server);
+			logger.log(Level.FINE, message);
+			throw new MonitorRuntimeException(message);
 		} catch (Exception e) {
 			if (!command.getRequest().equals("exit") && !command.getRequest().equals("logout")) {
 				logger.log(Level.SEVERE, String.format("problem executing command: '%s' on %s", command.getRequest(), server), e);

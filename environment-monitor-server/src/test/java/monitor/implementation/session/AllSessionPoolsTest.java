@@ -22,18 +22,24 @@ public class AllSessionPoolsTest {
 	 * Check that logout works when the command is still running.
 	 */
 
-	public void testLogoutAllSessionsOnAllServers() {
+	public void testLogoutAllSessionsOnAllServers() throws InterruptedException {
+		System.out.println("\n\n----------------------------------------------------------");
+		System.out.println("Start of AllSessionPoolsTest.testLogoutAllSessionsOnAllServers");
+
 		Session session = allSessionPools.getServerSessionPool(server).getSession("SessionTest");
 		Command command = new Command("sleep 20");
 		command.setMillisBeforeTimeout(1);
 		CommandResult commandResult = session.executeCommand(command);
 		assertEquals(CommandStatus.RUNNING, commandResult.getCommandStatus());
 		assertEquals(CommandStatus.RUNNING, session.getLastCommandStatus());
+		allSessionPools.dumpAllSessionsOnAllServers("before logoutAllSessionsOnAllServers");
 		allSessionPools.logoutAllSessionsOnAllServers("testLogoutAllSessionsOnAllServers");
 		if (allSessionPools.getAllSessions().size() > 0) {
 			allSessionPools.dumpAllSessionsOnAllServers("to show which ones remain after logoutAllSessionsOnAllServers");
 			assertEquals("expected no sessions after logoutAllSessionsOnAllServers", 0, allSessionPools.getAllSessions().size());
 		}
+		System.out.println("\n\n----------------------------------------------------------");
+		System.out.println("End of AllSessionPoolsTest.testLogoutAllSessionsOnAllServers");
 	}
 		
 	

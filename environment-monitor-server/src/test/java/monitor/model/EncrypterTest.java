@@ -11,7 +11,7 @@ public class EncrypterTest {
 	static Logger logger = Logger.getLogger(EncrypterTest.class.getName());
 	// note: the tests actually log on so config.properties needs the encrypted password for
 	// user.default.password and use.auto.password
-	public static final String password = "changeThisToTheRealPassword";
+	public static final String password = "justask";
 	
 	@Test
 	public void testEncryptAndDecrypt() throws Exception {

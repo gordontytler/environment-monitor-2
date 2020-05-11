@@ -28,7 +28,6 @@ public class SessionReaper extends SessionManagementRunnable implements Runnable
 		this.sessionManagementLock = sessionManagementLock;
 	}
 
-	@Override
 	public void run() {
 		boolean interrupted = false;
 		boolean changeOnLastLoop = true;

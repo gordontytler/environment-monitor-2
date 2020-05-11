@@ -2,6 +2,8 @@ package monitor.implementation.session;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -21,17 +23,17 @@ public class ServerSessionPool {
 
 	static Logger logger = Logger.getLogger(ServerSessionPool.class.getName());
 
-	private static int MAX_SESSIONS = Configuration.getInstance().getMaximumServerSessions();
+ 	private static int MAX_SESSIONS = Configuration.getInstance().getMaximumServerSessions();
 	private static final int MAX_TERMINALS_PER_SESSION = Configuration.getInstance().getMaximumTerminalsPerSSHConnection();
 	private static final int MINUTES_TO_WAIT_AFTER_FAILED_LOGIN =  Configuration.getInstance().getMinutesToWaitAfterFailedLogin();
 	private static final int DEFAULT_TEST_COMMAND_TIMEOUT_MILLIS = Configuration.getInstance().getTestCommandTimeoutMillis();
 	private static final String MAX_SESSIONS_ERROR = "Maximum of %d sessions are open on server %s.\n    Will not create a new one.";
-	
+
+	private ReentrantLock poolModificationLock = new ReentrantLock(false);  
 	// The sessions for one server. Each session uses the Stdin and Stdout for one terminal.
 	protected List<Session> sessions = new ArrayList<Session>(MAX_SESSIONS);
 	/** only 10 terminals can share the same ssh connection to the server see {@link TooManySessionsTest}  */
 	private List<SSHConnection> sshConnections = new ArrayList<SSHConnection>();	
-
 	
 	private AllSessionPools allSessionPools = AllSessionPools.getInstance();
 	private final Server server;
@@ -41,7 +43,6 @@ public class ServerSessionPool {
 	private volatile boolean inTheMiddleOfCreatingASessionNow;
 	private String previousFailedLoginReason = "unknown";
 	private boolean alreadyTriedToCreateAutoUser = false;
-
 
 	ServerSessionPool(Server server) {
 		this.server = server;
@@ -71,37 +72,41 @@ public class ServerSessionPool {
 	 * is OK to make two threads asking for a session on the same server to block 
 	 */
 	public synchronized Session getSession(String calledBy) {
-		Session session = findClosedSessionAndOpenIt(true);
-		if (session != null) {
-			return session;
-		}
-		if (numberOfOpenSessions() < MAX_SESSIONS) {
-			timeOfLastError = System.currentTimeMillis();
-			inTheMiddleOfCreatingASessionNow = true;
-			try {
-				session = createSessionAndLogon(calledBy, DEFAULT_TEST_COMMAND_TIMEOUT_MILLIS);
-			} catch (Exception e) {
-				StringBuilder causedBy = new StringBuilder();
-				Throwable cause = e.getCause();
-				Throwable lastCause = null;
-				while (cause != null) {
-					lastCause = cause;
-					cause = cause.getCause();
-				}
-				if (lastCause != null) {
-					causedBy.append("\n    Caused by: ").append(lastCause.toString());
-				}
-				previousFailedLoginReason = e.toString() + causedBy;
-				throw new MonitorRuntimeException(e);
-			} finally {
-				inTheMiddleOfCreatingASessionNow = false;
+		poolModificationLock.lock();
+		try {
+			Session session = findClosedSessionAndOpenIt(true);
+			if (session != null) {
+				return session;
 			}
-			timeOfLastError = 0;
-			return session;
+			if (numberOfOpenSessions() < MAX_SESSIONS) {
+				timeOfLastError = System.currentTimeMillis();
+				inTheMiddleOfCreatingASessionNow = true;
+				try {
+					session = createSessionAndLogon(calledBy, DEFAULT_TEST_COMMAND_TIMEOUT_MILLIS);
+				} catch (Exception e) {
+					StringBuilder causedBy = new StringBuilder();
+					Throwable cause = e.getCause();
+					Throwable lastCause = null;
+					while (cause != null) {
+						lastCause = cause;
+						cause = cause.getCause();
+					}
+					if (lastCause != null) {
+						causedBy.append("\n    Caused by: ").append(lastCause.toString());
+					}
+					previousFailedLoginReason = e.toString() + causedBy;
+					throw new MonitorRuntimeException(e);
+				} finally {
+					inTheMiddleOfCreatingASessionNow = false;
+				}
+				timeOfLastError = 0;
+				return session;
+			}
+			throw new MonitorNoStackTraceRuntimeException(tooManySessions);
+		} finally {
+			poolModificationLock.unlock();
 		}
-		throw new MonitorNoStackTraceRuntimeException(tooManySessions);
 	}
-
 
 	private Session createSessionAndLogon(String calledBy, int testCommandTimeoutMillis) {
 		PseudoTerminal terminal = createPseudoTerminal();
@@ -116,10 +121,10 @@ public class ServerSessionPool {
 			// TODO this command should be in the config file and admin might be a better group to run sudo 
 			CommandResult result = session.executeCommand(new Command("sudo /usr/sbin/useradd -G " + defaultUserName + ",sudo -K PASS_MAX_DAYS=-1 " + autoUserName));
 			if (CommandStatus.FINISHED.equals(result.getCommandStatus())) {
-				// just because it finished doesn't mean it worked e.g. useradd: group 'wheel' does not exist
+				// just because it finished doesn't mean it worked e.g. useradd: group 'admins' does not exist
 				result = session.executeCommand(new Command("sudo /usr/bin/passwd " + autoUserName));
 				if (CommandStatus.FINISHED.equals(result.getCommandStatus())) {
-					destroySSHConnections();
+					destroySSHConnections();  // todo why ?
 					terminal = createPseudoTerminal();
 					session = new Session(server, terminal, calledBy, testCommandTimeoutMillis);
 				}
@@ -153,11 +158,43 @@ public class ServerSessionPool {
 		}
 	}
 
-	public void destroySSHConnections() {
+	public synchronized void destroySSHConnections() {
+		// to avoid concurrent modification exception
+		ArrayList<Session> copyOfSessions = new ArrayList<Session>(MAX_SESSIONS);
+		sessions.forEach(s -> copyOfSessions.add(s));
+
+		for (Session session : copyOfSessions) {
+			//session.setKillSubprocesesWhenFinished(true);  it might be a control session
+			session.tidyUpAfterException("destroySSHConnections");
+		}
 		for (SSHConnection connection : sshConnections) {
 			connection.destroy();
 		}
 		sshConnections = new ArrayList<SSHConnection>();
+		// todo: find a better pattern to manage the lifecycle of SSHConnection, Session, PseudoTerminal
+		// session.tidyUpAfterException calls Session.logout() which calls killProcess calls PseudoTerminal.distroy which calls
+		// SSHConnection.removePseudoTerminal which calls ServerSessionPool.removeSSHConnection when there are no terminals left.
+		sessions = new ArrayList<Session>(MAX_SESSIONS);
+		// the Session.logout mentioned above also calls back to ServerSessionPool.removeSession to remove it'self
+	}
+
+
+	public void removeSession(String sessionId) {
+		for (int i = 0; i < sessions.size(); i++) {
+			if (sessions.get(i).getSessionId().equals(sessionId)) {
+				sessions.remove(i);
+			}
+		}
+	}
+
+	/** called when all the terminals have been closed due to inactivity */
+	public void removeSSHConnection(int indexInServerSessionPool) {
+		if (indexInServerSessionPool > sshConnections.size() - 1) {
+			logger.info("removeSSHConnection IndexOutOfBoundsException. index: " + indexInServerSessionPool + " size: "
+					+ sshConnections.size());
+			return;
+		}
+		sshConnections.remove(indexInServerSessionPool);
 	}
 	
 	private int numberOfOpenSessions() {
@@ -214,7 +251,7 @@ public class ServerSessionPool {
 					session = createSessionAndLogon(calledBy, timeout);
 				} catch (Exception e) {
 					attempts++;
-					logger.log(Level.SEVERE, String.format("Failed attempt %d to get control session on %s", attempts, server.getHost()), e);
+					logger.log(Level.SEVERE, String.format("Failed attempt %d to get control session on %s caused by %s", attempts, server.getHost(), e));
 					session = null;
 					timeout = timeout + DEFAULT_TEST_COMMAND_TIMEOUT_MILLIS;
 
@@ -246,19 +283,6 @@ public class ServerSessionPool {
 		return sessionsOfSelectedTypes;
 	}
 
-
-	public void removeSession(String sessionId) {
-		for (int i=0; i < sessions.size(); i++) {
-			if (sessions.get(i).getSessionId().equals(sessionId)) {
-				sessions.remove(i);
-			}
-		}
-	}
-
-	/** called when all the terminals have been closed due to inactivity */
-	public void removeSSHConnection(int indexInServerSessionPool) {
-		sshConnections.remove(indexInServerSessionPool);
-	}
 	
 	public List<SSHConnection> getSshConnections() {
 		return sshConnections;

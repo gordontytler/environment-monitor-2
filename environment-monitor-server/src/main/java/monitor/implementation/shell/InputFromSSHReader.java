@@ -7,6 +7,7 @@ import monitor.model.Configuration;
 import monitor.model.StringUtil;
 
 import java.io.InputStream;
+import java.io.InterruptedIOException;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.CountDownLatch;
@@ -124,8 +125,7 @@ public class InputFromSSHReader implements Runnable {
                 // This is the INFO level message
                 logger.info(String.format("sessionId:%s[%d] finished - '%s' -> %s", sessionId, commandNumber, safeSubString(runningRequest, 30), safeSubString(getChunksForLogMessage(), 120)));
                 if (commandQueue.isEmpty()) {
-                    if (logFine)
-                        logger.info(String.format("sessionId:%s[%d] commandQueue.isEmpty CommandStatus is FINISHED %s", sessionId, commandNumber, safeSubString(runningRequest, 30)));
+                    if (logFine) logger.info(String.format("sessionId:%s[%d] commandQueue.isEmpty CommandStatus is FINISHED %s", sessionId, commandNumber, safeSubString(runningRequest, 30)));
                     sshExecuter.setLastCommandStatus(CommandStatus.FINISHED);
                 }
                 if (sshExecuterThread != null && sshExecuter != null && sshExecuterThread.getState() == Thread.State.TIMED_WAITING && sshExecuter.isInteruptable()) {
@@ -135,7 +135,7 @@ public class InputFromSSHReader implements Runnable {
                     stopFinishedCheckingSignal.countDown();
                     stopFinishedCheckingSignal = null;
                 }
-                // block until SSHExecuter adds to the queue again
+                // block until SSHExecuter adds to the queue again or SSHExecuter.stopReaderThread interrupts
                 commandAndNumber = takeNextCommandAndNumber();
                 foundPrompt = false;
                 foundEchoedCommand = false;
@@ -143,8 +143,18 @@ public class InputFromSSHReader implements Runnable {
             if (logFine)
                 logger.info(String.format("sessionId:%s[%d] InputFromSSHReader thread ending normally.", sessionId, commandNumber));
             stopSignal.countDown();
+        } catch (InterruptedException e) {
+            logger.log(Level.INFO, "Thread interupted: " + Thread.currentThread().getName());
+            e.fillInStackTrace();
+            sshExecuter.saveInputFromShellReaderException(e);
+            sshExecuter.setLastCommandStatus(CommandStatus.ERROR);
+        } catch (InterruptedIOException e) {
+            logger.log(Level.INFO, "InterruptedIOException in thread " + Thread.currentThread().getName());
+            e.fillInStackTrace();
+            sshExecuter.saveInputFromShellReaderException(e);
+            sshExecuter.setLastCommandStatus(CommandStatus.ERROR);
         } catch (Exception e) {
-            logger.log(Level.SEVERE, e.getMessage() + " in thread " + Thread.currentThread().getName(), e);
+            logger.log(Level.SEVERE, e + " in thread " + Thread.currentThread().getName(), e);
             e.fillInStackTrace();
             sshExecuter.saveInputFromShellReaderException(e);
             sshExecuter.setLastCommandStatus(CommandStatus.ERROR);

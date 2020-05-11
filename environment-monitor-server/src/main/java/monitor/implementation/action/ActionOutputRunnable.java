@@ -50,9 +50,16 @@ public class ActionOutputRunnable implements Runnable {
         this.environmentViewBuilder = EnvironmentViewBuilder.getInstance(environmentName);
     }
 
-
-    @Override
     public void run() {
+        try {
+            runACommandOnServersAndCollectTheOutputs();
+        } catch(Exception e) {
+            logger.warning(e.getMessage() + " occurred running '" + action.getCommandLine() +
+                    " in thread: " + Thread.currentThread().getName());
+        }
+    }
+
+    public void runACommandOnServersAndCollectTheOutputs() {
         Thread.currentThread().setName(environmentName + " - " + environmentViewRow.getOutputName() + " on " + environmentViewRow.getServerName());
 
         List<Session> sessions = new ArrayList<Session>();

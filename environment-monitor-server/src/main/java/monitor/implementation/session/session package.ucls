@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="monitor.implementation.session.SessionManagementRunnable" 
+    project="environment-monitor-server" 
+    file="/environment-monitor-server/src/main/java/monitor/implementation/session/SessionManagementRunnable.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="136" width="248" x="1532" y="254"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="monitor.implementation.session.Session" project="environment-monitor-server" 
+    file="/environment-monitor-server/src/main/java/monitor/implementation/session/Session.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="290" width="340" x="834" y="219"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="monitor.implementation.session.ClosedSessionTester" 
+    project="environment-monitor-server" 
+    file="/environment-monitor-server/src/main/java/monitor/implementation/session/ClosedSessionTester.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="222" x="1303" y="505"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="monitor.implementation.session.ServerSessionPool" 
+    project="environment-monitor-server" 
+    file="/environment-monitor-server/src/main/java/monitor/implementation/session/ServerSessionPool.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="226" width="316" x="1113" y="-78"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="monitor.implementation.session.ChildProcessFinder" 
+    project="environment-monitor-server" 
+    file="/environment-monitor-server/src/main/java/monitor/implementation/session/ChildProcessFinder.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="68" width="251" x="888" y="660"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="monitor.implementation.session.PseudoTerminal" 
+    project="environment-monitor-server" 
+    file="/environment-monitor-server/src/main/java/monitor/implementation/session/PseudoTerminal.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="603" y="254"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="monitor.implementation.session.ProcessKiller" project="environment-monitor-server" 
+    file="/environment-monitor-server/src/main/java/monitor/implementation/session/ProcessKiller.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="69" width="370" x="826" y="553"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="monitor.implementation.session.SessionManager" 
+    project="environment-monitor-server" 
+    file="/environment-monitor-server/src/main/java/monitor/implementation/session/SessionManager.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="252" width="273" x="1511" y="-69"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="monitor.implementation.session.SSHConnection" project="environment-monitor-server" 
+    file="/environment-monitor-server/src/main/java/monitor/implementation/session/SSHConnection.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="217" x="784" y="-61"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="monitor.implementation.session.SessionReaper" 
+    project="environment-monitor-server" 
+    file="/environment-monitor-server/src/main/java/monitor/implementation/session/SessionReaper.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="157" width="222" x="1565" y="500"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="monitor.implementation.session.FinishedActionSessionCloser" 
+    project="environment-monitor-server" 
+    file="/environment-monitor-server/src/main/java/monitor/implementation/session/FinishedActionSessionCloser.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="149" width="255" x="1804" y="504"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="12">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="13">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="14">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="15" name="terminals"/>      
+      <multiplicity id="16" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="17">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="18" name="sshConnection"/>      
+      <multiplicity id="19" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="20">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="21" name="terminal"/>      
+      <multiplicity id="22" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="23">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="24">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="25" name="sessions"/>      
+      <multiplicity id="26" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="27">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="28" name="sshConnections"/>      
+      <multiplicity id="29" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="30">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="31" name="runnables"/>      
+      <multiplicity id="32" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="33">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="34" name="serverSessionPool"/>      
+      <multiplicity id="35" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="36">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="37" name="childProcessFinder"/>      
+      <multiplicity id="38" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="39">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="40" name="processKiller"/>      
+      <multiplicity id="41" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
