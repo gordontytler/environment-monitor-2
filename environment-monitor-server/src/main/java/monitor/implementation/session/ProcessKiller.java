@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import monitor.implementation.MonitorRuntimeException;
 import monitor.model.Command;
 import monitor.model.CommandResult;
 import monitor.model.Server;
@@ -46,13 +47,27 @@ public class ProcessKiller {
 			logger.log(Level.SEVERE, String.format("Problem killing subprocesses of PID %d on %s.", parentProcessId, server), e);
 		} finally {
 			if (!controlSessionPassedIn && controlSession != null && controlSession.isLoggedOn()) {
-				controlSession.close(calledBy + "->ProcessKiller.killSubProcesses"); // killing sub-processes would require another control session	
+				// if we close the control session, it will start a SessionClosingRunnable, which calls
+				// this method which either creates or finds a control session which we close here.
+				// This creates an endless loop of creating and destroying processes. All done with the same
+				// ssh login. Currently, they are created and destroyed at the same rate.
+				// Perhaps some flag hiding in another class with a strange name will exist to stop this.?
+				controlSession.setKillSubprocesesWhenFinished(false);
+				controlSession.close(calledBy + "->ProcessKiller.killSubProcesses"); // killing sub-processes would require another control session
 			}
 		}
 		return controlKillResult;
 	}	
 	
 	public CommandResult killSubProcesses(Server server, int parentProcessId, String calledBy) {
+		// todo needs a redesign
+		if (calledBy.contains("SessionClosingRunnable.close->ProcessKiller.killSubProcesses->SessionClosingRunnable.close")) {
+			try {
+				throw new MonitorRuntimeException("loop detected");
+			} catch (Exception e) {
+				logger.log(Level.SEVERE, "logging but not re-throwing", e);
+			}
+		}
 		return killSubProcesses(server, parentProcessId, null, false, calledBy);
 	}
 

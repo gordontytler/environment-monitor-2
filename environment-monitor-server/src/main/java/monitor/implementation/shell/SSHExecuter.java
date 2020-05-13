@@ -182,8 +182,8 @@ public class SSHExecuter implements CommandExecuter {
 		boolean stopped = stoppedSignal.await(1000, TimeUnit.MILLISECONDS);
 		if (!stopped) {
 			inputFromSSHReaderException = null;
+			logger.info("Interrupting thread " + inputFromSSHReaderThread.getName() + " because it did not respond to stop signal.");
 			inputFromSSHReaderThread.interrupt();
-			throw new MonitorRuntimeException("Thread " + inputFromSSHReaderThread.getName() + " did not stop when asked.");
 		}
 	}	
 	

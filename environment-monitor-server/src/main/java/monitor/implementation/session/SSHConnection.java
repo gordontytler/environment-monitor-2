@@ -97,6 +97,7 @@ public class SSHConnection {
 					isAuthenticated = conn.authenticateWithPublicKey(user.getName(), keyfile, keyfilePass);
 					if (isAuthenticated) {
 						loggedOnUserName = user.getName();
+						loggedOnUserPassword = user.getPassword(); // see comment in getLoggedOnUserPassword
 						logger.info(String.format("logged on to server %s as user %s using public key authentication.", server.getHost(), username));
 					} else {
 						throw new MonitorRuntimeException(String.format("\n\npassword authentication failed for user %s and public key authentication failed for user %s on server %s using keyfile %s\n\n", user.getName(), username, server.getHost(), keyfile.toString()));
@@ -181,6 +182,19 @@ public class SSHConnection {
 		return loggedOnUserName;
 	}
 
+	/**
+	 * This is used by PasswordTyper.typePasswordIfAsked but there is a problem.
+	 *
+	 * Why does the response contain password when we have already authenticated using public key?
+	 *
+	 * INFO: Starting http endpoint for scripts at http://gordon-HP-Notebook:8084/MonitorScript
+	 * May 12, 2020 9:16:40 AM monitor.implementation.session.SSHConnection <init>
+	 * INFO: logged on to server gordon-HP-Notebook as user gordon using public key authentication.
+	 * ...
+	 * monitor.implementation.MonitorRuntimeException: Don't know password for user gordon on gordon-HP-Notebook
+	 * 	at monitor.implementation.shell.PasswordTyper.typePasswordIfAsked(PasswordTyper.java:30)
+	 *
+	 */
 	String getLoggedOnUserPassword() {
 		return loggedOnUserPassword;
 	}

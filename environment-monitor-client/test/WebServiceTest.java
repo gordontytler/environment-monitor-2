@@ -29,7 +29,8 @@ public class WebServiceTest {
 	
 	public void doTest(String[] args) throws MalformedURLException {
 		// The SOAP server has to be started manually.
-		service = new MonitorService_Service(new URL("http://localhost:8080/Monitor/?wsdl"), new QName("http://MonitorService", "MonitorService"));			
+		// todo why does localhost get refused?
+		service = new MonitorService_Service(new URL("http://gordon-hp-notebook:8084/Monitor/?wsdl"), new QName("http://MonitorService", "MonitorService"));
 		System.out.println("Retrieving the port from the following service: " + service);
 		MonitorService port = service.getMonitorServicePort();
 		LogonResult logonResult = port.logon("localhost", "", "");

@@ -56,20 +56,23 @@ public class SessionClosingRunnable implements Runnable {
 	public void close(String calledBy) {
 		String message = "success";
 		try {
-			int millisBeforeInterupting = SHORT_DELAY_BEFORE_INTERUPTING;
-			if (commandExecuter.getLastCommandStatus() == CommandStatus.RUNNING || 
-				commandExecuter.getLastCommandStatus() == CommandStatus.ERROR ||
-				(commandExecuter.getLastCommandStatus() == CommandStatus.FINISHED && killSubprocesesWhenFinished)) {
-				// when close is done before logout by session reaper don't want to open another control session 
-				if (!session.isPreviouslyControlSession()) {
-					String reason = String.format("lastCommandStatus: %s killSubprocesesWhenFinished: %b previouslyControlSession: %b", commandExecuter.getLastCommandStatus(), killSubprocesesWhenFinished, session.isPreviouslyControlSession());
-					SessionEvent sessionEvent = new SessionEvent(System.currentTimeMillis(), "killSubProcesses", session.getSessionId(), session.isLoggedOn(), session.isOpen(), session.isControlSession(), session.getSessionType(), reason, session.getLastUsed());
-					session.appendToSessionHistory(sessionEvent);
-					processKiller.killSubProcesses(server, commandExecuter.getBashProcessId(), calledBy + "->SessionClosingRunnable.close");
-					millisBeforeInterupting = LONG_DELAY_BEFORE_INTERUPTING; // give it time for tail to stop to avoid SSHExecuter complaining did not stop reading input when asked
+			if (session.isKillSubprocesesWhenFinished()) {
+				// no point in killing sub-processes if it has finished unless we expect trouble
+				// but always try to kill sub-processes if there was an error or the executor thinks they are running
+				// e.g. tail server.log
+				if (commandExecuter.getLastCommandStatus() == CommandStatus.RUNNING ||
+						commandExecuter.getLastCommandStatus() == CommandStatus.ERROR ||
+						(commandExecuter.getLastCommandStatus() == CommandStatus.FINISHED && killSubprocesesWhenFinished)) {
+					// when close is done before logout by session reaper don't want to open another control session
+					if (!session.isPreviouslyControlSession()) {
+						String reason = String.format("lastCommandStatus: %s killSubprocesesWhenFinished: %b previouslyControlSession: %b", commandExecuter.getLastCommandStatus(), killSubprocesesWhenFinished, session.isPreviouslyControlSession());
+						SessionEvent sessionEvent = new SessionEvent(System.currentTimeMillis(), "killSubProcesses", session.getSessionId(), session.isLoggedOn(), session.isOpen(), session.isControlSession(), session.getSessionType(), reason, session.getLastUsed());
+						session.appendToSessionHistory(sessionEvent);
+						processKiller.killSubProcesses(server, commandExecuter.getBashProcessId(), calledBy + "->SessionClosingRunnable.close");
+					}
 				}
 			}
-			session.prepareSessionForReuse(millisBeforeInterupting);
+			session.prepareSessionForReuse(LONG_DELAY_BEFORE_INTERUPTING);
 		} catch (Exception e) {
 			message = e.getMessage();
 			if (e instanceof ChannelClosedException) {

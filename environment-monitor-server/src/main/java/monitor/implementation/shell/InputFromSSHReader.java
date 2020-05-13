@@ -185,20 +185,20 @@ public class InputFromSSHReader implements Runnable {
         if (len > 0 && command.mightRequirePassword()) {
             // the password for sudo
             if (passwordTyper.typePasswordIfAsked(sshExecuter, len, buff, command)) {
-                logger.info(String.format("sessionId:%s[%d] Password provided for user %s running command: %s", sessionId, commandNumber, sshExecuter.getLoggedOnUserName(), safeSubString(runningRequest, 30)));
+                logger.info(String.format("sessionId:%s[%d] Password provided for user %s running command: %s", sessionId, commandNumber, sshExecuter.getLoggedOnUserName(), safeSubString(runningRequest, 60)));
                 command.setPasswordAlreadyTyped(true);
                 Thread.sleep(inputPollMillis);
                 len = in.read(buff);
                 if (len > 0 && command.mightRequireRetypePassword()) {
                     // the password for changing a password
                     if (passwordTyper.typePasswordIfAsked(sshExecuter, len, buff, command)) {
-                        logger.info(String.format("sessionId:%s[%d] Password retyped for user %s running command: %s", sessionId, commandNumber, sshExecuter.getLoggedOnUserName(), safeSubString(runningRequest, 30)));
+                        logger.info(String.format("sessionId:%s[%d] Password retyped for user %s running command: %s", sessionId, commandNumber, sshExecuter.getLoggedOnUserName(), safeSubString(runningRequest, 60)));
                         Thread.sleep(inputPollMillis);
                         len = in.read(buff);
                     }
                     // Retype new UNIX password:
                     if (len > 0 && passwordTyper.typePasswordIfAsked(sshExecuter, len, buff, command)) {
-                        logger.info(String.format("sessionId:%s[%d] Password retyped again for user %s running command: %s", sessionId, commandNumber, sshExecuter.getLoggedOnUserName(), safeSubString(runningRequest, 30)));
+                        logger.info(String.format("sessionId:%s[%d] Password retyped again for user %s running command: %s", sessionId, commandNumber, sshExecuter.getLoggedOnUserName(), safeSubString(runningRequest, 60)));
                         Thread.sleep(inputPollMillis);
                         len = in.read(buff);
                     }

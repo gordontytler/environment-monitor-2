@@ -205,6 +205,7 @@ public class Session {
 		controlSession = false;
 		killSubprocesesWhenFinished = true;
 		open = false;
+		calledBy = "";
 	}
 	
 	public void makeLoggedOnMessage() {
@@ -250,6 +251,9 @@ public class Session {
 		return commandResult;
 	}
 
+	/** Remove from pools, change it's identity, test it then reset instance variables.
+	 * TODO - prehaps better to throw the session away but keep the connection resource
+	 * just remove from the pool. Have a separate pool of connections. */
 	void prepareSessionForReuse(int millisBeforeInterupting) throws Exception {
 		if (!allSessionPools.isShutdownThreadIsRunning()) {
 			allSessionPools.removeSession(getSessionId());
@@ -448,7 +452,7 @@ public class Session {
 	public String toStatusString() {
 		return String.format("sessionId:%-6s %-5s on %-35s loggedOn: %-5b open: %-5b controlSession: %-5b %-8s %-8s %s %s\n", 
 			getSessionId(), getLoggedOnUserName(), getServer(), isLoggedOn(), isOpen(), isControlSession(), 
-			getLastCommandStatus(), getSessionType(), getRunningCommand(), getCalledBy());
+			getLastCommandStatus(), getSessionType(), getRunningCommand(), StringUtil.safeSubString(getCalledBy(), 120));
 	}
 	
 	
