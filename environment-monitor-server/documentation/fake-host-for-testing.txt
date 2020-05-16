@@ -1,0 +1,31 @@
+
+add to /etc/hosts
+
+127.0.0.1	localhost
+127.0.1.1	gordon-HP-Notebook
+127.0.1.2	gordon-netbook-2
+127.0.1.3	gordon-netbook-3
+127.0.1.4	gordon-netbook-4
+127.0.1.5	gordon-netbook-5
+127.0.1.6	gordon-netbook
+
+
+see https://serverfault.com/questions/363095/why-does-my-hostname-appear-with-the-address-127-0-1-1-rather-than-127-0-0-1-in?rq=1
+
+also need to add these fake hosts to  ~/.ssh/config
+
+Host gordon-netbook
+  Hostname gordon-HP-Notebook
+
+Host gordon-netbook-2
+  Hostname gordon-HP-Notebook
+
+Host gordon-netbook-3
+  Hostname gordon-HP-Notebook
+
+Host gordon-netbook-4
+  Hostname gordon-HP-Notebook
+
+Host gordon-netbook-5
+  Hostname gordon-HP-Notebook
+

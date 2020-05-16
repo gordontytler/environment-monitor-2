@@ -27,7 +27,7 @@ public class ApplicationDAO {
 		Application application = null;
 		List<Action> actions = new ArrayList<Action>();		
 
-		File file = new File(Configuration.getInstance().getDataDirectory() + fileName);
+		File file = new File(Configuration.getInstance().getDataDirectory() + "/" + fileName);
 
 		BufferedReader reader = null;
 		try {

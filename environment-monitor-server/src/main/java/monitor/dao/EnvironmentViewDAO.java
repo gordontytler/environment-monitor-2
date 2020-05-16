@@ -422,7 +422,7 @@ public class EnvironmentViewDAO {
     }
 
     private String getPath() {
-        return Configuration.getInstance().getDataDirectory();
+        return Configuration.getInstance().getDataDirectory() + File.separatorChar;
     }
 
     private String getDefaults() {

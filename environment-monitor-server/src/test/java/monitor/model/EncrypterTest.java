@@ -9,14 +9,14 @@ import org.junit.Test;
 public class EncrypterTest {
 
 	static Logger logger = Logger.getLogger(EncrypterTest.class.getName());
-	// note: the tests actually log on so config.properties needs the encrypted password for
+	// note: the tests actually log on so real-passwords-in-config.properties needs the encrypted password for
 	// user.default.password and use.auto.password
 	public static final String password = "justask";
 	
 	@Test
 	public void testEncryptAndDecrypt() throws Exception {
 		Encrypter encrypter = new Encrypter();
-		String encodedAndEncrypted = encrypter.encrypt(password); // <- to encrypt passwords set it here and paste from log output to config.properties
+		String encodedAndEncrypted = encrypter.encrypt(password); // <- to encrypt passwords set it here and paste from log output to real-passwords-in-config.properties
 		logger.info(password + " -> " + encodedAndEncrypted);
 		String decoded = encrypter.decrypt(encodedAndEncrypted);
 		Assert.assertEquals(password, decoded);

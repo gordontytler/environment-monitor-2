@@ -26,7 +26,7 @@ public class ConfigurationTest {
 
     @Test
     public void testGetDataDirectory() {
-        Assert.assertEquals(Configuration.getInstance().getDataDirectory(), "./target/test-classes/");
+        Assert.assertEquals("./src/test/resources", Configuration.getInstance().getDataDirectory());
     }
 
     @Test
@@ -34,7 +34,7 @@ public class ConfigurationTest {
         User defaultOperator = Configuration.getInstance().getUser("some-server");
         Assert.assertNotNull(defaultOperator.getName());
         Assert.assertNotNull(defaultOperator.getPassword());
-        logger.info("password is " + defaultOperator.getPassword());
+        logger.info(defaultOperator.getName() + " password is " + defaultOperator.getPassword());
     }
 
     @Test

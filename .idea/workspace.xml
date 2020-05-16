@@ -25,42 +25,28 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42888511-bec5-456a-90e8-58d2f67ecf03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/environment-monitor-server/.classpath" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environment-monitor-server/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environment-monitor-server/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environment-monitor-server/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/session package.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/session package.ucls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="42888511-bec5-456a-90e8-58d2f67ecf03" name="Default Changelist" comment="Eclipse config and class diagram for monitor.implementation.session. Also fix some concurrency bugs in session pool.">
+      <change afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environment-monitor-server/documentation/fake-host-for-testing.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environment-monitor-server/startServer.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/environment-monitor-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/environment-monitor-server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/action/ActionOutputRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/action/ActionOutputRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/action/ActionRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/action/ActionRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/AllSessionPools.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/AllSessionPools.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/ClosedSessionTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/ClosedSessionTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/FinishedActionSessionCloser.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/FinishedActionSessionCloser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/NextSessionId.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/NextSessionId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/SSHConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/SSHConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/ServerSessionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/ServerSessionPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/SessionClosingRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/SessionClosingRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/SessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/SessionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/SessionReaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/session/SessionReaper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/InputFromBashReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/InputFromBashReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/InputFromSSHReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/InputFromSSHReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/SSHExecuter.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/implementation/shell/SSHExecuter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/api/MonitorHttpProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/api/MonitorHttpProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/ApplicationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/ApplicationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/ApplicationFileNamesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/ApplicationFileNamesDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/EnvironmentNamesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/EnvironmentNamesDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/EnvironmentViewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/dao/EnvironmentViewDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/model/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/java/monitor/model/Configuration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/main/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/session/AllSessionPoolsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/session/AllSessionPoolsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/session/ProcessKillerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/session/ProcessKillerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/session/ServerSessionPoolTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/session/ServerSessionPoolTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/session/SessionManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/session/SessionManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/shell/LogFileReplayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/implementation/shell/LogFileReplayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/model/ConfigurationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/model/ConfigurationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/model/EncrypterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/java/monitor/model/EncrypterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/environment-monitor-server/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-server/src/test/resources/config.properties" afterDir="false" />
     </list>
     <list id="b1259bc0-9b08-4bb8-90f1-cfca68ba8d85" name="do not commit" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/environment-monitor-client/bin/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/WebServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/WebServiceTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/ClientConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/ClientConfiguration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/CloseableTabbedPane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/environment-monitor-client/bin/monitor/gui/CloseableTabbedPane$1.class" afterDir="false" />
@@ -178,6 +164,48 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="27" end1="35" start2="27" end2="31" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="36" end1="53" start2="32" end2="38" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="54" end1="57" start2="39" end2="42" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="63" end1="63" start2="48" end2="49" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="159" end1="159" start2="145" end2="147" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="179" end1="179" start2="167" end2="231" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="195" end1="196" start2="247" end2="248" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="203" end1="203" start2="255" end2="257" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="206" end1="208" start2="260" end2="263" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="209" end1="211" start2="264" end2="270" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="215" end1="217" start2="274" end2="277" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="219" end1="220" start2="279" end2="280" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="223" end1="226" start2="283" end2="290" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="230" end1="231" start2="294" end2="295" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="240" end1="242" start2="304" end2="305" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="257" end1="271" start2="320" end2="320" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="277" end1="277" start2="326" end2="327" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="278" end1="282" start2="328" end2="331" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="325" end1="326" start2="374" end2="389" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="359" end1="360" start2="422" end2="425" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="383" end1="385" start2="448" end2="450" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="387" end1="387" start2="452" end2="453" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="391" end1="393" start2="457" end2="459" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="395" end1="397" start2="461" end2="464" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="399" end1="400" start2="466" end2="468" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="404" end1="406" start2="472" end2="474" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="410" end1="412" start2="478" end2="480" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="416" end1="418" start2="484" end2="486" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="422" end1="423" start2="490" end2="507" changelist="42888511-bec5-456a-90e8-58d2f67ecf03" />
+        <range start1="440" end1="442" start2="524" end2="526" changelist="b1259bc0-9b08-4bb8-90f1-cfca68ba8d85" />
+        <range start1="444" end1="444" start2="528" end2="529" changelist="b1259bc0-9b08-4bb8-90f1-cfca68ba8d85" />
+        <range start1="452" end1="453" start2="537" end2="538" changelist="b1259bc0-9b08-4bb8-90f1-cfca68ba8d85" />
+        <range start1="457" end1="458" start2="542" end2="543" changelist="b1259bc0-9b08-4bb8-90f1-cfca68ba8d85" />
+        <range start1="467" end1="468" start2="552" end2="553" changelist="b1259bc0-9b08-4bb8-90f1-cfca68ba8d85" />
+        <range start1="471" end1="472" start2="556" end2="557" changelist="b1259bc0-9b08-4bb8-90f1-cfca68ba8d85" />
+        <range start1="473" end1="473" start2="558" end2="569" changelist="b1259bc0-9b08-4bb8-90f1-cfca68ba8d85" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectId" id="1bA4w5u5ytl7SUGFmaBURkZplSZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -193,7 +221,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/environment-monitor-server/src/test/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/environment-monitor-server/doNotCommit" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.21358268" />
@@ -201,14 +229,41 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/environment-monitor-server/doNotCommit" />
+      <recent name="$PROJECT_DIR$/environment-monitor-server/doNotCommit/test" />
       <recent name="$PROJECT_DIR$/environment-monitor-server/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ConfigurationTest">
-    <configuration name="All in environment-monitor-server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.EncrypterTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="monitor.api.Main" />
       <module name="environment-monitor-server" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="monitor.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="monitor.gui.MainFrame" />
+      <module name="environment-monitor-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="monitor.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WebServiceTest" />
+      <module name="environment-monitor-client" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -228,22 +283,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConfigurationTest.testUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="environment-monitor-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="monitor.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="monitor.model" />
-      <option name="MAIN_CLASS_NAME" value="monitor.model.ConfigurationTest" />
-      <option name="METHOD_NAME" value="testUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="EncrypterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="environment-monitor-server" />
       <extension name="coverage">
@@ -259,27 +298,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="monitor in environment-monitor-server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="environment-monitor-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="monitor.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="monitor" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ConfigurationTest" />
         <item itemvalue="JUnit.EncrypterTest" />
-        <item itemvalue="JUnit.ConfigurationTest.testUser" />
-        <item itemvalue="JUnit.All in environment-monitor-server" />
-        <item itemvalue="JUnit.monitor in environment-monitor-server" />
+        <item itemvalue="JUnit.ConfigurationTest" />
+        <item itemvalue="Application.MainFrame" />
+        <item itemvalue="Application.WebServiceTest" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -323,7 +348,21 @@
       <option name="project" value="LOCAL" />
       <updated>1588169882780</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Eclipse config and class diagram for monitor.implementation.session. Also fix some concurrency bugs in session pool.">
+      <created>1589233753288</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589233753288</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Stop SessionClosingRunnable asking ProcessKiller to kill the sub-processes in the Session it created to kill the subprocesses in another session. This frees ProcessKiller from the endless task of creating processes which which it then tries to kill.">
+      <created>1589383870252</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1589383870252</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -357,7 +396,9 @@
     <MESSAGE value="fix Idea config" />
     <MESSAGE value="Improve the loading of configuration data. &#10;&#10;Look for config.properties in the location specified by the DataDirectory system property. If this fails, look in the classpath for config.properties." />
     <MESSAGE value="Fix session management tests by removing stale data in the session pool after closing all sessions. This is only needed for tests. It isn't necessary when shutting down." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix session management tests by removing stale data in the session pool after closing all sessions. This is only needed for tests. It isn't necessary when shutting down." />
+    <MESSAGE value="Eclipse config and class diagram for monitor.implementation.session. Also fix some concurrency bugs in session pool." />
+    <MESSAGE value="Stop SessionClosingRunnable asking ProcessKiller to kill the sub-processes in the Session it created to kill the subprocesses in another session. This frees ProcessKiller from the endless task of creating processes which which it then tries to kill." />
+    <option name="LAST_COMMIT_MESSAGE" value="Stop SessionClosingRunnable asking ProcessKiller to kill the sub-processes in the Session it created to kill the subprocesses in another session. This frees ProcessKiller from the endless task of creating processes which which it then tries to kill." />
   </component>
   <component name="WindowStateProjectService">
     <state x="443" y="116" width="1397" height="845" key="#Project_Structure" timestamp="1588100649386">
@@ -381,46 +422,65 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="390" y="236" width="643" height="320" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.27.1299.741@67.27.1299.741" timestamp="1588492728305" />
-    <state x="450" y="107" width="1009" height="864" key="CommitChangelistDialog2" timestamp="1588169882084">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="1995" y="27" width="1281" height="741" key="CommitChangelistDialog2" timestamp="1589383869184">
+      <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state x="450" y="107" width="1009" height="864" key="CommitChangelistDialog2/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588169882084" />
+    <state x="1995" y="27" width="1281" height="741" key="CommitChangelistDialog2/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589383869184" />
     <state width="870" height="482" key="Diff.GoToChangePopup" timestamp="1588233841200">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="870" height="482" key="Diff.GoToChangePopup/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588233841200" />
-    <state x="100" y="98" width="1720" height="882" key="DiffContextDialog" timestamp="1588234818108">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="1991" y="52" width="1224" height="644" key="DiffContextDialog" timestamp="1589365658382">
+      <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state x="100" y="98" width="1720" height="882" key="DiffContextDialog/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588234818108" />
-    <state x="733" y="296" width="936" height="484" key="FileChooserDialogImpl" timestamp="1588069486695">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="1991" y="52" width="1224" height="644" key="DiffContextDialog/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589365658382" />
+    <state x="2441" y="196" width="936" height="484" key="FileChooserDialogImpl" timestamp="1589364242870">
+      <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state x="733" y="296" width="936" height="484" key="FileChooserDialogImpl/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588069486695" />
-    <state width="1253" height="372" key="GridCell.Tab.0.bottom" timestamp="1589233382556">
+    <state x="2441" y="196" key="FileChooserDialogImpl/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589364242870" />
+    <state width="1253" height="254" key="GridCell.Tab.0.bottom" timestamp="1589628312955">
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state width="1253" height="303" key="GridCell.Tab.0.bottom/0.27.3286.1053@0.27.3286.1053" timestamp="1588521379095" />
     <state width="1874" height="491" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588418754404" />
-    <state width="1253" height="372" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589233382556" />
-    <state width="1253" height="372" key="GridCell.Tab.0.center" timestamp="1589233382556">
+    <state width="1253" height="254" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589628312955" />
+    <state width="1253" height="254" key="GridCell.Tab.0.center" timestamp="1589628312955">
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state width="1253" height="303" key="GridCell.Tab.0.center/0.27.3286.1053@0.27.3286.1053" timestamp="1588521379094" />
     <state width="1874" height="491" key="GridCell.Tab.0.center/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588418754403" />
-    <state width="1253" height="372" key="GridCell.Tab.0.center/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589233382556" />
-    <state width="1253" height="372" key="GridCell.Tab.0.left" timestamp="1589233382555">
+    <state width="1253" height="254" key="GridCell.Tab.0.center/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589628312955" />
+    <state width="1253" height="254" key="GridCell.Tab.0.left" timestamp="1589628312955">
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state width="1253" height="303" key="GridCell.Tab.0.left/0.27.3286.1053@0.27.3286.1053" timestamp="1588521379094" />
     <state width="1874" height="491" key="GridCell.Tab.0.left/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588418754403" />
-    <state width="1253" height="372" key="GridCell.Tab.0.left/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589233382555" />
-    <state width="1253" height="372" key="GridCell.Tab.0.right" timestamp="1589233382556">
+    <state width="1253" height="254" key="GridCell.Tab.0.left/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589628312954" />
+    <state width="1253" height="254" key="GridCell.Tab.0.right" timestamp="1589628312955">
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state width="1253" height="303" key="GridCell.Tab.0.right/0.27.3286.1053@0.27.3286.1053" timestamp="1588521379095" />
     <state width="1874" height="491" key="GridCell.Tab.0.right/1920.0.1366.768/0.27.1920.1053@0.27.1920.1053" timestamp="1588418754403" />
-    <state width="1253" height="372" key="GridCell.Tab.0.right/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589233382556" />
+    <state width="1253" height="254" key="GridCell.Tab.0.right/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589628312955" />
+    <state width="1253" height="219" key="GridCell.Tab.1.bottom" timestamp="1589625522609">
+      <screen x="1920" y="0" width="1366" height="768" />
+    </state>
+    <state width="1253" height="219" key="GridCell.Tab.1.bottom/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589625522609" />
+    <state width="1253" height="219" key="GridCell.Tab.1.center" timestamp="1589625522609">
+      <screen x="1920" y="0" width="1366" height="768" />
+    </state>
+    <state width="1253" height="219" key="GridCell.Tab.1.center/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589625522609" />
+    <state width="1253" height="219" key="GridCell.Tab.1.left" timestamp="1589625522609">
+      <screen x="1920" y="0" width="1366" height="768" />
+    </state>
+    <state width="1253" height="219" key="GridCell.Tab.1.left/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589625522609" />
+    <state width="1253" height="219" key="GridCell.Tab.1.right" timestamp="1589625522609">
+      <screen x="1920" y="0" width="1366" height="768" />
+    </state>
+    <state width="1253" height="219" key="GridCell.Tab.1.right/1920.0.1366.768/0.27.1920.1053@1920.0.1366.768" timestamp="1589625522609" />
     <state x="727" y="285" width="986" height="507" key="NewModule_or_Project.wizard" timestamp="1588069533091">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

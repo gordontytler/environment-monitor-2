@@ -12,7 +12,7 @@ import java.util.List;
 public class EnvironmentNamesDAO {
 
     private static final EnvironmentNamesDAO theInstance = new EnvironmentNamesDAO();
-    private final String fullPathToInstallDirectory = Configuration.getInstance().getFullPathToInstallDirectory();
+    private final String dataDirectory = Configuration.getInstance().getDataDirectory();
     EnvironmentViewDAO environmentViewDAO = EnvironmentViewDAO.getInstance();
     ArrayList<String> names = new ArrayList<String>();
     private final AllSessionPools allSessionPools = AllSessionPools.getInstance();
@@ -28,7 +28,7 @@ public class EnvironmentNamesDAO {
         if (names.size() == 0) {
             Session session = allSessionPools.getLocalSession("->EnvironmentNamesDAO.getEnvironmentNames");
             // get the names from files containing "environmentName = "
-            Command command = new Command("grep environmentName " + Configuration.getInstance().getDataDirectory() + "environments/* | awk -F'= ' '{print $2}'");
+            Command command = new Command("grep environmentName " + dataDirectory + "/environments/* | awk -F'= ' '{print $2}'");
             CommandResult commandResult = session.executeCommand(command);
             session.close("getEnvironmentNames");
             String[] lines = commandResult.getOutput().split("\n");

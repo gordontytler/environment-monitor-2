@@ -74,7 +74,7 @@ public class LogFileReplayer {
     List<String> load(String inputFile) throws IOException {
         List<String> lines = new ArrayList<String>();
         File file = new File(inputFile);
-        BufferedReader reader = new BufferedReader(new FileReader(Configuration.getInstance().getDataDirectory() + file));
+        BufferedReader reader = new BufferedReader(new FileReader(Configuration.getInstance().getDataDirectory() + "/" + file));
         String nextLine = reader.readLine();
         while (nextLine != null) {
             lines.add(nextLine);

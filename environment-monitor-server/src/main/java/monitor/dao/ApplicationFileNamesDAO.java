@@ -26,7 +26,7 @@ public class ApplicationFileNamesDAO {
 	public synchronized List<String> getApplicationFileNames() {
 		if (names.size() == 0) {
 			Session session = allSessionPools.getLocalSession("->ApplicationFileNamesDAO.getApplicationFileNames");
-			Command command = new Command("ls -1 " + Configuration.getInstance().getDataDirectory() + "applications/");
+			Command command = new Command("ls -1 " + Configuration.getInstance().getDataDirectory() + "/applications/");
 			CommandResult commandResult = session.executeCommand(command);
 			session.close("getApplicationFileNames");
 			String[] lines = commandResult.getOutput().split("\n");

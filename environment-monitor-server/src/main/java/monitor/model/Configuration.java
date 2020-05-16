@@ -60,26 +60,26 @@ public class Configuration {
                 // no system property so use classpath loader to locate the file in either ./target/classes or ./target/test-classes
                 InputStream input = Configuration.class.getClassLoader().getResourceAsStream("config.properties");
                 if (input == null) {
-                    logger.log(Level.SEVERE, "config.properties was not found using class loader and no DataDirectory system property defined.");
+                    logger.log(Level.SEVERE, "real-passwords-in-config.properties was not found using class loader and no DataDirectory system property defined.");
                     return false;
                 }
                 properties.load(input);
-                logger.log(Level.INFO, "loaded properties from config.properties on classpath");
+                logger.log(Level.INFO, "loaded properties from real-passwords-in-config.properties on classpath");
                 return true;
             }
         } catch (Exception e) {
-            logger.log(Level.SEVERE, "could not load config.properties file", e);
+            logger.log(Level.SEVERE, "could not load real-passwords-in-config.properties file", e);
             return false;
         }
     }
 
     static void saveDefaultProperties() {
-        File file = new File("config.properties.created.from.defaults");
+        File file = new File("real-passwords-in-config.properties.created.from.defaults");
         try {
             FileOutputStream out = new FileOutputStream(file);
             properties.store(out, "Created from defaults. To recreate delete this file and run monitor.model.ConfigurationTest");
         } catch (Exception e) {
-            logger.log(Level.SEVERE, "could not create config.properties file from defaults", e);
+            logger.log(Level.SEVERE, "could not create real-passwords-in-config.properties file from defaults", e);
         }
     }
 

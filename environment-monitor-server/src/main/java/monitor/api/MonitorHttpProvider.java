@@ -54,7 +54,7 @@ public class MonitorHttpProvider implements Provider<DataSource> {
 
 	static Logger logger = Logger.getLogger(MonitorHttpProvider.class.getName());
 	private static final boolean logFine = Configuration.getInstance().isLogFine();	
-	private static final String fullPathToInstallDirectory = Configuration.getInstance().getFullPathToInstallDirectory();
+	private static final String dataDirectory = Configuration.getInstance().getDataDirectory();
 	private static final String hostAndPort = Configuration.getInstance().getMonitorHostAndPort();
 	private MonitorServiceImpl monitorServiceImpl;
 	private AllSessionPools allSessionPools = AllSessionPools.getInstance();
@@ -227,7 +227,7 @@ public class MonitorHttpProvider implements Provider<DataSource> {
 	}
 
 	private String get(String queryString) {
-		File file = new File(fullPathToInstallDirectory + "/" + queryString);
+		File file = new File(dataDirectory + "/" + queryString);
 		BufferedReader reader = null;
 		try {
 			reader = new BufferedReader(new FileReader(file));

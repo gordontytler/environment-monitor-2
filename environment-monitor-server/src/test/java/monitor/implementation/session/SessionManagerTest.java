@@ -16,7 +16,7 @@ public class SessionManagerTest {
 		sessionManager.interruptThreads();
 	}
 	
-	// Test the real config.properties and logging
+	// Test the real real-passwords-in-config.properties and logging
 	public static void main(String[] args) throws InterruptedException {
 		SessionManager sessionManager = new SessionManager();
 		sessionManager.setLogFine(false);
