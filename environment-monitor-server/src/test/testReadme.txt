@@ -1,3 +1,7 @@
+
+Install ssh server
+==================
+
 gordon@gordon-HP-Notebook:~$ sudo apt install openssh-server
 Reading package lists... Done
 Building dependency tree
@@ -133,6 +137,6 @@ gordon@gordon-HP-Notebook:~$
 I should have kept notes about this. Did something need to be installed?
 We need an ssh server and client and need to enable something.
 
-We also need to add out public key to the authorized_keys
+We also need to add our public key to the authorized_keys
 
 cp .ssh/id_rsa.pub .ssh/authorized_keys cp .ssh/id_rsa.pub .ssh/authorized_keys
