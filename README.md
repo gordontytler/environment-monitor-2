@@ -1,6 +1,8 @@
 # environment-monitor
 ssh based zero client server monitor with discovery visualisation and automation
 
+![Each line is a scrolling server log](https://github.com/gordontytler/environment-monitor/blob/master/environment-monitor-client/Screenshot-2.png)
+
 It does what a developer might do. It logs on to a server, checks the running processes and looks for errors in the log files. It has a rest web service and browser console and a Java swing graphical representation of the log files. You see error, warning and info as scrolling patterns of red orange and green. One monitor screen might show an environment, such as user acceptance test. The will be a normal pattern of scrolling graphics but when anything is wrong, the human will instantly see. A network error or database problem produce entirely different patterns.
 
 When it logs on, if it doesn't have one, it will create a new account so as to not fill up command history. Then it will either use the existing config (on a central server) or will discover applications e.g. a jboss or spring boot and start monitoring their log files. 
