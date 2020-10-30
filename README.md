@@ -3,13 +3,19 @@ ssh based zero client server monitor with discovery visualisation and automation
 
 ![Each line is a scrolling server log](https://github.com/gordontytler/environment-monitor/blob/master/environment-monitor-client/Screenshot-2.png)
 
-It does what a developer might do. It logs on to a server, checks the running processes and looks for errors in the log files. It has a rest web service and browser console and a Java swing graphical representation of the log files. You see error, warning and info as scrolling patterns of red orange and green. One monitor screen might show an environment, such as user acceptance test. There will be a normal pattern of scrolling graphics but when anything is wrong, the human will instantly see. A network error or database problem produce entirely different and instantly recognisable patterns.
+It does what a developer might do. It logs on to a server, checks the running processes and looks for errors in the log files. 
+
+It has a rest web service with a browser console for the execution of remote commands. A Java client shows an intuative swing graphical representation of the log files. You see error, warning and info as scrolling patterns of red orange and green. This is like tailing all the log files, but with colours instead of text.
+
+Each monitor tab represents an environment, such as user acceptance test. There will be a normal pattern of scrolling graphics but when anything is wrong, the human will instantly see. A network error or database problem produce entirely different and instantly recognisable patterns.
 
 You click on the red bar and up comes the stack stace.
 
-When it logs on, if it doesn't have one, it will create a new account so as to not fill up command history. Then it will either use the existing config (on a central server) or will discover applications e.g. a database or jboss or spring boot and start monitoring their log files. 
+Response and load issues are immediately apparent and the cause identified from the speed of the moving patterns. It's very intuative.
 
-It is written in java and python. There is no client. The ssl is ganymed-ssh2, written in java for performance. It has a rest and soap web service with a browser console that can run  your commands on one or many servers e.g. a diff of config between test and production. There is a heartbeat function that checks that the discovered applications are still running. Notifications and alerts can be added via environment or application configuration. 
+When the environment-monitor logs on to a server, if necessary, it will create a new account so as to not fill up command history. Then it will either use the existing config (on a central server) or will discover applications e.g. a database or jboss or spring boot and start monitoring their log files. 
+
+It is written in java and python. There is no client installed on the server being monitored. The ssl is ganymed-ssh2, written in java for performance. It has a rest and soap web service with a browser console that can run  your commands on one or many servers e.g. a diff of config between test and production. There is a heartbeat function that checks that the discovered applications are still running. Notifications and alerts can be added via environment or application configuration. 
 
 
 Here is the config file 
