@@ -7,7 +7,7 @@ It does what a developer might do. It logs on to a server, checks the running pr
 
 When it logs on, if it doesn't have one, it will create a new account so as to not fill up command history. Then it will either use the existing config (on a central server) or will discover applications e.g. a database or jboss or spring boot and start monitoring their log files. 
 
-It is written in java and python. There is no client. The ssl is ganymed-ssh2, written in java for performance. It has a rest and soap web service with browser console that can run a commands on servers. There is a heartbeat function that checks that the discovered applications are still running. 
+It is written in java and python. There is no client. The ssl is ganymed-ssh2, written in java for performance. It has a rest and soap web service with a browser console that can run  your commands on one or many servers e.g. a diff of config between test and production. There is a heartbeat function that checks that the discovered applications are still running. Notifications and alerts can be added via environment or application configuration. 
 
 
 Here is the config file 
