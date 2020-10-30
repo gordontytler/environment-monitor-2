@@ -1,5 +1,5 @@
 # environment-monitor
-ssh based zero client server monitor with discovery visualisation and automation
+ssh based zero client server monitor with discovery, visualisation and automation
 
 ![Each line is a scrolling server log](https://github.com/gordontytler/environment-monitor/blob/master/environment-monitor-client/Screenshot-2.png)
 
