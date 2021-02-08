@@ -1,11 +1,21 @@
 # environment-monitor
-ssh based zero client server monitor with discovery visualisation and automation
+ssh based zero client server monitor with discovery, visualisation and automation
 
-It does what a developer might do. It logs on to a server, checks the running processes and looks for errors in the log files. It has a rest web service and browser console and a Java swing graphical representation of the log files. You see error, warning and info as scrolling patterns of red orange and green. One monitor screen might show an environment, such as user acceptance test. The will be a normal pattern of scrolling graphics but when anything is wrong, the human will instantly see. A network error or database problem produce entirely different patterns.
+![Each line is a scrolling server log](https://github.com/gordontytler/environment-monitor/blob/master/environment-monitor-client/Screenshot-2.png)
 
-When it logs on, if it doesn't have one, it will create a new account so as to not fill up command history. Then it will either use the existing config (on a central server) or will discover applications e.g. a jboss or spring boot and start monitoring their log files. 
+It does what a developer might do. It logs on to a server, checks the running processes and looks for errors in the log files. 
 
-It is written in java and python. There is no client. The ssl is written in java for performance. It has a rest and soap web service with browser console that can run a commands on servers. There is a heartbeat function that checks that the discovered applications are still running. 
+It has a rest web service with a browser console for the execution of remote commands. A Java client shows an intuative swing graphical representation of the log files. You see error, warning and info as scrolling patterns of red orange and green. This is like tailing all the log files, but with colours instead of text.
+
+Each monitor tab represents an environment, such as user acceptance test. There will be a normal pattern of scrolling graphics but when anything is wrong, the human will instantly see. A network error or database problem produce entirely different and instantly recognisable patterns.
+
+You click on the red bar and up comes the stack stace.
+
+Response and load issues are immediately apparent and the cause identified from the speed of the moving patterns. It's very intuative.
+
+When the environment-monitor logs on to a server, if necessary, it will create a new account so as to not fill up command history. Then it will either use the existing config (on a central server) or will discover applications e.g. a database or jboss or spring boot and start monitoring their log files. 
+
+It is written in java and python. There is no client installed on the server being monitored. The ssl is [ganymed-ssh2](http://www.ganymed.ethz.ch/ssh2/), written in java for performance. It has a rest and soap web service with a browser console that can run  your commands on one or many servers e.g. a diff of config between test and production. There is a heartbeat function that checks that the discovered applications are still running. Notifications and alerts can be added via environment or application configuration. 
 
 
 Here is the config file 
@@ -31,18 +41,18 @@ UnusedMinutesBeforeLogoutSession=10
 action.already.running.kill=true
 action.already.running.run.another=true
 user.auto=auto
-user.auto.create=true
-user.auto.password=iY7UkS05R8UHtwzbqxscBw\=\=
+user.auto.create=false
+user.auto.password=hnTVTG8f7b4=
 user.auto.tryFirst=true
-user.default=jboss
-user.default.password=iY7UkS05R8UHtwzbqxscBw\=\=
-user.default.password.2=ihtJmup0aRZ8VJkqQBT7KwHr1ewQ7U2e
+user.default=gordon
+user.default.password=hnTVTG8f7b4=
+user.default.password.2=hnTVTG8f7b4=
 user.gordon-netbook=gordon
 user.gordon-netbook-2=gordon
-user.gordon-netbook.password=iY7UkS05R8UHtwzbqxscBw\=\=
+user.gordon-netbook.password=hnTVTG8f7b4=
 user.tytlergubuntu01=tytlerg
 user.tytlergubuntu01-2=tytlerg
-user.tytlergubuntu01.password=6paptXZlNI8VQU6Dc3/wSA\=\=
+user.tytlergubuntu01.password=hnTVTG8f7b4=
 ```
 
 Here is the readme.txt
@@ -119,7 +129,7 @@ cd /var/app
 chmod -R g+rwx environment-monitor
 ```
 
-Here is the Python to discover what application are running.
+Here is the Python to discover which applications are running.
 
 ```
 #! /usr/bin/env python
