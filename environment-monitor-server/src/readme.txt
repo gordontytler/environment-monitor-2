@@ -19,7 +19,7 @@ Ubuntu:
 
 java -Djava.util.logging.config.file=./logging.properties -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n -classpath ./bin:./lib/ganymed-ssh2-build251beta1.jar monitor.api.Main &>> ./log/stdout.log  &
 
-Centos:
+Centos:  there is an extra & at the end
 
 java -Djava.util.logging.config.file=./logging.properties -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n -classpath ./bin:./lib/ganymed-ssh2-build251beta1.jar monitor.api.Main >> ./log/stdout.log  &
 

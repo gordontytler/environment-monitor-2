@@ -56,8 +56,9 @@ public class Main {
 			
 			String scriptAddress = monitorURL + "Script";
 			logger.info("Starting http endpoint for scripts at " + scriptAddress);
+			// output to console in case logging is not working
 			Endpoint.publish(scriptAddress, new MonitorHttpProvider(monitorServiceImpl));
-
+			System.out.println("Starting http endpoint for scripts at " + scriptAddress);
 			Runtime.getRuntime().addShutdownHook(new Thread("ShutdownHook") {
 			    public void run() { AllSessionPools.getInstance().messyLogoutAllSessionsOnAllServers("new Thread(\"ShutdownHook\")"); }
 			});
