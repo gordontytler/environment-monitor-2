@@ -38,4 +38,5 @@
 FROM openjdk:8
 COPY ./target/classes /tmp
 COPY ./lib/ganymed-ssh2-262.jar /tmp
+RUN mkdir /tmp/log
 WORKDIR /tmp
