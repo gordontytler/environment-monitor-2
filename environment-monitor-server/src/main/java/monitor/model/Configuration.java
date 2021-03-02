@@ -60,15 +60,15 @@ public class Configuration {
                 // no system property so use classpath loader to locate the file in either ./target/classes or ./target/test-classes
                 InputStream input = Configuration.class.getClassLoader().getResourceAsStream("config.properties");
                 if (input == null) {
-                    logger.log(Level.SEVERE, "real-passwords-in-config.properties was not found using class loader and no DataDirectory system property defined.");
+                    logger.log(Level.SEVERE, "config.properties was not found using class loader and no DataDirectory system property defined.");
                     return false;
                 }
                 properties.load(input);
-                logger.log(Level.INFO, "loaded properties from real-passwords-in-config.properties on classpath");
+                logger.log(Level.INFO, "loaded properties from config.properties on classpath");
                 return true;
             }
         } catch (Exception e) {
-            logger.log(Level.SEVERE, "could not load real-passwords-in-config.properties file", e);
+            logger.log(Level.SEVERE, "could not load config.properties file", e);
             return false;
         }
     }
